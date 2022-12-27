@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+  
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 100px;
+    
+  }
+  
+
+
+.topNav{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: #1A4C67;
+}
+
+.logo{
+    position: absolute;
+    width: auto;
+    height: 65px;
+    left: 10px;
+    top: 5px;
+}
+
+.logoName{
+    position: absolute;
+    width: 273px;
+    height: 112px;
+    
+    top: -40px;
+    
+    left: 108px;
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: white;
+}
+
+.topNav-right{
+    float: right;
+}
+
+
+
+.button2{
+    font-family: 'Basic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    word-spacing: 5px;
+    color: #F9F7FA;
+    background-color: black;
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    right: 30px;
+    top: 15px;
+    border-radius: 15px;
+    
+}
+
+.bottomNav{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    top: 80px;
+
+    background: #687987;
+}
+
+
+
+.DeleteImg{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 100px;
+    top: 5px;
+}
+
+.delete{
+    position: absolute;
+    right: 45px;
+    top: -15px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 5px;
+    font-size: 16px;
+    
+    text-align: center;
+
+    color: white;
+    letter-spacing: 1px;
+}
+
+.add{
+    position: absolute;
+    right: 250px;
+    top: -15px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 5px;
+    font-size: 16px;
+    
+    text-align: center;
+
+    color: white;
+    letter-spacing: 1px;
+}
+
+.AddImg{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 285px;
+    top: 7px;
+}
+
+.view{
+    position: absolute;
+    right: 432px;
+    top: -15px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 5px;
+    font-size: 16px;
+    
+    text-align: center;
+
+    color: white;
+    letter-spacing: 1px;
+}
+
+.ViewImg{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 472px;
+    top: 7px;
+}
+
+.adminLogo{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 30%;
+    top: 200px;
+}
+
+.body-right{
+    position: relative;
+    float: right;
+    margin-top: 160px;
+    left: 4%;
+}
+
+.container {
+    margin-top: 5px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    float:center;
+    margin-left: 500px;
+    margin-right: 450px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: black;
+   
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 110%;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-left: 00px;
+
+    
+    
+}
+
+  
+.button {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #EA9A27;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 6px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.fpw{
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.5px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    
+}
+
+footer{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    left: 0px;
+    bottom: 0;
+    background-color: #1A4C67;
+}
+
+.about span{
+    
+    float: left;
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400px;
+    margin-top: 40px;
+}
+
+.terms span{
+    float: left;
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400px;
+    margin-top: 40px;
+}
+
+.left-bottom{
+    margin-top: 40px;
+    margin-left: 30px;
+
+}
+.all{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    color: #FCFBFD;
+    letter-spacing: 0.5px;
+}
+
+.copyright{
+    float: left;
+    height: 11px;
+}
+
+.right{
+    float: right;
+    
+}
+
+.contact{
+    margin-top: -75px;
+    right: 45px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+    align-self: center;
+    padding-left: 31px;
+    word-spacing: 2px;
+}
+
+
+.call{
+    width: 20px;
+    height: 20px;
+    margin-top: -30px;
+    margin-bottom: 25px;
+    
+}
+
+.num{
+    margin-top: -55px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 32px;
+    margin-right: 45px;
+    margin-left: 20px;
+    color: #FFFFFF;
+    word-spacing: 2px;
+}
+.right-bottom2{
+    margin-top: -35px;
+  
+}
+
+.wa{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.fb{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+    
+}
+
+.insta{
+    width: 32px;
+    height: 32px;
+    
+}
