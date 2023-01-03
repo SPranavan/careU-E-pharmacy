@@ -1,9 +1,19 @@
 <?php
-    //App Root
-    define('APPROOT', dirname(dirname(__FILE__)));
 
-    //URL Root
-    define('URLROOT', 'http://localhost/careU_project/');
+  // App Root
+  define('APPROOT', dirname(dirname(__FILE__)));
 
-    //Site Name
-    define('SITENAME', 'careU-Pharmacy');
+  // URL Root
+  define('URLROOT', 'http://localhost/careU_project');
+  
+  // Site Name
+  define('SITENAME', 'careU-Pharmacy');
+
+
+
+
+
+
+
+
+
