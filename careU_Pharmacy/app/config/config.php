@@ -11,7 +11,7 @@
 
   
   // URL Root
-  define('URLROOT', 'http://localhost/careU_Pharmacy');
+  define('URLROOT', 'http://localhost/careU_project');
   
   // Site Name
   define('SITENAME', 'careU-Pharmacy');
