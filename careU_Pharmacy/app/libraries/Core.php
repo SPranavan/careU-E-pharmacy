@@ -6,7 +6,7 @@
    */
   class Core {
     protected $currentController = 'Users';
-    protected $currentMethod = 'login';
+    protected $currentMethod = 'login_register';
     protected $params = [];
 
     public function __construct(){
@@ -14,19 +14,20 @@
 
       $url = $this->getUrl();
 
-      // Look in controllers for first value
-      if(file_exists('../app/controllers/' . ucwords($url[0]). '.php')){
-        // If exists, set as controller
-        $this->currentController = ucwords($url[0]);
-        // Unset 0 Index
-        unset($url[0]);
-      }
+      if(isset($url[0])){
+        if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
+            $this->currentController = ucwords($url[0]);
+        }
+    }
 
-      // Require the controller
-      require_once '../app/controllers/'. $this->currentController . '.php';
+    // Import update currentController
+    require_once('../app/controllers/' . $this->currentController . '.php');
 
-      // Instantiate controller class
-      $this->currentController = new $this->currentController;
+    //instatiate the class
+    $this->currentController = new $this->currentController;
+
+    // unset the first value from the url array
+    unset($url[0]);  
 
       // Check for second part of url
       if(isset($url[1])){
