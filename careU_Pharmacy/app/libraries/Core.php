@@ -14,20 +14,19 @@
 
       $url = $this->getUrl();
 
-      if(isset($url[0])){
-        if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
-            $this->currentController = ucwords($url[0]);
-        }
-    }
+      // Look in controllers for first value
+      if(file_exists('../app/controllers/' . ucwords($url[0]). '.php')){
+        // If exists, set as controller
+        $this->currentController = ucwords($url[0]);
+        // Unset 0 Index
+        unset($url[0]);
+      }
 
-    // Import update currentController
-    require_once('../app/controllers/' . $this->currentController . '.php');
+      // Require the controller
+      require_once '../app/controllers/'. $this->currentController . '.php';
 
-    //instatiate the class
-    $this->currentController = new $this->currentController;
-
-    // unset the first value from the url array
-    unset($url[0]);  
+      // Instantiate controller class
+      $this->currentController = new $this->currentController;
 
       // Check for second part of url
       if(isset($url[1])){

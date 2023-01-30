@@ -67,7 +67,7 @@
 .search-container {
   float: center;
   width: 41.5%;
-  margin-left: 450px;
+  margin-left: 425px;
 }
 
 .search-container input[type=text] {
@@ -235,7 +235,7 @@
     height: 30px;
     top: 5px;
     z-index: 2;
-    margin-left: 72px;
+    margin-left: 68px;
 }
 
 .item3{
@@ -269,7 +269,7 @@
     height: 25px;
     top: 7px;
     z-index: 2;
-    margin-left: 78px;
+    margin-left: 75px;
 }
 
 .item1{
@@ -290,7 +290,7 @@
     height: 25px;
     top: 9px;
     z-index: 2;
-    margin-left: 452px;
+    margin-left: 425px;
     
 }
 
@@ -315,7 +315,7 @@
     position: relative;
     display: inline-block;
     z-index: 1;
-    margin-left: 435px;
+    margin-left: 410px;
   }
   
   .dropdown-content1 {
@@ -335,7 +335,7 @@
     display: block;
     font-family: 'Roboto';
     font-style: normal;
-    margin-left: 34px;
+    margin-left: 35px;
   }
   
   .dropdown-content1 a:hover {color: white;}
@@ -434,7 +434,7 @@
     position: relative;
     display: inline-block;
     z-index: 1;
-    margin-left: 64px;
+    margin-left: 60px;
   }
   
   .dropdown-content3 {

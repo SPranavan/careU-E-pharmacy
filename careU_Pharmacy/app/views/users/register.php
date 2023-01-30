@@ -1,7 +1,7 @@
 <div class="body-right">
              
 
-<div class="container-2">
+            <div class="container-2">
                 <h3 class="para-3">First time to join ?</h3>
                 <p class="para-4">Fill the following information to upload prescription.</p>
                 <form action="<?php echo URLROOT; ?>/users/register" method="POST">
