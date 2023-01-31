@@ -3,7 +3,7 @@
    
 
     <div class="body-left">
-        <form action="<?php echo URLROOT; ?>/users/login" method="POST">        
+        <form action="<?php echo URLROOT; ?>/public/index.php?page=login" method="POST">        
 
             <div class="container-1">
                 <h3 class="para-1">Already a customer ?</h3>
@@ -22,7 +22,7 @@
                 <br>
                 <br>
                 
-                <button type="submit" name="submit" class="button-2" style="vertical-align:middle"><span>Sign In</span></button>
+                <button type="submit" name="login" class="button-2" style="vertical-align:middle"><span>Sign In</span></button>
                 <br>
                 <!-- <php echo $msg; ?> -->
                 <br>
@@ -33,7 +33,9 @@
     </div>
 
     
-    <?php require APPROOT . '/views/users/register.php'; ?>
+
+
+    <br>
 
 
     <?php require APPROOT . '/views/inc/footer.php'; ?>

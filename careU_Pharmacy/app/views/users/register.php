@@ -1,18 +1,24 @@
-<div class="body-right">
+<?php require APPROOT . '/views/inc/main_header.php'; ?>
+
+   
+
+     
+    <div class="body-right">
              
 
-            <div class="container-2">
+    <div class="container-2">
+
                 <h3 class="para-3">First time to join ?</h3>
                 <p class="para-4">Fill the following information to upload prescription.</p>
-                <form action="<?php echo URLROOT; ?>/users/register" method="POST">
+                <form action="<?php echo URLROOT; ?>/public/index.php?page=register" method="POST">
                     
                     <div class="row">
                       <div class="col-25">
                         <label for="fname">First Name:</label>
                       </div>
                       <div class="col-75">
-                        <input type="text" id="fname" name="fname" value="<?php echo $data['fname']; ?>">
-                        <span style="color: red;"><?php echo $data['fname_err'];?></span>
+                        <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>">
+                        <span style="color: red;"><?php echo $data['fName_err'];?></span>
                         <br>
                       </div>
                     </div>
@@ -21,8 +27,8 @@
                         <label for="lname">Last Name:</label>
                       </div>
                       <div class="col-75">
-                        <input type="text" id="lname" name="lname" value="<?php echo $data['lname']; ?>">
-                        <span style="color: red;"><?php echo $data['lname_err'];?></span>
+                        <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>">
+                        <span style="color: red;"><?php echo $data['lName_err'];?></span>
                         <br>
                       </div>
                     </div>
@@ -96,7 +102,7 @@
                     <br>
                     <div class="row">
 
-                     <button type="submit" name="create" class="button-3" style="vertical-align:middle"><span>Create</span></button>
+                     <button type="submit" name="register" class="button-3" style="vertical-align:middle"><span>Create</span></button>
                      <a href="#" class="cancel-btn"><span>Cancel</span></a>
 
                      
@@ -106,3 +112,10 @@
             </div>
         
     </div>
+
+    <br>
+
+
+    <?php require APPROOT . '/views/inc/footer.php'; ?>
+
+    

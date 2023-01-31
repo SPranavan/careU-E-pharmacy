@@ -68,11 +68,11 @@
                   }
                   else{
                       $data['password_err'] = " *incorrect password";
-                      $this->view('users/login_register', $data);
+                      $this->view('users/login', $data);
                   }
               }
               else{
-                  $this->view('users/login_register', $data);
+                  $this->view('users/login', $data);
               }
 
 
@@ -90,7 +90,7 @@
                   'password_err' => ''
 
               ];
-              $this->view('users/login_register', $data);
+              $this->view('users/login', $data);
           }
 
       }
@@ -199,14 +199,14 @@
                 // Register User
                 if($this->userModel->register($data)){
                   //flash('register_success', 'You are registered and can log in');
-                  redirect('users/login_register');
+                  redirect('users/register');
                 } else {
                   die('Something went wrong');
                 }
       
               } else {
                 // Load view with errors
-                $this->view('users/login_register', $data);
+                $this->view('users/register', $data);
               }
       
             } else {
@@ -232,7 +232,7 @@
               ];
       
               // Load view
-              $this->view('users/login_register', $data);
+              $this->view('users/register', $data);
 
               
             }
