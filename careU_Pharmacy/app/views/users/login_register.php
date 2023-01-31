@@ -3,7 +3,7 @@
    
 
     <div class="body-left">
-        <form action="<?php echo URLROOT; ?>/users/login" method="POST">        
+        <form action="<?php echo URLROOT; ?>index.php?page=login" method="POST">        
 
             <div class="container-1">
                 <h3 class="para-1">Already a customer ?</h3>
@@ -22,7 +22,7 @@
                 <br>
                 <br>
                 
-                <button type="submit" name="submit" class="button-2" style="vertical-align:middle"><span>Sign In</span></button>
+                <button type="submit" name="login" class="button-2" style="vertical-align:middle"><span>Sign In</span></button>
                 <br>
                 <!-- <php echo $msg; ?> -->
                 <br>
@@ -40,7 +40,7 @@
 
                 <h3 class="para-3">First time to join ?</h3>
                 <p class="para-4">Fill the following information to upload prescription.</p>
-                <form action="<?php echo URLROOT; ?>/users/register" method="POST">
+                <form action="<?php echo URLROOT; ?>index.php?page=register" method="POST">
                     
                     <div class="row">
                       <div class="col-25">
@@ -132,7 +132,7 @@
                     <br>
                     <div class="row">
 
-                     <button type="submit" name="create" class="button-3" style="vertical-align:middle"><span>Create</span></button>
+                     <button type="submit" name="register" class="button-3" style="vertical-align:middle"><span>Create</span></button>
                      <a href="#" class="cancel-btn"><span>Cancel</span></a>
 
                      
