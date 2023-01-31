@@ -14,11 +14,10 @@
             
             $row = $this->db->single();
 
-            $passwd = $row->password;
-            if($passwd == $password){
+            $hashed_password = $row->password;
+            if(password_verify($password, $hashed_password)){
                 return $row;
-            }
-            else{
+            } else {
                 return false;
             }
         }

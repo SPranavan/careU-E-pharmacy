@@ -10,7 +10,7 @@
 
                 <h3 class="para-3">First time to join ?</h3>
                 <p class="para-4">Fill the following information to upload prescription.</p>
-                <form action="<?php echo URLROOT; ?>/public/index.php?page=register" method="POST">
+                <form action="<?php echo URLROOT; ?>/users/register" method="POST">
                     
                     <div class="row">
                       <div class="col-25">

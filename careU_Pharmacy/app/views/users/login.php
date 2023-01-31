@@ -3,7 +3,7 @@
    
 
     <div class="body-left">
-        <form action="<?php echo URLROOT; ?>/public/index.php?page=login" method="POST">        
+        <form action="<?php echo URLROOT; ?>/users/login" method="POST">        
 
             <div class="container-1">
                 <h3 class="para-1">Already a customer ?</h3>

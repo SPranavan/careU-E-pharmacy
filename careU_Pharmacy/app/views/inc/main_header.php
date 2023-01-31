@@ -20,7 +20,7 @@
                 <div class="topNav-right">
                     <div class="login-link">
                         <img class="login-icon" src="<?php echo URLROOT;?>/public/img/header/Login.png" alt="icon">
-                        <a href="#"><h4 class="login-a">LOGIN / REGISTER</h4></a>
+                        <a href="<?php echo URLROOT; ?>/users/login"><h4 class="login-a">LOGIN / </h4></a><a href="<?php echo URLROOT; ?>/users/register"><h4 class="register-a">REGISTER</h4></a>
                         <a href="#"><h4 class="myacc-a"> |&nbsp MY ACCOUNT</h4></a>
                     </div>
 

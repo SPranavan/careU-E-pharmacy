@@ -129,7 +129,7 @@
 
 .login-a{
     margin-top: 11px;
-    margin-right: 50px;
+    margin-right: 114.3px;
     color: white;
     font-family: 'Basic';
     font-style: normal;
@@ -146,6 +146,27 @@
     display: inline-block;
     
     cursor: pointer;
+}
+
+.register-a{
+  margin-top: 11px;
+  margin-right: 50px;
+  color: white;
+  font-family: 'Basic';
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 13px;
+  /* text-align: center; */
+  position: absolute;
+  
+  right: 100px;   
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  cursor: pointer;
 }
 
 .myacc-a{
