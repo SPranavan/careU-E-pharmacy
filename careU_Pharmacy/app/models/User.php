@@ -37,6 +37,21 @@
             }
         }
 
+        public function findUserByMobile($mobile){
+            $this->db->query("SELECT * FROM users where mobile = :mobile");
+            $this->db->bind(':mobile', $mobile);
+
+            $this->db->single();
+
+            //check row
+            if($this->db->rowCount() > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
 
 
         // Regsiter user

@@ -3,6 +3,13 @@
    
 
     <div class="body-left">
+
+    <img class="login-Img" src="<?php echo URLROOT;?>/public/img/users/loginImg.jpg" alt="login">
+        
+    </div>
+
+    <div class="body-right">
+
         <form action="<?php echo URLROOT; ?>/users/login" method="POST">        
 
             <div class="container-1">
@@ -27,9 +34,13 @@
                 <!-- <php echo $msg; ?> -->
                 <br>
                 <a href="#" class="fpw"><span>Forget your password?</span></a>
-                
+        
             </div>
         </form>
+             
+
+    
+        
     </div>
 
     

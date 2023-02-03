@@ -137,16 +137,16 @@
                 }
               }
       
-              /* if(empty($data['mobile'])){
+              if(empty($data['mobile'])){
                   $data['mobile_err'] = 'Pleae enter mobile number';
-                } else {
+               } else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'mobile number is already taken';
                   }
-                } 
+              } 
 
-                */
+              
 
 
       
@@ -176,7 +176,7 @@
       
               // Validate Confirm Password
               if(empty($data['confirm_password'])){
-                $data['confirm_password_err'] = 'Pleae confirm password';
+                $data['confirm_password_err'] = 'Please enter confirm password';
               } else {
                 if($data['password'] != $data['confirm_password']){
                   $data['confirm_password_err'] = 'Passwords do not match';
