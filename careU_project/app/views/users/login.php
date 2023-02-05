@@ -3,8 +3,7 @@
     <main class="content">
         <div class="body-left">
 
-        
-            
+                    
         </div>
 
         <div class="body-right">

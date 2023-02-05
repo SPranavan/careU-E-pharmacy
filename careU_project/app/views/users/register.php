@@ -3,7 +3,7 @@
    
 <div class="body-left">
 
-<img class="login-Img" src="<?php echo URLROOT;?>/public/img/users/loginImg.jpg" alt="login">
+
     
 </div>
 

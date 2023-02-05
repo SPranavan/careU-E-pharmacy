@@ -1,25 +1,24 @@
 
 
-
+/*
 .body-right{
     
     float: right;
     
     left: 51%;
 }
+*/
+
+/*
 
 .body-left{
    
     left: 30px;
     
 }
+*/
 
-.login-Img{
-    
-    width: 50%;
-    
-    
-}
+
 
 .para-1{
     font-family: 'Roboto';
@@ -65,15 +64,11 @@
 
 
 .container-1 {
-
-    padding-top: 2px;
-   
-    padding-left: 20px;
-    padding-right: 55px;
-    
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: -10px;
     border-radius: 20px;
-    background-color: #1A4C67;
-    width: 120%;
+    background-color: white;
     padding-top: 10px;
     float:center;
     /*margin-left: 550px;*/
@@ -89,8 +84,9 @@
 
 .container-2 {
     
+    margin-top: 20px;
     padding-top: 2px;
-   
+    padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 55px;
     border-radius: 10px;
