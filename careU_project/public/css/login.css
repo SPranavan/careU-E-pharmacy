@@ -1,22 +1,23 @@
 
 
+
 .body-right{
-    position: absolute;
+    
     float: right;
-    margin-top: 200px;
+    
     left: 51%;
 }
 
 .body-left{
-    position: absolute;
-    left: -400px;
-    margin-top: 200px;
+   
+    left: 30px;
+    
 }
 
 .login-Img{
-    position: relative;
-    left: 40%;
-    margin-top: -15px;
+    
+    width: 50%;
+    
     
 }
 
@@ -64,9 +65,15 @@
 
 
 .container-1 {
-    margin-top: -10px;
+
+    padding-top: 2px;
+   
+    padding-left: 20px;
+    padding-right: 55px;
+    
     border-radius: 20px;
-    background-color: white;
+    background-color: #1A4C67;
+    width: 120%;
     padding-top: 10px;
     float:center;
     /*margin-left: 550px;*/
@@ -81,9 +88,9 @@
 }
 
 .container-2 {
-    margin-top: 20px;
+    
     padding-top: 2px;
-    padding-bottom: 30px;
+   
     padding-left: 20px;
     padding-right: 55px;
     border-radius: 10px;
