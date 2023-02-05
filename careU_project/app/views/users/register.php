@@ -20,7 +20,7 @@
                     
                     <div class="row">
                       <div class="col-25">
-                        <label for="fname">First Name:</label>
+                        <label for="fname">First Name:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="lname">Last Name:</label>
+                        <label for="lname">Last Name:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="telNo">Mobile Number:</label>
+                        <label for="telNo">Mobile Number:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>">
@@ -50,7 +50,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="mail">Email:</label>
+                        <label for="mail">Email:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="email" id="mail" name="email" value="<?php echo $data['email']; ?>">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="sa">Street Address:</label>
+                        <label for="sa">Street Address:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="text" id="sa" name="address" value="<?php echo $data['address']; ?>">
@@ -70,7 +70,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="city">City</label>
+                        <label for="city">City<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <select id="city" name="city" value="<?php echo $data['city']; ?>">
@@ -84,7 +84,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="pw">Password:</label>
+                        <label for="pw">Password:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="password" id="pw" name="password" value="<?php echo $data['password']; ?>">
@@ -94,7 +94,7 @@
                     </div>
                     <div class="row">
                       <div class="col-25">
-                        <label for="cpw">Confirm Password:</label>
+                        <label for="cpw">Confirm Password:<span style="color:red;">*</span></label>
                       </div>
                       <div class="col-75">
                         <input type="password" id="cpw" name="confirm_password" value="<?php echo $data['confirm_password']; ?>">
