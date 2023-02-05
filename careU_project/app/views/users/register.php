@@ -1,6 +1,7 @@
 <?php require APPROOT . '/views/inc/main_header.php'; ?>
 
-   
+<main class="content"> 
+
 <div class="body-left">
 
 
@@ -120,7 +121,9 @@
 
     <br>
 
+</main>
 
-    <?php require APPROOT . '/views/inc/footer.php'; ?>
+
+<?php require APPROOT . '/views/inc/footer.php'; ?>
 
     
