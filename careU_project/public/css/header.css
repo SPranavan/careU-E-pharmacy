@@ -363,6 +363,7 @@ section {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 5;
     border-radius: 0px 0px 10px 10px;
+    margin-left: 5px;
   }
   
   .dropdown-content1 a {
@@ -372,7 +373,7 @@ section {
     display: block;
     font-family: 'Roboto';
     font-style: normal;
-    margin-left: 34px;
+    margin-left: 30px;
   }
   
   .dropdown-content1 a:hover {color: white;}
@@ -420,7 +421,7 @@ section {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 5;
     border-radius: 0px 0px 10px 10px;
-    margin-left: -240px;
+    margin-left: -233px;
   }
   
   .dropdown-content2 a {
@@ -430,7 +431,7 @@ section {
     display: block;
     font-family: 'Roboto';
     font-style: normal;
-    margin-left: 254px;
+    margin-left: 248px;
   }
   
   .dropdown-content2 a:hover {
@@ -493,7 +494,7 @@ section {
     display: block;
     font-family: 'Roboto';
     font-style: normal;
-    margin-left: 516px;
+    margin-left: 518px;
   }
   
   .dropdown-content3 a:hover {color: white;}
