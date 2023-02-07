@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITENAME; ?></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/admins/header.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/admins/admin.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
@@ -23,8 +23,8 @@
                         <div class="topNav-right">
                             <div class="login-link">
                                 <img class="login-icon" src="<?php echo URLROOT;?>/public/img/header/Login.png" alt="icon">
-                                <a href="<?php echo URLROOT; ?>/users/login"><h4 class="login-a">LOGIN / </h4></a><a href="<?php echo URLROOT; ?>/users/register"><h4 class="register-a">REGISTER</h4></a>
-                                <a href="#"><h4 class="myacc-a"> |&nbsp MY ACCOUNT</h4></a>
+                                <a href="<?php echo URLROOT; ?>#"><h4 class="register-a">MY ACCOUNT</h4></a>
+                                <a href="#"><h4 class="myacc-a"> |&nbsp LOGOUT</h4></a>
                             </div>
     
                             
@@ -35,17 +35,12 @@
                     <img class="logo" src="<?php echo URLROOT;?>/public/img/header/Logo_White.png" alt="logo">
                     <h3 class="logoName">Pharmacy</h3>
     
-                    <div class="search-container">
-                        <form action="/action_page.php">
-                        <input type="text" placeholder="Search..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
+                    
     
                     
     
                         <div class="topNav-right">
-                            <a href=""><button type="submit" name="submit" class="button1" style="vertical-align:middle"><span><span>Upload Prescription</span></button></a>
+                            <a href=""><button type="submit" name="submit" class="button1" style="vertical-align:middle"><span><span>Admin</span></button></a>
                         </div>
     
                     </div>
@@ -60,46 +55,48 @@
     
                     <div class="bottomNav-left">
     
-                        <img class="Img1" src="<?php echo URLROOT;?>/public/img/header/Medicine.png" alt="Medicine">
+                        <img class="Img1" src="<?php echo URLROOT;?>/public/img/admins/View.png" alt="View">
                         <a href=""><h5 class="item1"></h5></a>
                         
                         <div class="dropdown1">
-                        <button class="dropbtn1">Medicine</button>
+                        <button class="dropbtn1">View</button>
                         <div class="dropdown-content1">
-                            <a href="#">Heart</a>
-                            <a href="#">Diabetes</a>
-                            <a href="#">Infection</a>
-                            <a href="#">Gastro Intestinal System</a>
-                            <a href="#">Muscle and Joint</a>
+                            <a href="viewManager.php">Manager</a>
+                            <a href="#">Pharmacist</a>
+                            <a href="#">Store Keeper</a>
+                            <a href="#">Delivery Person</a>
+                            <a href="#">Customer</a>
                         </div>
                         </div>
                         
     
-                        <img class="Img2" src="<?php echo URLROOT;?>/public/img/header/PersonalCare.png" alt="PersonalCare">
+                        <img class="Img2" src="<?php echo URLROOT;?>/public/img/admins/Add.png" alt="Add">
                         <a href=""><h5 class="item2"></h5></a>
                         <div class="dropdown2">
-                        <button class="dropbtn2">Personal Care</button>
+                        <button class="dropbtn2">Add</button>
                         <div class="dropdown-content2">
-                            <a href="#">Nourishments</a>
-                            <a href="#">Accessories</a>
-                            <a href="#">Skin Care</a>
-                            <a href="#">Women Personal Care</a>
-                            <a href="#">Oral Care</a>
+                            <a href="addManager.php">Manager</a>
+                            <a href="#">Pharmacist</a>
+                            <a href="#">Store Keeper</a>
+                            <a href="#">Delivery Person</a>
+                    
                             
                         </div>
                         </div>
                             
                         
     
-                        <img class="Img3" src="<?php echo URLROOT;?>/public/img/header/MedicalDevices.png" alt="MedicalDevices">
+                        <img class="Img3" src="<?php echo URLROOT;?>/public/img/admins/Delete.png" alt="Delete">
                         <a href=""><h5 class="item3"></h5></a>
                         
                         <div class="dropdown3">
-                        <button class="dropbtn3">Medical Devices</button>
+                        <button class="dropbtn3">Delete</button>
                         <div class="dropdown-content3">
-                            <a href="#">First Aid</a>
-                            <a href="#">Health Devices</a>
-                            <a href="#">Supports</a>
+                            <a href="#">Manager</a>
+                            <a href="#">Pharmacist</a>
+                            <a href="#">Store Keeper</a>
+                            <a href="#">Delivery Person</a>
+                            <a href="#">Customer</a>
                             
                         </div>
                         </div>

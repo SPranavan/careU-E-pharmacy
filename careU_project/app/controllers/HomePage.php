@@ -8,6 +8,7 @@
       
      
       $this->view('users/home_page');
+      //$this->view('admins/admin_dashboard');
     }
 
     
