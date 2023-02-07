@@ -108,6 +108,7 @@
       
               // Init data
               $data =[
+                'user_ID' => '',
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
                 'mobile' => trim($_POST['mobile']),
@@ -116,6 +117,7 @@
                 'city' => trim($_POST['city']),
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
+                'user_role' => 'customer',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -212,6 +214,7 @@
             } else {
               // Init data
               $data =[
+                'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
                 'mobile' => '',
@@ -220,6 +223,7 @@
                 'city' => '',
                 'password' => '',
                 'confirm_password' => '',
+                'user_role' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
