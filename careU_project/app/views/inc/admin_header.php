@@ -7,6 +7,7 @@
     <title><?php echo SITENAME; ?></title>
     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/admins/header.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/admins/admin.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/admins/add.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -61,7 +62,7 @@
                         <div class="dropdown1">
                         <button class="dropbtn1">View</button>
                         <div class="dropdown-content1">
-                            <a href="viewManager.php">Manager</a>
+                            <a href="#">Manager</a>
                             <a href="#">Pharmacist</a>
                             <a href="#">Store Keeper</a>
                             <a href="#">Delivery Person</a>
@@ -75,7 +76,7 @@
                         <div class="dropdown2">
                         <button class="dropbtn2">Add</button>
                         <div class="dropdown-content2">
-                            <a href="addManager.php">Manager</a>
+                            <a href="<?php echo URLROOT; ?>/admins/add_manager">Manager</a>
                             <a href="#">Pharmacist</a>
                             <a href="#">Store Keeper</a>
                             <a href="#">Delivery Person</a>

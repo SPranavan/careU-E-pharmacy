@@ -1,0 +1,173 @@
+.box1{
+    margin-top: 4.5%; 
+    box-sizing: border-box;
+    position: absolute;
+    width: 290px;
+    height: 205px;
+    left: 10%;
+    /* top: 180px; */
+    position: fixed;
+  
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+  
+  
+  
+.actor{
+    position: absolute;
+    width: 184px;
+    height: 37px;
+    left: 50px;
+    margin-top: 35px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.actor1{
+    position: absolute;
+    width: 175px;
+    height: 28px;
+    left: 50px;
+    margin-top: 30px;
+    cursor: not-allowed;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    background: #F1F1E6;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 3px;
+}
+
+
+
+.body-right{
+    /* position: absolute; */
+    /* float: right; */
+    /* margin-top: 150px; */
+    width: 100%;
+    margin-left: 42%;
+
+}
+
+.container1 {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    /* left: 800px; */
+    border-radius: 10px;
+    background-color: #F1F1E6;
+    width: 50%;
+    height: auto;
+    margin-bottom: 150px;
+    box-sizing: border-box;
+    margin-top: -5px;
+    
+   
+}
+  
+  
+  
+  
+.topic1{
+    margin-top: 15px;
+    width: 220px;
+    height: 33px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+  
+
+
+  
+input[type=text], input[type=tel], input[type=password], input[type=email], select, textarea{
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+  
+/* select{
+    width: 93.5%;
+} */
+  
+  
+label {
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    font-family: 'Roboto';
+    font-size: small;
+    color: black;
+}
+  
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: cell;
+    float: left;
+    margin-left: 80%;
+    
+}
+  
+input[type=submit]:hover {
+    background-color: rgb(89, 89, 89);
+}
+  
+  
+  
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 5px;
+    margin-right: -20px;
+    
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 5px;
+   
+}
+  
+.row{
+    margin-left: 25px;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+.col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+}
+  
+  
