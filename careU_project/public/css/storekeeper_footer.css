@@ -1,29 +1,12 @@
-
-/* .wrapper {
-      min-height: 100%;
-    
-      padding-bottom: 1000px;
-      margin-bottom: -50px;
-}  */
-
-   
-
-
-
 footer{
-      left: 0px;
-      
-      
-      width: 100%;
-      background-color: #023E58;
-   
+    left: 0px;
+    position: absolute;
     
-    
+    margin-top: 850px;
+    width: 100%;
+    background-color: #023E58;  
 }
-  
-
-  
-  
+    
 .about span{
       
       float: left;
