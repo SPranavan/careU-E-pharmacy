@@ -4,9 +4,9 @@
 
     <div class="box1">
         <a href="<?php echo URLROOT; ?>/admins/add_manager"><span class="actor">Manager</span></a><br><br>
-        <a href="addPharmacist.php"><span class="actor">Pharmacist</span></a><br><br>
-        <a href="addStoreKeeper.php"><span class="actor">Store Keeper</span></a><br><br>
-        <a href="addDeliveryPerson.php"><span class="actor1">Delivery Person</span></a>
+        <a href="<?php echo URLROOT; ?>/admins/add_pharmacist"><span class="actor">Pharmacist</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/add_storekeeper"><span class="actor">Store Keeper</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/add_deliveryperson"><span class="actor1">Delivery Person</span></a>
     </div>
 
     <div class="body-right">
@@ -16,14 +16,14 @@
         <div class="container1">
 
             <form action="<?php echo URLROOT; ?>/admins/add_deliveryperson" method="POST">
-                    <div class="row">
+                    <!-- <div class="row">
                     <div class="col-25">
                         <label for="empID">Employee ID:</label>
                     </div>
                     <div class="col-75">
                         <input type="text" id="empID" name="user_ID" value="<?php echo $user_ID; ?>" readonly>
                     </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name:</label>

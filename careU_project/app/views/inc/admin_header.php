@@ -77,9 +77,9 @@
                         <button class="dropbtn2">Add</button>
                         <div class="dropdown-content2">
                             <a href="<?php echo URLROOT; ?>/admins/add_manager">Manager</a>
-                            <a href="#">Pharmacist</a>
-                            <a href="#">Store Keeper</a>
-                            <a href="#">Delivery Person</a>
+                            <a href="<?php echo URLROOT; ?>/admins/add_pharmacist">Pharmacist</a>
+                            <a href="<?php echo URLROOT; ?>/admins/add_storekeeper">Store Keeper</a>
+                            <a href="<?php echo URLROOT; ?>/admins/add_deliveryperson">Delivery Person</a>
                     
                             
                         </div>
