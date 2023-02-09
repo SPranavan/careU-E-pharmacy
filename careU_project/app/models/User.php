@@ -93,7 +93,7 @@
 
         public function getLastUserID()
         {
-            $stmt = $this->db->prepare("SELECT user_ID FROM users ORDER BY user_ID DESC LIMIT 1");
+            $stmt = $this->db->prepare("SELECT user_ID FROM users where user_role = 'customer' ORDER BY user_ID DESC LIMIT 1");
             $stmt->execute();
 
             return $stmt->fetchColumn();

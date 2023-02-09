@@ -3,15 +3,15 @@
     <main class="content">
 
     <div class="box1">
-        <a href="<?php echo URLROOT; ?>/admins/add_manager"><span class="actor1">Manager</span></a><br><br>
-        <a href="addPharmacist.php"><span class="actor">Pharmacist</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/add_manager"><span class="actor">Manager</span></a><br><br>
+        <a href="addPharmacist.php"><span class="actor1">Pharmacist</span></a><br><br>
         <a href="addStoreKeeper.php"><span class="actor">Store Keeper</span></a><br><br>
         <a href="addDeliveryPerson.php"><span class="actor">Delivery Person</span></a>
     </div>
 
     <div class="body-right">
 
-        <h3 class="topic1">Add | Manager</h3>   
+        <h3 class="topic1">Add | Pharmacist</h3>   
 
         <div class="container1">
 
