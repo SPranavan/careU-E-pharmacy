@@ -1,0 +1,42 @@
+.delete-medicaldevices-div1{
+    position: absolute;
+    top:180px;
+}
+
+.delete-medicaldevices-heading-1{
+    position: relative;
+    top:0;
+    left:80px;
+    font-family:'Roboto';
+    font-size:20px;
+    color:black;
+    font-weight:bold;
+}
+
+.delete-medicaldevices-div3 {
+    position: absolute;
+    left: 380px;
+    top:70px;
+    width:1000px;
+    height:400px;
+    background-color:#e4e4e4;
+}
+
+.delete-medicaldevices-div2{
+    padding: 0 5px;
+    text-align:center;
+    font-family:'Roboto';
+    font-size: 17px;
+    position: absolute;
+    top: 68px;
+    left: 80px;
+    height:141px;
+    width:200px;
+    border: 2px solid black;
+    border-radius:10px;
+}
+
+.delete-medicaldevices-div2 a{
+    text-decoration:none;
+    color: inherit;
+}

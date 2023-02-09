@@ -1,0 +1,66 @@
+.view-personalcare-div1{
+    position: absolute;
+    top:180px;
+}
+
+.view-personalcare-heading-1{
+    position: relative;
+    top:0;
+    left:80px;
+    font-family:'Roboto';
+    font-size:20px;
+    color:black;
+    font-weight:bold;
+}
+
+.table-10 {
+    position: relative;
+    left: 380px;
+    top: 5px;
+    border-collapse: collapse;
+    font-family:'Roboto';
+}
+
+.table-10 thead tr {
+    background-color: #023E58;
+    color: #ffffff;
+    text-align: center;
+}
+
+.table-10 th,
+.table-10 td {
+    padding: 12px 12px;
+}
+
+.table-10 tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align:center;
+}
+
+.table-10 tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-10 tbody tr:last-of-type {
+    border-bottom: 2px solid #023E58;
+}
+
+
+.view-personalcare-div2{
+    padding: 0 5px;
+    text-align:center;
+    font-family:'Roboto';
+    font-size: 17px;
+    position: absolute;
+    top: 68px;
+    left: 80px;
+    height:224px;
+    width:200px;
+    border: 2px solid black;
+    border-radius:10px;
+}
+
+.view-personalcare-div2 a{
+    text-decoration:none;
+    color: inherit;
+}

@@ -1,0 +1,72 @@
+.add-medicaldevices-div1{
+    position: absolute;
+    top:180px;
+}
+
+.add-medicaldevices-heading{
+    position: relative;
+    top:0;
+    left:80px;
+    font-family:'Roboto';
+    font-size:20px;
+    color:black;
+    font-weight:bold;
+}
+
+.add-medicaldevices-div2{
+    position: absolute;
+    padding: 0;
+    left: 170px;
+    top:70px;
+    height:560px;
+    width:1175px;
+    border:1px solid black;
+    background-color: #e4e4e4;
+    border-collapse: collapse;
+    font-family:'Roboto';
+}
+
+.add-medicaldevices-form{
+    position: relative;
+    left:100px;
+    top:20px;
+}
+
+.add-medicaldevices-form label{
+    font-size:15px;
+
+}
+
+input.add-medicaldevices-form{
+    font-size:15px;
+    width:809px;
+}
+
+input.add-medicaldevices-input{
+    font-size:15px;
+    width:799px;
+}
+
+
+.add-medicaldevices-select{
+    font-size:15px;
+    width:797px;
+}
+
+#add-medicaldevices-bt1{
+    font-size:15px;
+    position: relative;
+    left:150px;
+    top:10px;
+    border-radius:15px;
+    padding:2px 8px;
+}
+
+#add-medicaldevices-bt2{
+    font-size:15px;
+    position: relative;
+    left:720px;
+    top:10px;
+    border-radius:15px;
+    padding:2px 8px;
+}

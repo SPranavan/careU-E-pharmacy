@@ -1,0 +1,217 @@
+.body-right{
+    position: absolute;
+    float: right;
+    margin-top: 200px;
+    left: 51%;
+}
+
+.body-left{
+    position: absolute;
+    left: -400px;
+    margin-top: 200px;
+}
+
+.para-1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+
+    color: #000000;
+}
+
+.para-2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #000000;
+
+}
+
+.para-3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+
+    color: white;
+}
+
+.para-4{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: white;
+}
+
+.container-1 {
+    margin-top: 5px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    float:center;
+    margin-left: 550px;
+    margin-right: 440px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: black;
+   
+}
+
+.container-2 {
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 55px;
+    border-radius: 10px;
+    background-color: #1A4C67;
+    width: 138%;
+    height: auto;
+    margin-bottom: 150px;
+    box-sizing: border-box;
+   
+    color: white;
+   
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel], select {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-left: 00px;
+    margin-top: 10px;    
+    
+}
+
+  
+.button-2 {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #EA9A27;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    
+}
+  
+.button-2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button-2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button-2:hover span {
+    padding-right: 25px;
+}
+  
+.button-2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button-3 {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #EA9A27;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+   
+    
+}
+  
+.button-3 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button-3 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button-3:hover span {
+    padding-right: 25px;
+}
+  
+.button-3:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.fpw{
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.5px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    
+}
+
+.cancel-btn{
+    
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    float: right;
+    margin-top: 16px;
+}
+
