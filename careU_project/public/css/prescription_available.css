@@ -1,0 +1,94 @@
+.available p {
+    position: absolute;
+    width: 293px;
+    height: 33px;
+    left: 275px;
+    top: 246px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: -23px;
+    color: #000000;
+}
+
+.details {
+
+    position: absolute;
+    width: 1292px;
+    height: 347px;
+    left: 265px;
+    top: 301px;
+
+    background: #F1F1E6;
+    border-radius: 15px;
+
+
+
+}
+
+/* th {
+    height: 65px;
+    width: 296px;
+}
+
+tr{
+    height: 65px;
+    width: 296px;
+}
+     */
+.details th,
+.details td {
+    /* border: 1px solid #ddd; */
+    padding-right: 157px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 26px;
+    width: 95%;
+    margin-top: 21px;
+    text-align: center;
+    width: 60%;
+    padding-left: 30px;
+}
+
+.details th {
+    margin-top: 4px !important;
+    font-weight: 800;
+}
+
+
+
+td {
+    text-align: center;
+}
+
+.hr1 {
+    width: 95%;
+    margin-top: 21px;
+}
+
+
+.hr2 {
+    width: 95%;
+    margin-top: 40px;
+}
+
+
+table {
+    margin-top: -43px;
+}
+
+td button {
+    /* position: absolute; */
+    width: 80px;/*
+    height: 30px;
+    top: 30px; */
+    /* left: 1096px;
+    top: 346px; */
+    color:#F1F1E6;
+    background: #000000;
+    border-radius: 10px;
+}
