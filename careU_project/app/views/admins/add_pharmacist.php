@@ -15,21 +15,21 @@
 
         <div class="container1">
 
-            <form action="#" method="POST">
-                    <div class="row">
+            <form action="<?php echo URLROOT; ?>/admins/add_pharmacist" method="POST">
+                    <!-- <div class="row">
                     <div class="col-25">
                         <label for="empID">Employee ID:</label>
                     </div>
                     <div class="col-75">
                         <input type="text" id="empID" name="user_ID" value="" readonly>
                     </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="fname" name="fName" value="" required>
+                        <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>" required>
                     </div>
                     </div>
                     <div class="row">
@@ -37,7 +37,7 @@
                         <label for="lname">Last Name:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="lname" name="lName" value="" required>
+                        <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>" required>
                     </div>
                     </div>
                     <div class="row">
@@ -45,7 +45,7 @@
                         <label for="telNo">Mobile Number:</label>
                     </div>
                     <div class="col-75">
-                        <input type="tel" id="telNo" name="mobile" value="" required>
+                        <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" required>
                     </div>
                     </div>
                     <div class="row">
@@ -53,7 +53,7 @@
                         <label for="mail">Email:</label>
                     </div>
                     <div class="col-75">
-                        <input type="email" id="mail" name="email" value="" required>
+                        <input type="email" id="mail" name="email" value="<?php echo $data['email']; ?>" required>
                     </div>
                     </div>
                     <div class="row">
@@ -61,7 +61,7 @@
                         <label for="sa">Street Address:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="sa" name="address" value="" required>
+                        <input type="text" id="sa" name="address" value="<?php echo $data['address']; ?>" required>
                     </div>
                     </div>
                     <div class="row">
@@ -69,7 +69,7 @@
                         <label for="city">City</label>
                     </div>
                     <div class="col-75">
-                        <select id="city" name="city" value="">
+                        <select id="city" name="city" value="<?php echo $data['city']; ?>">
                         <option value="Kandy">Kandy</option>
                         <option value="Colombo">Colombo</option>
                         <option value="Jaffna">Jaffna</option>
@@ -81,7 +81,7 @@
                         <label for="pw">Password:</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="pw" name="password" value="" required>
+                        <input type="password" id="pw" name="password" value="<?php echo $data['password']; ?>" required>
                     </div>
                     </div>
                     <div class="row">
@@ -89,7 +89,7 @@
                         <label for="cpw">Confirm Password:</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="cpw" name="confirm_password" value="" required>
+                        <input type="password" id="cpw" name="confirm_password" value="<?php echo $data['confirm_password']; ?>" required>
                     </div>
                     </div>
                     

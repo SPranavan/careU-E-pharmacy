@@ -4,9 +4,9 @@
 
     <div class="box1">
         <a href="<?php echo URLROOT; ?>/admins/add_manager"><span class="actor1">Manager</span></a><br><br>
-        <a href="addPharmacist.php"><span class="actor">Pharmacist</span></a><br><br>
-        <a href="addStoreKeeper.php"><span class="actor">Store Keeper</span></a><br><br>
-        <a href="addDeliveryPerson.php"><span class="actor">Delivery Person</span></a>
+        <a href="<?php echo URLROOT; ?>/admins/add_pharmacist"><span class="actor">Pharmacist</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/add_storekeeper"><span class="actor">Store Keeper</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/add_deliveryperson"><span class="actor">Delivery Person</span></a>
     </div>
 
     <div class="body-right">
