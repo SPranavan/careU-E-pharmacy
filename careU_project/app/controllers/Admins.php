@@ -1,149 +1,50 @@
-<?php 
+<?php
 
-    /*
-        *TASKS:
-            ~ Login & Reg
-    */ 
+    class admins extends Controller{
 
-    class Users extends Controller{
-
-        //Create varibale to connect to DB
         private $userModel;
 
-        //Assigned 'User' model file
         public function __construct()
         {
-            $this->userModel = $this->model('User');
+            $this->userModel = $this->model('Admin');
         }
 
+        public function index(){
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admin/admin_dashboard', $data);
+        }
 
-        //User's login authentication
-        public function login(){
+        // public function add_manager(){
+        //     $this->userModel = $this->model('User');
+        //     $data ="";
+        //     $this->view('admin/add_manager', $data);
+        // }
 
-          if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-              
-
-              //Fetch data from request form
-              $data = [
-                  'email' => trim($_POST['email']),
-                  'password' => trim($_POST['password']),
-                  
-                  'email_err' => '',
-                  'password_err' => ''
-
-              ];
-
-              //Validate email and password
-              if(empty($data['email'])){
-                  $data['email_err'] =  " *please enter email";
-              }
-              else{
-
-                  //Check user/email
-                  if($this->userModel->findUserByEmail($data['email'])){
-                  //User found
-
-                  }
-                  
-                  else{
-                      $data['email_err'] = " *User not found";
-                  }
-              }
-
-              //Valid Password
-              if(empty($data['password'])){
-                  $data['password_err'] = " *please enter password";
-              }
-              
-
-              // IF ERRORS FREE, THEN ACCORDING TO USER ROLE NEED TO CREATE SEASSION AND LAND IN TO HIS/HER OWNS PAGE
-              if(empty($data['email_err']) && empty($data['password_err'])){
-
-                  //Authentication user's email & password
-                  $loggedInUser = $this->userModel->login($data['email'], $data['password']);
-
-                  if($loggedInUser){
-                      $this->createUserSession($loggedInUser);
-                  }
-                  else{
-                      $data['password_err'] = " *incorrect password";
-                      $this->view('users/login', $data);
-                  }
-              }
-              else{
-                  $this->view('users/login', $data);
-              }
-
-
-          }
-          else{
-
-              //If request is not POST then this scope will be execute
-
-              $data = [
-
-                  'email' => '',
-                  'password' => '',
-
-                  'email_err' => '',
-                  'password_err' => ''
-
-              ];
-              $this->view('users/login', $data);
-          }
-
-      }
-
-        private function generateUserID($lastUserID)
+        private function getLastUserID_manager($lastUserID)
         {    
 
             if($lastUserID == " ")
              {
-                 $user_ID = "C00001";
+                 $user_ID = "M00001";
              }
              else
              {
                  $user_ID = substr($lastUserID, 5);
                  $user_ID = intval($user_ID);
-                 $user_ID = "C0000" . ($user_ID+1);
+                 $user_ID = "M0000" . ($user_ID+1);
 
-            //     preg_match('/C(\d+)/', $lastid, $matches);
-            //     $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
+            
              }
           
-            //  if (empty($lastUserID)) {
-            //      return 'C00001';
-            //  }
-
-            //  elseif (preg_match('/U(\d+)/', $lastUserID, $matches)) {
-            //   $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
-            //   echo'hello';
-            // } else {
-            //     // Handle the error, for example, by logging the error message.
-            //     error_log("Error: Failed to match pattern in preg_match()");
-            // }
-          
-    
-            // // preg_match('/U(\d+)/', $lastUserID, $matches);
-            // // $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
-            // if (isset($matches[1])) {
-            //   $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
-            // } else {
-            //     // handle the error, for example, by logging it or returning a default value
-            //     $user_ID = "C00001";
-            // }
+           
     
             return $user_ID;
         }
 
-     
 
-
-        public function register(){
-
-
-            
+        public function add_manager(){
+ 
 
 
             // Check for POST
@@ -154,10 +55,10 @@
               $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
               // Get the latest user ID
-              $lastUserID = $this->model('User')->getLastUserID();
+              $lastUserID = $this->model('Admin')->getLastUserID();
 
               // Generate the new user ID
-              $user_ID = $this->generateUserID($lastUserID);
+              $user_ID = $this->getLastUserID_manager($lastUserID);
 
               // Save the new user to the database
               //$this->model('User')->register($user_ID);
@@ -255,7 +156,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->register($data)){
+                if($this->userModel->add_manager($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
@@ -264,7 +165,7 @@
       
               } else {
                 // Load view with errors
-                $this->view('users/register', $data);
+                $this->view('admins/add_manager', $data);
               }
       
             } else {
@@ -292,30 +193,16 @@
               ];
       
               // Load view
-              $this->view('users/register', $data);
+              $this->view('admins/add_manager', $data);
 
               
             }
           }
 
 
-          //Create Session
-          public function createUserSession($user){
-           
-            //Store session data
-            $_SESSION['user_fName'] = $user->fName;
-            $_SESSION['user_lName'] = $user->lName;
-            $_SESSION['user_role'] = $user->user_role;
-            
-            if($_SESSION['user_role'] == "customer"){
-              header("Location: ".URLROOT."/HomePage");
-            }
-
-            
-
-          }
 
 
-        
+
+
+
     }
-
