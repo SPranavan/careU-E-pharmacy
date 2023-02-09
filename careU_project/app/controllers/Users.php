@@ -95,19 +95,76 @@
 
       }
 
+        private function generateUserID($lastUserID)
+        {    
+
+            if($lastUserID == " ")
+             {
+                 $user_ID = "C00001";
+             }
+             else
+             {
+                 $user_ID = substr($lastUserID, 5);
+                 $user_ID = intval($user_ID);
+                 $user_ID = "C0000" . ($user_ID+1);
+
+            //     preg_match('/C(\d+)/', $lastid, $matches);
+            //     $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
+             }
+          
+            //  if (empty($lastUserID)) {
+            //      return 'C00001';
+            //  }
+
+            //  elseif (preg_match('/U(\d+)/', $lastUserID, $matches)) {
+            //   $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
+            //   echo'hello';
+            // } else {
+            //     // Handle the error, for example, by logging the error message.
+            //     error_log("Error: Failed to match pattern in preg_match()");
+            // }
+          
+    
+            // // preg_match('/U(\d+)/', $lastUserID, $matches);
+            // // $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
+            // if (isset($matches[1])) {
+            //   $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
+            // } else {
+            //     // handle the error, for example, by logging it or returning a default value
+            //     $user_ID = "C00001";
+            // }
+    
+            return $user_ID;
+        }
+
      
 
 
         public function register(){
+
+
+            
+
+
             // Check for POST
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
               // Process form
         
               // Sanitize POST data
               $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+              // Get the latest user ID
+              $lastUserID = $this->model('User')->getLastUserID();
+
+              // Generate the new user ID
+              $user_ID = $this->generateUserID($lastUserID);
+
+              // Save the new user to the database
+              //$this->model('User')->register($user_ID);
       
               // Init data
               $data =[
+                'user_ID' => $user_ID,
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
                 'mobile' => trim($_POST['mobile']),
@@ -116,6 +173,7 @@
                 'city' => trim($_POST['city']),
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
+                'user_role' => 'customer',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -212,6 +270,7 @@
             } else {
               // Init data
               $data =[
+                'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
                 'mobile' => '',
@@ -220,6 +279,7 @@
                 'city' => '',
                 'password' => '',
                 'confirm_password' => '',
+                'user_role' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',

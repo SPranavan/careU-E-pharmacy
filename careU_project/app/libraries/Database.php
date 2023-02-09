@@ -38,6 +38,16 @@
       $this->stmt = $this->dbh->prepare($sql);
     }
 
+    public function prepare($query)
+    {
+        $stmt = $this->dbh->prepare($query);
+        return $stmt;
+    }
+
+   
+
+
+
     // Bind values
     public function bind($param, $value, $type = null){
       if(is_null($type)){
