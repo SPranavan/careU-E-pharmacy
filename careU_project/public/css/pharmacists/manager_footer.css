@@ -1,0 +1,120 @@
+footer{
+    left: 0px;
+    position: absolute;
+
+
+    margin-top: 800px;
+    width: 100%;
+    background-color: #023E58;  
+}
+    
+.about span{
+      
+      float: left;
+      color: white;
+      font-family: 'Roboto';
+      text-align: center;
+      margin-left: 30px;
+      margin-right: 10px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 400px;
+      margin-top: 40px;
+}
+  
+.terms span{
+      float: left;
+      color: white;
+      font-family: 'Roboto';
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 400px;
+      margin-top: 40px;
+}
+  
+.left-bottom{
+      margin-top: 40px;
+      margin-left: 30px;
+  
+}
+
+.all{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 10px;
+      color: #FCFBFD;
+      letter-spacing: 0.5px;
+}
+  
+.copyright{
+      float: left;
+      height: 11px;
+}
+  
+.right{
+      float: right;
+      
+}
+  
+.contact{
+      margin-top: -75px;
+      right: 45px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 28px;
+      color: #FFFFFF;
+      align-self: center;
+      padding-left: 31px;
+      word-spacing: 2px;
+}
+  
+  
+.call{
+      width: 20px;
+      height: 20px;
+      margin-top: -30px;
+      margin-bottom: 25px;
+      
+}
+  
+.num{
+      margin-top: -55px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 32px;
+      margin-right: 45px;
+      margin-left: 20px;
+      color: #FFFFFF;
+      word-spacing: 2px;
+}
+
+.right-bottom2{
+      margin-top: -35px;
+    
+}
+  
+.wa{
+      width: 30px;
+      height: 30px;
+      
+}
+  
+.fb{
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+      margin-left: 15px;
+      
+}
+  
+.insta{
+      width: 32px;
+      height: 32px;
+      
+}
