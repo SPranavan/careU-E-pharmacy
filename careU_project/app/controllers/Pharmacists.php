@@ -20,105 +20,105 @@
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/home_page', $data);
+            $this->view('pharmacists/home_page', $data);
         }
 
         public function accepted_orders()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/accepted_orders', $data);
+            $this->view('pharmacists/accepted_orders', $data);
         }
 
         public function available_prescription()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/available_prescription', $data);
+            $this->view('pharmacists/available_prescription', $data);
         }
 
         public function completed_orders()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/completed_orders', $data);
+            $this->view('pharmacists/completed_orders', $data);
         }
 
         public function completed_prescription()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/completed_prescription', $data);
+            $this->view('pharmacists/completed_prescription', $data);
         }
 
         public function create_new_prescription()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/create_new_prescription', $data);
+            $this->view('pharmacists/create_new_prescription', $data);
         }
 
         public function created_prescription()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/created_prescription', $data);
+            $this->view('pharmacists/created_prescription', $data);
         }
 
         public function new_order()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/new_order', $data);
+            $this->view('pharmacists/new_order', $data);
         }
 
         public function prescription_acailable()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/prescription_available', $data);
+            $this->view('pharmacists/prescription_available', $data);
         }
 
         public function product_medicine_heart()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/product_medicine_heart', $data);
+            $this->view('pharmacists/product_medicine_heart', $data);
         }
 
         public function product_medicine_diabetes()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/product_medicine_diabetes', $data);
+            $this->view('pharmacists/product_medicine_diabetes', $data);
         }
 
         public function product_medicine_gastro()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/product_medicine_gastro', $data);
+            $this->view('pharmacists/product_medicine_gastro', $data);
         }
 
         public function product_medicine_infection()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/product_medicine_infection', $data);
+            $this->view('pharmacists/product_medicine_infection', $data);
         }
 
         public function product_medicine_muscle()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/product_medicine_muscle', $data);
+            $this->view('pharmacists/product_medicine_muscle', $data);
         }
 
         public function view_a_prescription()
         {
             $this->userModel = $this->model('User');
             $data ="";
-            $this->view('pharmacist/view_a_prescription', $data);
+            $this->view('pharmacists/view_a_prescription', $data);
         }
 
 
