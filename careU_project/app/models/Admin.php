@@ -9,6 +9,9 @@
         }
 
 
+       
+
+
         public function findUserByEmail($email){
             $this->db->query("SELECT * FROM users where email = :email");
             $this->db->bind(':email', $email);

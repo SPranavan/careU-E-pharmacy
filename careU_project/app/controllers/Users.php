@@ -306,14 +306,47 @@
             $_SESSION['user_fName'] = $user->fName;
             $_SESSION['user_lName'] = $user->lName;
             $_SESSION['user_role'] = $user->user_role;
-            
+  
             if($_SESSION['user_role'] == "customer"){
-              header("Location: ".URLROOT."/HomePage");
+              //header("Location: ".URLROOT."/HomePage");
+              redirect('customers/myaccount');
+            }
+            elseif($_SESSION['user_role'] == "admin"){
+              //header("Location: ".URLROOT."/admin_dashboard");
+              redirect('admins/admin_dashboard');
+            }
+            elseif($_SESSION['user_role'] == "pharmacist"){
+              //header("Location: ".URLROOT."/admin_dashboard");
+              redirect('pharmacists/home_page');
+            }
+            elseif($_SESSION['user_role'] == "manager"){
+              //header("Location: ".URLROOT."/admin_dashboard");
+              redirect('managers/dashboard');
+            }
+            elseif($_SESSION['user_role'] == "storekeeper"){
+              //header("Location: ".URLROOT."/admin_dashboard");
+              redirect('storekeepers/Add_medicine');
+            }
+            elseif($_SESSION['user_role'] == "deliveryperson"){
+              //header("Location: ".URLROOT."/admin_dashboard");
             }
 
             
 
           }
+
+
+          public function logout(){
+            // DESTROY USER DETAILS
+            
+            unset($_SESSION['user_fName']);
+            unset($_SESSION['user_lName']);
+            unset($_SESSION['user_role']);
+           
+
+            session_destroy();
+            redirect('users/login');
+        }
 
 
         

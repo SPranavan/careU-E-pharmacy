@@ -12,7 +12,43 @@
         public function index(){
             $this->userModel = $this->model('Admin');
             $data ="";
-            $this->view('admin/admin_dashboard', $data);
+            $this->view('admins/admin_dashboard', $data);
+        }
+
+
+        public function view_manager()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/view_manager', $data);
+        }
+
+        public function view_pharmacist()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/view_pharmacist', $data);
+        }
+
+        public function view_storekeeper()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/view_storekeeper', $data);
+        }
+
+        public function view_deliveryperson()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/view_deliveryperson', $data);
+        }
+
+        public function view_customer()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/view_customer', $data);
         }
 
         // public function add_manager(){
@@ -20,6 +56,45 @@
         //     $data ="";
         //     $this->view('admin/add_manager', $data);
         // }
+
+
+        public function delete_manager()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/delete_manager', $data);
+        }
+
+        public function delete_pharmacist()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/delete_pharmacist', $data);
+        }
+
+        public function delete_storekeeper()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/delete_storekeeper', $data);
+        }
+
+        public function delete_deliveryperson()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/delete_deliveryperson', $data);
+        }
+
+        public function delete_customer()
+        {
+            $this->userModel = $this->model('Admin');
+            $data ="";
+            $this->view('admins/delete_customer', $data);
+        }
+        
+        
+
 
 
 
