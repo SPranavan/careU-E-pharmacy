@@ -166,16 +166,16 @@
       
               // Validate Email
               if(empty($data['email'])){
-                $data['email_err'] = 'Please enter email';
+                $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
                 if($this->userModel->findUserByEmail($data['email'])){
-                  $data['email_err'] = 'Email is already taken';
+                  $data['email_err'] = 'This email is already taken';
                 }
               }
       
               if(empty($data['mobile'])){
-                  $data['mobile_err'] = 'Pleae enter mobile number';
+                  $data['mobile_err'] = 'Please enter your mobile number';
                } 
               elseif(strlen($data['mobile']) !== 10){
                 $data['mobile_err'] = 'Please enter a valid mobile number';
@@ -184,7 +184,7 @@
               else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
-                    $data['mobile_err'] = 'mobile number is already taken';
+                    $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
 
@@ -194,15 +194,15 @@
       
               // Validate Name
               if(empty($data['fName'])){
-                $data['fName_err'] = 'Please enter first name';
+                $data['fName_err'] = 'Please enter your first name';
               }
       
               if(empty($data['lName'])){
-                  $data['lName_err'] = 'Please enter last name';
+                  $data['lName_err'] = 'Please enter your last name';
               }
       
               if(empty($data['address'])){
-                  $data['address_err'] = 'Please enter address';
+                  $data['address_err'] = 'Please enter your address';
               }
       
               if(empty($data['city'])){
@@ -351,26 +351,25 @@
       
               // Validate Email
               if(empty($data['email'])){
-                $data['email_err'] = 'Please enter email';
+                $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
                 if($this->userModel->findUserByEmail($data['email'])){
-                  $data['email_err'] = 'Email is already taken';
+                  $data['email_err'] = 'This email is already taken';
                 }
               }
       
               if(empty($data['mobile'])){
-                  $data['mobile_err'] = 'Please enter mobile number';
+                  $data['mobile_err'] = 'Please enter your mobile number';
                } 
-               elseif(strlen($data['mobile']) !== 10){
-                  $data['mobile_err'] = 'Please enter a valid mobile number';
-               }
-              
-              
-               else {
+              elseif(strlen($data['mobile']) !== 10){
+                $data['mobile_err'] = 'Please enter a valid mobile number';
+              } 
+               
+              else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
-                    $data['mobile_err'] = 'mobile number is already taken';
+                    $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
 
@@ -380,15 +379,15 @@
       
               // Validate Name
               if(empty($data['fName'])){
-                $data['fName_err'] = 'Please enter first name';
+                $data['fName_err'] = 'Please enter your first name';
               }
       
               if(empty($data['lName'])){
-                  $data['lName_err'] = 'Please enter last name';
+                  $data['lName_err'] = 'Please enter your last name';
               }
       
               if(empty($data['address'])){
-                  $data['address_err'] = 'Please enter address';
+                  $data['address_err'] = 'Please enter your address';
               }
       
               if(empty($data['city'])){
@@ -535,24 +534,25 @@
       
               // Validate Email
               if(empty($data['email'])){
-                $data['email_err'] = 'Please enter email';
+                $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
                 if($this->userModel->findUserByEmail($data['email'])){
-                  $data['email_err'] = 'Email is already taken';
+                  $data['email_err'] = 'This email is already taken';
                 }
               }
       
               if(empty($data['mobile'])){
-                  $data['mobile_err'] = 'Pleae enter mobile number';
-               }
+                  $data['mobile_err'] = 'Please enter your mobile number';
+               } 
               elseif(strlen($data['mobile']) !== 10){
                 $data['mobile_err'] = 'Please enter a valid mobile number';
               } 
+               
               else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
-                    $data['mobile_err'] = 'mobile number is already taken';
+                    $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
 
@@ -562,15 +562,15 @@
       
               // Validate Name
               if(empty($data['fName'])){
-                $data['fName_err'] = 'Please enter first name';
+                $data['fName_err'] = 'Please enter your first name';
               }
       
               if(empty($data['lName'])){
-                  $data['lName_err'] = 'Please enter last name';
+                  $data['lName_err'] = 'Please enter your last name';
               }
       
               if(empty($data['address'])){
-                  $data['address_err'] = 'Please enter address';
+                  $data['address_err'] = 'Please enter your address';
               }
       
               if(empty($data['city'])){
@@ -719,24 +719,25 @@
       
               // Validate Email
               if(empty($data['email'])){
-                $data['email_err'] = 'Please enter email';
+                $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
                 if($this->userModel->findUserByEmail($data['email'])){
-                  $data['email_err'] = 'Email is already taken';
+                  $data['email_err'] = 'This email is already taken';
                 }
               }
       
               if(empty($data['mobile'])){
-                  $data['mobile_err'] = 'Pleae enter mobile number';
+                  $data['mobile_err'] = 'Please enter your mobile number';
                } 
               elseif(strlen($data['mobile']) !== 10){
                 $data['mobile_err'] = 'Please enter a valid mobile number';
-              }
-               else {
+              } 
+               
+              else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
-                    $data['mobile_err'] = 'mobile number is already taken';
+                    $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
 
@@ -746,15 +747,15 @@
       
               // Validate Name
               if(empty($data['fName'])){
-                $data['fName_err'] = 'Please enter first name';
+                $data['fName_err'] = 'Please enter your first name';
               }
       
               if(empty($data['lName'])){
-                  $data['lName_err'] = 'Please enter last name';
+                  $data['lName_err'] = 'Please enter your last name';
               }
       
               if(empty($data['address'])){
-                  $data['address_err'] = 'Please enter address';
+                  $data['address_err'] = 'Please enter your address';
               }
       
               if(empty($data['city'])){
