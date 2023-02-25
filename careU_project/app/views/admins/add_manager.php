@@ -31,7 +31,7 @@
                     <div class="col-75">
                         <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>"><br>
                         <span style="color: red;"><?php echo $data['fName_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -41,7 +41,7 @@
                     <div class="col-75">
                         <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['lName_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -51,7 +51,7 @@
                     <div class="col-75">
                         <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['mobile_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -61,7 +61,7 @@
                     <div class="col-75">
                         <input type="email" id="mail" name="email" value="<?php echo $data['email']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['email_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -71,7 +71,7 @@
                     <div class="col-75">
                         <input type="text" id="sa" name="address" value="<?php echo $data['address']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['address_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -85,7 +85,7 @@
                         <option value="Jaffna">Jaffna</option>
                         </select>
                         <span style="color: red;"><?php echo $data['city_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -95,7 +95,7 @@
                     <div class="col-75">
                         <input type="password" id="pw" name="password" value="<?php echo $data['password']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['password_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     <div class="row">
@@ -105,7 +105,7 @@
                     <div class="col-75">
                         <input type="password" id="cpw" name="confirm_password" value="<?php echo $data['confirm_password']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['confirm_password_err'];?></span>
-                        <br>
+                        <br><br>
                     </div>
                     </div>
                     
