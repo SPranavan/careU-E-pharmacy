@@ -176,7 +176,12 @@
       
               if(empty($data['mobile'])){
                   $data['mobile_err'] = 'Pleae enter mobile number';
-               } else {
+               } 
+              elseif(strlen($data['mobile']) !== 10){
+                $data['mobile_err'] = 'Please enter a valid mobile number';
+              } 
+               
+              else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'mobile number is already taken';
@@ -355,8 +360,14 @@
               }
       
               if(empty($data['mobile'])){
-                  $data['mobile_err'] = 'Pleae enter mobile number';
-               } else {
+                  $data['mobile_err'] = 'Please enter mobile number';
+               } 
+               elseif(strlen($data['mobile']) !== 10){
+                  $data['mobile_err'] = 'Please enter a valid mobile number';
+               }
+              
+              
+               else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'mobile number is already taken';
@@ -534,7 +545,11 @@
       
               if(empty($data['mobile'])){
                   $data['mobile_err'] = 'Pleae enter mobile number';
-               } else {
+               }
+              elseif(strlen($data['mobile']) !== 10){
+                $data['mobile_err'] = 'Please enter a valid mobile number';
+              } 
+              else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'mobile number is already taken';
@@ -592,7 +607,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->add_pharmacist($data)){
+                if($this->userModel->add_storekeeper($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
@@ -714,7 +729,11 @@
       
               if(empty($data['mobile'])){
                   $data['mobile_err'] = 'Pleae enter mobile number';
-               } else {
+               } 
+              elseif(strlen($data['mobile']) !== 10){
+                $data['mobile_err'] = 'Please enter a valid mobile number';
+              }
+               else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'mobile number is already taken';
@@ -772,7 +791,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->add_pharmacist($data)){
+                if($this->userModel->add_deliveryperson($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
