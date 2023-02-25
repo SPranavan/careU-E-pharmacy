@@ -3,11 +3,12 @@
     <main class="content">
 
     <div class="box2">
-    <a href="<?php echo URLROOT; ?>/admins/delete_manager"><span class="actor">Manager</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/delete_pharmacist"><span class="actor1">Pharmacist</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/delete_storekeeper"><span class="actor">Store Keeper</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/delete_deliveryperson"><span class="actor">Delivery Person</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/delete_customer"><span class="actor">Customer</span></a><br><br>
+    
+        <a href="<?php echo URLROOT; ?>/admins/view_manager"><span class="actor">Manager</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/view_pharmacist"><span class="actor1">Pharmacist</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/view_storekeeper"><span class="actor">Store Keeper</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/view_deliveryperson"><span class="actor">Delivery Person</span></a><br><br>
+        <a href="<?php echo URLROOT; ?>/admins/view_customer"><span class="actor">Customer</span></a><br><br>
     </div>
 
     

@@ -55,24 +55,26 @@
 
 
 .body-right-view{
-    position: absolute;
+    /* position: absolute; */
     float: right;
     margin-top: 0.5%;
     width: 100%;
-    left: 570px;
+    /* left: 50%; */
+    /* margin-left: 20%; */
 }
 
 .container2-view {
     padding-top: 20px;
     padding-bottom: 30px;
-    left: 800px;
+    /* left: 800px; */
     border-radius: 10px;
     background-color: #F1F1E6;
-    width: 55%;
+    width: 61%;
     height: auto;
     margin-bottom: 5px;
     box-sizing: border-box;
     margin-top: -5px;
+    margin-left: 35%;
     
     
 }
@@ -86,6 +88,7 @@
     font-size: 20px;
     line-height: 20px;
     color: #000000;
+    margin-left: 35%;
   }
 
 
