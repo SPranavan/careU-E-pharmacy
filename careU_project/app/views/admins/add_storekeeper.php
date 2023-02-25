@@ -49,7 +49,7 @@
                         <label for="telNo">Mobile Number:</label>
                     </div>
                     <div class="col-75">
-                        <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" ><br>
+                        <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" placeholder="07Xxxxxxxx"><br>
                         <span style="color: red;"><?php echo $data['mobile_err'];?></span>
                         <br><br>
                     </div>
