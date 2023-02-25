@@ -29,7 +29,7 @@
                         <label for="fname">First Name:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="fname" name="fName" value="" required>
+                        <input type="text" id="fname" name="fName" value="" >
                     </div>
                     </div>
                     <div class="row">
@@ -37,7 +37,7 @@
                         <label for="lname">Last Name:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="lname" name="lName" value="" required>
+                        <input type="text" id="lname" name="lName" value="" >
                     </div>
                     </div>
                     <div class="row">
@@ -45,7 +45,7 @@
                         <label for="telNo">Mobile Number:</label>
                     </div>
                     <div class="col-75">
-                        <input type="tel" id="telNo" name="mobile" value="" required>
+                        <input type="tel" id="telNo" name="mobile" value="" >
                     </div>
                     </div>
                     <div class="row">
@@ -53,7 +53,7 @@
                         <label for="mail">Email:</label>
                     </div>
                     <div class="col-75">
-                        <input type="email" id="mail" name="email" value="" required>
+                        <input type="email" id="mail" name="email" value="" >
                     </div>
                     </div>
                     <div class="row">
@@ -61,7 +61,7 @@
                         <label for="sa">Street Address:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="sa" name="address" value="" required>
+                        <input type="text" id="sa" name="address" value="" >
                     </div>
                     </div>
                     <div class="row">
@@ -81,7 +81,7 @@
                         <label for="pw">Password:</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="pw" name="password" value="" required>
+                        <input type="password" id="pw" name="password" value="" >
                     </div>
                     </div>
                     <div class="row">
@@ -89,7 +89,7 @@
                         <label for="cpw">Confirm Password:</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="cpw" name="confirm_password" value="" required>
+                        <input type="password" id="cpw" name="confirm_password" value="" >
                     </div>
                     </div>
                     

@@ -29,7 +29,7 @@
                         <label for="fname">First Name:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>" required>
+                        <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>" >
                     </div>
                     </div>
                     <div class="row">
@@ -37,7 +37,7 @@
                         <label for="lname">Last Name:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>" required>
+                        <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>" >
                     </div>
                     </div>
                     <div class="row">
@@ -45,7 +45,7 @@
                         <label for="telNo">Mobile Number:</label>
                     </div>
                     <div class="col-75">
-                        <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" required>
+                        <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" >
                     </div>
                     </div>
                     <div class="row">
@@ -53,7 +53,7 @@
                         <label for="mail">Email:</label>
                     </div>
                     <div class="col-75">
-                        <input type="email" id="mail" name="email" value="<?php echo $data['email']; ?>" required>
+                        <input type="email" id="mail" name="email" value="<?php echo $data['email']; ?>" >
                     </div>
                     </div>
                     <div class="row">
@@ -61,7 +61,7 @@
                         <label for="sa">Street Address:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="sa" name="address" value="<?php echo $data['address']; ?>" required>
+                        <input type="text" id="sa" name="address" value="<?php echo $data['address']; ?>" >
                     </div>
                     </div>
                     <div class="row">
@@ -81,7 +81,7 @@
                         <label for="pw">Password:</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="pw" name="password" value="<?php echo $data['password']; ?>" required>
+                        <input type="password" id="pw" name="password" value="<?php echo $data['password']; ?>" >
                     </div>
                     </div>
                     <div class="row">
@@ -89,7 +89,7 @@
                         <label for="cpw">Confirm Password:</label>
                     </div>
                     <div class="col-75">
-                        <input type="password" id="cpw" name="confirm_password" value="<?php echo $data['confirm_password']; ?>" required>
+                        <input type="password" id="cpw" name="confirm_password" value="<?php echo $data['confirm_password']; ?>" >
                     </div>
                     </div>
                     
