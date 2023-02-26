@@ -2,15 +2,15 @@
 
     class admins extends Controller{
 
-        private $userModel;
+        private $adminModel;
 
         public function __construct()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
         }
 
         public function index(){
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/admin_dashboard', $data);
         }
@@ -18,35 +18,42 @@
 
         public function view_manager()
         {
-            $this->userModel = $this->model('Admin');
-            $data ="";
+            // $this->userModel = $this->model('Admin');
+            // $data ="";
+            // $this->view('admins/view_manager', $data);
+
+            $ManagerDetails = $this->adminModel->view_managers();
+            $data = [
+              'manager_details' => $ManagerDetails
+            ];
+
             $this->view('admins/view_manager', $data);
         }
 
         public function view_pharmacist()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/view_pharmacist', $data);
         }
 
         public function view_storekeeper()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/view_storekeeper', $data);
         }
 
         public function view_deliveryperson()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/view_deliveryperson', $data);
         }
 
         public function view_customer()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/view_customer', $data);
         }
@@ -60,35 +67,35 @@
 
         public function delete_manager()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/delete_manager', $data);
         }
 
         public function delete_pharmacist()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/delete_pharmacist', $data);
         }
 
         public function delete_storekeeper()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/delete_storekeeper', $data);
         }
 
         public function delete_deliveryperson()
         {
-            $this->userModel = $this->model('Admin');
-            $data ="";
+            $this->adminModel = $this->model('Admin');
+            $data = $this->adminModel;
             $this->view('admins/delete_deliveryperson', $data);
         }
 
         public function delete_customer()
         {
-            $this->userModel = $this->model('Admin');
+            $this->adminModel = $this->model('Admin');
             $data ="";
             $this->view('admins/delete_customer', $data);
         }
@@ -169,7 +176,7 @@
                 $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
-                if($this->userModel->findUserByEmail($data['email'])){
+                if($this->adminModel->findUserByEmail($data['email'])){
                   $data['email_err'] = 'This email is already taken';
                 }
               }
@@ -183,7 +190,7 @@
                
               else {
                   // Check mobile
-                  if($this->userModel->findUserByMobile($data['mobile'])){
+                  if($this->adminModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
@@ -239,7 +246,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->add_manager($data)){
+                if($this->adminModel->add_manager($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
@@ -354,7 +361,7 @@
                 $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
-                if($this->userModel->findUserByEmail($data['email'])){
+                if($this->adminModel->findUserByEmail($data['email'])){
                   $data['email_err'] = 'This email is already taken';
                 }
               }
@@ -368,7 +375,7 @@
                
               else {
                   // Check mobile
-                  if($this->userModel->findUserByMobile($data['mobile'])){
+                  if($this->adminModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
@@ -424,7 +431,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->add_pharmacist($data)){
+                if($this->adminModel->add_pharmacist($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
@@ -537,7 +544,7 @@
                 $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
-                if($this->userModel->findUserByEmail($data['email'])){
+                if($this->adminModel->findUserByEmail($data['email'])){
                   $data['email_err'] = 'This email is already taken';
                 }
               }
@@ -551,7 +558,7 @@
                
               else {
                   // Check mobile
-                  if($this->userModel->findUserByMobile($data['mobile'])){
+                  if($this->adminModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
@@ -607,7 +614,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->add_storekeeper($data)){
+                if($this->adminModel->add_storekeeper($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
@@ -722,7 +729,7 @@
                 $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
-                if($this->userModel->findUserByEmail($data['email'])){
+                if($this->adminModel->findUserByEmail($data['email'])){
                   $data['email_err'] = 'This email is already taken';
                 }
               }
@@ -736,7 +743,7 @@
                
               else {
                   // Check mobile
-                  if($this->userModel->findUserByMobile($data['mobile'])){
+                  if($this->adminModel->findUserByMobile($data['mobile'])){
                     $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
@@ -792,7 +799,7 @@
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
       
                 // Register User
-                if($this->userModel->add_deliveryperson($data)){
+                if($this->adminModel->add_deliveryperson($data)){
                   //flash('register_success', 'You are registered and can log in');
                   redirect('users/login');
                 } else {
@@ -834,6 +841,8 @@
               
             }
           }
+
+         
 
 
 

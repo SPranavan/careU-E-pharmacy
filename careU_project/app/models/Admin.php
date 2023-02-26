@@ -174,6 +174,17 @@
             }
         }
 
+        public function view_managers(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'manager'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
 
             
     }
+
+    
