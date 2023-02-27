@@ -210,6 +210,15 @@
 
         }
 
+        public function view_customer(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'customer'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
 
             
     }
