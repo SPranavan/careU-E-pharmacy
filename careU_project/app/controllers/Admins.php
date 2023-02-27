@@ -35,12 +35,12 @@
             // $this->adminModel = $this->model('Admin');
             // $data ="";
             // $this->view('admins/view_pharmacist', $data);
-            $ManagerDetails = $this->adminModel->view_managers();
+            $PharmacistDetails = $this->adminModel->view_pharmacist();
             $data = [
-              'manager_details' => $ManagerDetails
+              'pharmacist_details' => $PharmacistDetails
             ];
 
-            $this->view('admins/view_manager', $data);
+            $this->view('admins/view_pharmacist', $data);
         }
 
         public function view_storekeeper()
