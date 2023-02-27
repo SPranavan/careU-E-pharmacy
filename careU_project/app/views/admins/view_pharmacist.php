@@ -17,7 +17,7 @@
             <div class="container2-view">
             <table>
                     <tr>
-                        <th style="width:13%">Manager ID</th>
+                        <th style="width:13%">Pharmacist ID</th>
                         <th style="width:30%">Full Name</th>
                         <th style="width:20%">Contact Number</th>
                         <th style="width:30%">Email</th>
