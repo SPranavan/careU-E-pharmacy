@@ -65,9 +65,14 @@
 
         public function view_customer()
         {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/view_customer', $data);
+
+          $Customer = $this->adminModel->view_customer();
+          $data = [
+            'customer_details' => $Customer
+          ];
+
+          $this->view('admins/view_customer', $data);
+            
         }
 
         // public function add_manager(){
