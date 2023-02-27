@@ -55,9 +55,12 @@
 
         public function view_deliveryperson()
         {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/view_deliveryperson', $data);
+          $DeliveryPerson = $this->adminModel->view_deliveryperson();
+          $data = [
+            'deliveryperson_details' => $DeliveryPerson
+          ];
+
+          $this->view('admins/view_deliveryperson', $data);
         }
 
         public function view_customer()
