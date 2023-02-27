@@ -17,11 +17,11 @@
             <div class="container2-view">
             <table>
                     <tr>
-                        <th style="width:13%">Pharmacist ID</th>
-                        <th style="width:30%">Name</th>
-                        <th style="width:15%">Contact Number</th>
+                        <th style="width:13%">Manager ID</th>
+                        <th style="width:30%">Full Name</th>
+                        <th style="width:20%">Contact Number</th>
                         <th style="width:30%">Email</th>
-                        <th style="width:25%">&nbsp</th>
+                        <th style="width:20%">&nbsp</th>
                     </tr>
                     <!-- PHP CODE TO FETCH DATA FROM ROWS -->
                     <?php foreach($data['pharmacist_details'] as $mObject) : ?>
