@@ -183,6 +183,15 @@
 
         }
 
+        public function view_pharmacist(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'pharmacist'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
 
             
     }
