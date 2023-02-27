@@ -17,8 +17,8 @@
             <div class="container2-view">
             <table>
                     <tr>
-                        <th style="width:13%">Pharmacist ID</th>
-                        <th style="width:30%">Full Name</th>
+                        <th style="width:15%">Pharmacist ID</th>
+                        <th style="width:27%">Full Name</th>
                         <th style="width:20%">Contact Number</th>
                         <th style="width:30%">Email</th>
                         <th style="width:20%">&nbsp</th>

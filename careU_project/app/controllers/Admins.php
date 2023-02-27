@@ -9,6 +9,7 @@
             $this->adminModel = $this->model('Admin');
         }
 
+        //Controller for admin's dashboard
         public function index(){
             $this->adminModel = $this->model('Admin');
             $data ="";
@@ -16,6 +17,7 @@
         }
 
 
+        /* Controller for view manager details */
         public function view_manager()
         {
             // $this->userModel = $this->model('Admin');

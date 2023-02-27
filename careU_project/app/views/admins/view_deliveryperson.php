@@ -16,9 +16,9 @@
             <div class="container2-view">
             <table>
                     <tr>
-                        <th style="width:13%">Delivery Person ID</th>
-                        <th style="width:30%">Name</th>
-                        <th style="width:20%">Contact Number</th>
+                        <th style="width:18%">Delivery Person ID</th>
+                        <th style="width:26%">Name</th>
+                        <th style="width:18%">Contact Number</th>
                         <th style="width:30%">Email</th>
                         <th style="width:20%">&nbsp</th>
                     </tr>
