@@ -109,7 +109,8 @@ table {
   th{
     border-bottom: 1px solid black;
     padding-bottom: 5px;
-    text-align: center;
+    text-align: justify;
+    padding-left: 20px;
   }
   
   
@@ -134,7 +135,8 @@ table {
     font-size: 13px;
     padding: 7px;
     background-color: white;
-    text-align: left;
+    text-align: justify;
+    padding-left: 20px;
     border-bottom: 3px solid #F1F1E6;
     border-top: 15px solid #F1F1E6;
    

@@ -18,8 +18,8 @@
             <table>
                     <tr>
                         <th style="width:13%">Manager ID</th>
-                        <th style="width:33%">Name</th>
-                        <th style="width:17%">Contact Number</th>
+                        <th style="width:30%">Full Name</th>
+                        <th style="width:20%">Contact Number</th>
                         <th style="width:30%">Email</th>
                         <th style="width:20%">&nbsp</th>
                     </tr>
@@ -29,11 +29,11 @@
                         <tr class="dataset1">
                             <!-- FETCHING DATA FROM EACH
                                 ROW OF EVERY COLUMN -->
-                            <td><?php echo $mObject->Employee_ID ?></td>
-                            <td><?php echo $mObject->firstName.$mObject->lastName ?></td>
-                            <td><?php echo $mObject->mobileNumber ?></td>
+                            <td><?php echo $mObject->user_ID ?></td>
+                            <td><?php echo $mObject->fName.$mObject->lName ?></td>
+                            <td><?php echo $mObject->mobile ?></td>
                             <td><?php echo $mObject->email ?></td>
-                            <td class="vm"><a href=""><button class="viewMore"><img src=img/eye.png alt="view more" style="width:30px;height:20px;"></button></a></td>
+                            <td class="vm"><a href=""><button class="viewMore"><img src="<?php echo URLROOT;?>/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button></a></td>
                         </tr>
                     <?php endforeach; ?>
                                       
