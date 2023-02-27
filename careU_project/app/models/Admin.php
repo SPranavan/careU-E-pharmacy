@@ -201,6 +201,15 @@
 
         }
 
+        public function view_deliveryperson(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'deliveryperson'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
 
             
     }
