@@ -192,6 +192,15 @@
 
         }
 
+        public function view_storekeeper(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'view_storekeeper'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
 
             
     }
