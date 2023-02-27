@@ -45,9 +45,12 @@
 
         public function view_storekeeper()
         {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/view_storekeeper', $data);
+          $StoreKeepertDetails = $this->adminModel->view_storekeeper();
+          $data = [
+            'storekeeper_details' => $StoreKeepertDetails
+          ];
+
+          $this->view('admins/view_storekeeper', $data);
         }
 
         public function view_deliveryperson()
