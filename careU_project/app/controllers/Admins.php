@@ -30,6 +30,19 @@
             ];
 
             $this->view('admins/view_manager', $data);
+            // $this->view('admins/delete_manager', $data);
+        }
+
+        public function delete_manager()
+        {
+          $ManagerDetails = $this->adminModel->view_managers();
+          $data = [
+            'manager_details' => $ManagerDetails
+          ];
+
+     
+          $this->view('admins/delete_manager', $data);
+            // $this->view('admins/delete_manager', $data);
         }
 
         public function view_pharmacist()
@@ -84,12 +97,7 @@
         // }
 
 
-        public function delete_manager()
-        {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/delete_manager', $data);
-        }
+        
 
         public function delete_pharmacist()
         {
