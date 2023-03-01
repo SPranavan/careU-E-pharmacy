@@ -58,6 +58,15 @@
             $this->view('admins/view_pharmacist', $data);
         }
 
+        public function delete_pharmacist()
+        {
+            $PharmacistDetails = $this->adminModel->view_pharmacist();
+            $data = [
+              'pharmacist_details' => $PharmacistDetails
+            ];
+            $this->view('admins/delete_pharmacist', $data);
+        }
+
         public function view_storekeeper()
         {
           $StoreKeepertDetails = $this->adminModel->view_storekeeper();
@@ -68,6 +77,15 @@
           $this->view('admins/view_storekeeper', $data);
         }
 
+        public function delete_storekeeper()
+        {
+            $StoreKeepertDetails = $this->adminModel->view_storekeeper();
+            $data = [
+              'storekeeper_details' => $StoreKeepertDetails
+            ];
+            $this->view('admins/delete_storekeeper', $data);
+        }
+
         public function view_deliveryperson()
         {
           $DeliveryPerson = $this->adminModel->view_deliveryperson();
@@ -76,6 +94,15 @@
           ];
 
           $this->view('admins/view_deliveryperson', $data);
+        }
+
+        public function delete_deliveryperson()
+        {
+            $DeliveryPerson = $this->adminModel->view_deliveryperson();
+            $data = [
+              'deliveryperson_details' => $DeliveryPerson
+            ];
+            $this->view('admins/delete_deliveryperson', $data);
         }
 
         public function view_customer()
@@ -96,35 +123,13 @@
         //     $this->view('admin/add_manager', $data);
         // }
 
-
-        
-
-        public function delete_pharmacist()
-        {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/delete_pharmacist', $data);
-        }
-
-        public function delete_storekeeper()
-        {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/delete_storekeeper', $data);
-        }
-
-        public function delete_deliveryperson()
-        {
-            $this->adminModel = $this->model('Admin');
-            $data = $this->adminModel;
-            $this->view('admins/delete_deliveryperson', $data);
-        }
-
         public function delete_customer()
         {
-            $this->adminModel = $this->model('Admin');
-            $data ="";
-            $this->view('admins/delete_customer', $data);
+          $Customer = $this->adminModel->view_customer();
+          $data = [
+            'customer_details' => $Customer
+          ];
+          $this->view('admins/delete_customer', $data);
         }
         
         
