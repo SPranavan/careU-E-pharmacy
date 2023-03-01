@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/pharmacist_header.php'; ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/created_prescription.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/created_prescription.css">
     <!-- <script>
         function showMessage(){
             window.alert("this is a po-up message!");

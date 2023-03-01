@@ -45,7 +45,7 @@
                     
     
                         <div class="topNav-right">
-                            <a href=""><button type="submit" name="submit" class="button1" style="vertical-align:middle"><spa><span>Upload Prescription</span></button></a>
+                            <a href=""><button type="submit" name="submit" class="button1" style="vertical-align:middle"><span><span>Upload Prescription</span></button></a>
                         </div>
     
                     </div>

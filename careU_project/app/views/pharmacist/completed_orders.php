@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/pharmacist_header.php'; ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/completed_orders.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/completed_orders.css">
     <script>
         // Get the modal
         var modal = document.getElementById('id01');

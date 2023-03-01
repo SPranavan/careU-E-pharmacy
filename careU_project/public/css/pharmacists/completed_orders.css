@@ -1,0 +1,209 @@
+.available p {
+    position: absolute;
+    width: 400px;
+    height: 33px;
+    left: 341px;
+    top: 246px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: -23px;
+    color: #000000;
+}
+
+.box{
+    position: absolute;
+    width: 1410px;
+    height: 518px;
+    left: 341px;
+    top: 287px;
+    background: #F1F1E6;
+    border-radius: 15px;
+}
+
+.details {
+
+    position: absolute;
+    width: 1292px;
+    height: 347px;
+    left: 9px;
+    top: -2px;
+    /* background: #F1F1E6; */
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+.details table {
+    margin-top: -43px;
+    width: 100%;
+}
+
+
+
+
+
+/* th {
+    height: 65px;
+    width: 296px;
+}
+
+tr{
+    height: 65px;
+    width: 296px;
+}
+     */
+.details td {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 26px;
+    /* width: 100%; */
+    /* margin-top: 30px; */
+    padding-top: 20px;
+    text-align:center;
+    /* padding-left: 30px; */
+}
+
+.details th {
+    padding-top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+
+/* td {
+    text-align: center;
+} */
+
+.hr1 {
+    width:106%;
+    margin-top: 21px;
+}
+
+
+.hr2 {
+    width: 106%;
+    margin-top: 40px;
+}
+
+
+table {
+    margin-top: -43px;
+}
+
+td button {
+    /* position: absolute; */
+    width: 80px;/*
+    height: 30px;
+    top: 30px; */
+    /* left: 1096px;
+    top: 346px; */
+    color:#F1F1E6;
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* popup */
+/* Float cancel and delete buttons and add an equal width */
+
+
+
+
+
+
+/* Add padding and center-align text to the container */
+.container {
+    padding: 16px;
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    background: #F1F1E6;
+    border-radius: 15px;
+    z-index: 999;
+    margin-top: 231px;
+    margin-left: 450px;
+    border: 1px solid;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background: #F1F1E6;
+    margin: 0 auto 0 auto;
+    /* 5% from the top, 15% from the bottom and centered */
+
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .deletebtn {
+        width: 100%;
+    }
+}
+
+.review {
+    width: 266px;
+    height: 320px;
+}
+
+.sub-btn {
+    width: 108px;
+    height: 42px;
+
+    background: #000000;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+
+
+    color: #FFFFFF;
+}

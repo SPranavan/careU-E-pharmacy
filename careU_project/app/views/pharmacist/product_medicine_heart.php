@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/pharmacist_header.php'; ?>
 
 <head>
-<link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/product_medicine_heart.css">
+<link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/product_medicine_heart.css">
 </head>
 
 
@@ -12,55 +12,38 @@
         <div class="side_options">
             <a class="heart">Heart</a>
             <br>
-            <a>Diabetes</a>
+            <a href="product_medicine_diabetes">Diabetes</a>
             <br>
-            <a>Infection</a>
+            <a href="product_medicine_infection">Infection</a>
             <br>
-            <a>Gastro Infectional System</a>
+            <a href="product_medicine_gastro">Gastro Infectional System</a>
             <br>
-            <a>Muscle and Joint</a>
+            <a href="product_medicine_muscle">Muscle and Joint</a>
 
         </div>
 
 
     </div>
     <div class="details">
-        <div class="box1">
-            <img src="<?php echo URLROOT;?>/public/img/pharmacist/panadol.jpg" alt="call">
-            <p>Item name : </p>
-            <p>Price : </p>
-            <p>Stock : </p>
-        </div>
-        <div class="box2">
-            <img src="<?php echo URLROOT;?>/public/img/pharmacist/vitaminc.jpg" alt="call">
-            <p>Item name : </p>
-            <p>Price : </p>
-            <p>Stock : </p>
-        </div>
-        <div class="box3">
-            <img src="<?php echo URLROOT;?>/public/img/pharmacist/priton.jpg" alt="call">
-            <p>Item name : </p>
-            <p>Price : </p>
-            <p>Stock : </p>
-        </div>
-        <div class="box4">
-            <img src="<?php echo URLROOT;?>/public/img/pharmacist/avomine.png" alt="call">
-            <p>Item name : </p>
-            <p>Price : </p>
-            <p>Stock : </p>
-        </div>
-        <div class="box5">
-            <img src="<?php echo URLROOT;?>/public/img/pharmacist/asprine.jpg" alt="call">
-            <p>Item name : </p>
-            <p>Price : </p>
-            <p>Stock : </p>
-        </div>
-        <div class="box6">
-            <img src="<?php echo URLROOT;?>/public/img/pharmacist/Metformin.jpg" alt="call">
-            <p>Item name : </p>
-            <p>Price : </p>
-            <p>Stock : </p>
-        </div>
+        <?php 
+        $countdata = count($data);
+
+        for ($i=0; $i < $countdata; $i++) { 
+            echo '
+            <div class="box1">
+            <img src="'.URLROOT.'/public/img/pharmacist/panadol.jpg" alt="call">
+            <p>Item name :<span class="data"> '.$data[$i]-> name.' </span> </p>
+                <p>Price :<span class="data"> '.$data[$i]-> price.'</span> </p>
+                <p>Stock :<span class="data"> '.$data[$i]-> quantity.'</span> </p>
+                <p>Quantity :<span class="data"> '.$data[$i]-> quantity_measurement.'</span> </p>
+            </div> ';
+        };
+        
+        
+        
+        ?>
+        
+        
 
     </div>
     

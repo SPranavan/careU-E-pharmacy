@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/pharmacist_header.php'; ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/prescription_available.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/prescription_available.css">
 </head>
 
 

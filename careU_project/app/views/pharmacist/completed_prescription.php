@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/pharmacist_header.php'; ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/completed_prescription.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/completed_prescription.css">
     <script>
         // Get the modal
         var modal = document.getElementById('id01');
@@ -35,43 +35,21 @@
         </tr>
         <hr class="hr2">
         
-
+        <?php
+            $countdata = count($data);
+            for($i =0;$i<$countdata;$i++){
+          ?>      
         <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td></td>
-            <td></td>
+            <td><?php echo $data[$i]->prescriptionID ?></td>
+            <td><?php echo$data[$i]->customerID?></td>
+            <td><?php echo$data[$i]->customer_name?></td>
+            <td><?php echo$data[$i]->date?></td>
+            <td><?php echo$data[$i]->time?></td>
             <td><button>order details</button></td>
-            <td><button class="btn2" onclick="document.getElementById('id01').style.display='block'">Feedback</button></td>
+            <td><button class="btn2" onclick="document.getElementById;('id01').style.display='block'">Feedback</button></td>
         </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td></td>
-            <td></td>
-            <td><button>order details</button></td>
-            <td><button>feedback</button></td>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td></td>
-            <td></td>
-            <td><button>order details</button></td>
-            <td><button>feedback</button></td>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td></td>
-            <td></td>
-            <td><button>order details</button></td>
-            <td><button>feedback</button></td>
-        </tr>
+          <?php  }
+         ?>
     </table>
 
 </div>

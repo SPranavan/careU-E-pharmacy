@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITENAME; ?></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/pharmacist_header.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/footer.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
                         <div class="topNav-right">
                             <div class="login-link">
                                 <img class="login-icon" src="<?php echo URLROOT;?>/public/img/header/Login.png" alt="icon">
-                                <a href="<?php echo URLROOT; ?>/users/login"><h4 class="login-a">LOGIN / </h4></a><a href="<?php echo URLROOT; ?>/users/register"><h4 class="register-a">REGISTER</h4></a>
+                                <a href="<?php echo URLROOT; ?>/users/logout"><h4 class="login-a">LOGOUT</h4></a>
                                 <a href="#"><h4 class="myacc-a"> |&nbsp MY ACCOUNT</h4></a>
                             </div>
     
@@ -41,12 +41,16 @@
                         <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
+
+                    <div class="name">
+                        <p><?php echo $_SESSION['user_fName'] . " " . $_SESSION['user_lName'] ?></p>
+                    </div>
     
                     
     
-                        <div class="topNav-right">
+                        <!-- <div class="topNav-right">
                             <a href=""><button type="submit" name="submit" class="button1" style="vertical-align:middle"><spa><span>Upload Prescription</span></button></a>
-                        </div>
+                        </div> -->
     
                     </div>
     
@@ -67,8 +71,8 @@
                         <button class="dropbtn1">Products</button>
                         <div class="dropdown-content1">
                             <a href="/careU_project/pharmacists/product_medicine_heart">Medicine</a>
-                            <a href="#">Personal Care</a>
-                            <a href="#">Medical Devices</a>
+                            <a href="/careU_project/pharmacists/product_pc_nourishment">Personal Care</a>
+                            <a href="/careU_project/pharmacists/product_md_firstaid">Medical Devices</a>
                             <!-- <a href="#">Gastro Intestinal System</a>
                             <a href="#">Muscle and Joint</a> -->
                         </div>
@@ -83,8 +87,8 @@
                             <a href="/careU_project/pharmacists/available_prescription">Available Prescription</a>
                             <a href="/careU_project/pharmacists/accepted_prescription">Accepted Prescription</a>
                             <a href="/careU_project/pharmacists/completed_prescription">Completed Prescription</a>
-                            <a href="/careU_project/pharmacists/create_new_prescription">Create new Prescription</a>
-                            <a href="/careU_project/pharmacists/created_prescription">Created Prescription</a>
+                            <!-- <a href="/careU_project/pharmacists/create_new_prescription">Create new Prescription</a>
+                            <a href="/careU_project/pharmacists/created_prescription">Created Prescription</a> -->
                             
                         </div>
                         </div>
