@@ -185,6 +185,7 @@
                 'user_ID' => $user_ID,
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
+                'birthDate' => trim($_POST['birthDate']),
                 'mobile' => trim($_POST['mobile']),
                 'email' => trim($_POST['email']),
                 'address' => trim($_POST['address']),
@@ -192,9 +193,11 @@
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'manager',
+                'joinedDate' => date('Y-m-d H:i:s'),
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -239,6 +242,10 @@
               if(empty($data['lName'])){
                   $data['lName_err'] = 'Please enter your last name';
               }
+
+              if(empty($data['birthDate'])){
+                $data['birthDate_err'] = 'Please enter your birth date';
+            }
       
               if(empty($data['address'])){
                   $data['address_err'] = 'Please enter your address';
@@ -269,6 +276,7 @@
                  empty($data['mobile_err']) && 
                  empty($data['fname_err']) && 
                  empty($data['lname_err']) &&
+                 empty($data['birthDate_err']) &&
                  empty($data['address_err']) &&
                  empty($data['city_err']) &&
                  empty($data['password_err']) && empty($data['confirm_password_err'])){
@@ -296,6 +304,7 @@
                 'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
+                'birthDate' => '',
                 'mobile' => '',
                 'email' => '',
                 'address' => '',
@@ -303,9 +312,11 @@
                 'password' => '',
                 'confirm_password' => '',
                 'user_role' => '',
+                'joinedDate' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -370,6 +381,7 @@
                 'user_ID' => $user_ID,
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
+                'birthDate' => trim($_POST['birthDate']),
                 'mobile' => trim($_POST['mobile']),
                 'email' => trim($_POST['email']),
                 'address' => trim($_POST['address']),
@@ -377,9 +389,11 @@
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'pharmacist',
+                'joinedDate' => date('Y-m-d H:i:s'),
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -424,6 +438,10 @@
               if(empty($data['lName'])){
                   $data['lName_err'] = 'Please enter your last name';
               }
+
+              if(empty($data['birthDate'])){
+                $data['birthDate_err'] = 'Please enter your birth date';
+            }
       
               if(empty($data['address'])){
                   $data['address_err'] = 'Please enter your address';
@@ -454,6 +472,7 @@
                  empty($data['mobile_err']) && 
                  empty($data['fname_err']) && 
                  empty($data['lname_err']) &&
+                 empty($data['birthDate_err']) &&
                  empty($data['address_err']) &&
                  empty($data['city_err']) &&
                  empty($data['password_err']) && empty($data['confirm_password_err'])){
@@ -481,6 +500,7 @@
                 'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
+                'birthDate' => '',
                 'mobile' => '',
                 'email' => '',
                 'address' => '',
@@ -488,9 +508,11 @@
                 'password' => '',
                 'confirm_password' => '',
                 'user_role' => '',
+                'joinedDate' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -553,6 +575,7 @@
                 'user_ID' => $user_ID,
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
+                'birthDate' => trim($_POST['birthDate']),
                 'mobile' => trim($_POST['mobile']),
                 'email' => trim($_POST['email']),
                 'address' => trim($_POST['address']),
@@ -560,9 +583,11 @@
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'storekeeper',
+                'joinedDate' => date('Y-m-d H:i:s'),
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -607,6 +632,10 @@
               if(empty($data['lName'])){
                   $data['lName_err'] = 'Please enter your last name';
               }
+
+              if(empty($data['birthDate'])){
+                $data['birthDate_err'] = 'Please enter your birth date';
+            }
       
               if(empty($data['address'])){
                   $data['address_err'] = 'Please enter your address';
@@ -637,6 +666,7 @@
                  empty($data['mobile_err']) && 
                  empty($data['fname_err']) && 
                  empty($data['lname_err']) &&
+                 empty($data['birthDate_err']) &&
                  empty($data['address_err']) &&
                  empty($data['city_err']) &&
                  empty($data['password_err']) && empty($data['confirm_password_err'])){
@@ -664,6 +694,7 @@
                 'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
+                'birthDate' => '',
                 'mobile' => '',
                 'email' => '',
                 'address' => '',
@@ -671,9 +702,11 @@
                 'password' => '',
                 'confirm_password' => '',
                 'user_role' => '',
+                'joinedDate' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -738,6 +771,7 @@
                 'user_ID' => $user_ID,
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
+                'birthDate' => trim($_POST['birthDate']),
                 'mobile' => trim($_POST['mobile']),
                 'email' => trim($_POST['email']),
                 'address' => trim($_POST['address']),
@@ -745,9 +779,11 @@
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'deliveryperson',
+                'joinedDate' => date('Y-m-d H:i:s'),
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -792,6 +828,10 @@
               if(empty($data['lName'])){
                   $data['lName_err'] = 'Please enter your last name';
               }
+
+              if(empty($data['birthDate'])){
+                $data['birthDate_err'] = 'Please enter your birth date';
+            }
       
               if(empty($data['address'])){
                   $data['address_err'] = 'Please enter your address';
@@ -822,6 +862,7 @@
                  empty($data['mobile_err']) && 
                  empty($data['fname_err']) && 
                  empty($data['lname_err']) &&
+                 empty($data['birthDate_err']) &&
                  empty($data['address_err']) &&
                  empty($data['city_err']) &&
                  empty($data['password_err']) && empty($data['confirm_password_err'])){
@@ -849,6 +890,7 @@
                 'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
+                'birthDate' => '',
                 'mobile' => '',
                 'email' => '',
                 'address' => '',
@@ -856,9 +898,11 @@
                 'password' => '',
                 'confirm_password' => '',
                 'user_role' => '',
+                'joinedDate' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',

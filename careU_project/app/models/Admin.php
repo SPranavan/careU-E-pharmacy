@@ -55,17 +55,20 @@
         public function add_manager($data){
                   
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, mobile, email, address, city, password, user_role) VALUES(:user_ID, :fName, :lName, :mobile, :email, :address, :city, :password, :user_role)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
             $this->db->bind(':lName', $data['lName']);
+            $this->db->bind(':birthDate', $data['birthDate']);
             $this->db->bind(':mobile', $data['mobile']);
             $this->db->bind(':email', $data['email']);
             $this->db->bind(':address', $data['address']);
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'manager');
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
+
         
             // Execute
             if($this->db->execute()){
@@ -88,17 +91,20 @@
         public function add_pharmacist($data){
                   
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, mobile, email, address, city, password, user_role) VALUES(:user_ID, :fName, :lName, :mobile, :email, :address, :city, :password, :user_role)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
             $this->db->bind(':lName', $data['lName']);
+            $this->db->bind(':birthDate', $data['birthDate']);
             $this->db->bind(':mobile', $data['mobile']);
             $this->db->bind(':email', $data['email']);
             $this->db->bind(':address', $data['address']);
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'pharmacist');
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
+
         
             // Execute
             if($this->db->execute()){
@@ -121,17 +127,20 @@
         public function add_storekeeper($data){
                   
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, mobile, email, address, city, password, user_role) VALUES(:user_ID, :fName, :lName, :mobile, :email, :address, :city, :password, :user_role)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
             $this->db->bind(':lName', $data['lName']);
+            $this->db->bind(':birthDate', $data['birthDate']);
             $this->db->bind(':mobile', $data['mobile']);
             $this->db->bind(':email', $data['email']);
             $this->db->bind(':address', $data['address']);
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'storekeeper');
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
+
         
             // Execute
             if($this->db->execute()){
@@ -153,18 +162,22 @@
 
         public function add_deliveryperson($data){
                   
+            
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, mobile, email, address, city, password, user_role) VALUES(:user_ID, :fName, :lName, :mobile, :email, :address, :city, :password, :user_role)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
             $this->db->bind(':lName', $data['lName']);
+            $this->db->bind(':birthDate', $data['birthDate']);
             $this->db->bind(':mobile', $data['mobile']);
             $this->db->bind(':email', $data['email']);
             $this->db->bind(':address', $data['address']);
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'deliveryperson');
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
+            
         
             // Execute
             if($this->db->execute()){

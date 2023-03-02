@@ -16,6 +16,8 @@
   // Site Name
   define('SITENAME', 'careU-Pharmacy');
 
+  // Set timezone
+  date_default_timezone_set('Asia/Kolkata');
 
 
 

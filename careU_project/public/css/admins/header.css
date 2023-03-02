@@ -301,6 +301,10 @@ section {
     z-index: 8;
     height: 45px;
   }
+
+  .dropbtn1:active{
+    color: white;
+  }
   
   .dropdown1 {
     position: relative;

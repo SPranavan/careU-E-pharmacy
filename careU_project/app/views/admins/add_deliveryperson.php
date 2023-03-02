@@ -16,14 +16,7 @@
         <div class="container1">
 
             <form action="<?php echo URLROOT; ?>/admins/add_deliveryperson" method="POST">
-                    <!-- <div class="row">
-                    <div class="col-25">
-                        <label for="empID">Employee ID:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="empID" name="user_ID" value="<?php echo $user_ID; ?>" readonly>
-                    </div>
-                    </div> -->
+                    
                     <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name:</label>
@@ -41,6 +34,16 @@
                     <div class="col-75">
                         <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>" ><br>
                         <span style="color: red;"><?php echo $data['lName_err'];?></span>
+                        <br><br>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-25">
+                        <label for="birthDate">Birth Date:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="birthDate" name="birthDate" value="<?php echo $data['birthDate']; ?>" ><br>
+                        <span style="color: red;"><?php echo $data['birthDate_err'];?></span>
                         <br><br>
                     </div>
                     </div>
