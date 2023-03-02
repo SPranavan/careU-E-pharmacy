@@ -167,6 +167,7 @@
                 'user_ID' => $user_ID,
                 'fName' => trim($_POST['fName']),
                 'lName' => trim($_POST['lName']),
+                'birthDate' => trim($_POST['birthDate']),
                 'mobile' => trim($_POST['mobile']),
                 'email' => trim($_POST['email']),
                 'address' => trim($_POST['address']),
@@ -174,9 +175,11 @@
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'customer',
+                'joinedDate' => date('Y-m-d H:i:s'),
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
@@ -187,20 +190,25 @@
       
               // Validate Email
               if(empty($data['email'])){
-                $data['email_err'] = 'Please enter email';
+                $data['email_err'] = 'Please enter your email address';
               } else {
                 // Check email
                 if($this->userModel->findUserByEmail($data['email'])){
-                  $data['email_err'] = 'Email is already taken';
+                  $data['email_err'] = 'This email is already taken';
                 }
               }
       
               if(empty($data['mobile'])){
-                  $data['mobile_err'] = 'Pleae enter mobile number';
-               } else {
+                  $data['mobile_err'] = 'Please enter your mobile number';
+               } 
+              elseif(strlen($data['mobile']) !== 10){
+                $data['mobile_err'] = 'Please enter a valid mobile number';
+              } 
+               
+              else {
                   // Check mobile
                   if($this->userModel->findUserByMobile($data['mobile'])){
-                    $data['mobile_err'] = 'mobile number is already taken';
+                    $data['mobile_err'] = 'This mobile number is already taken';
                   }
               } 
 
@@ -210,15 +218,19 @@
       
               // Validate Name
               if(empty($data['fName'])){
-                $data['fName_err'] = 'Please enter first name';
+                $data['fName_err'] = 'Please enter your first name';
               }
       
               if(empty($data['lName'])){
-                  $data['lName_err'] = 'Please enter last name';
+                  $data['lName_err'] = 'Please enter your last name';
               }
+
+              if(empty($data['birthDate'])){
+                $data['birthDate_err'] = 'Please enter your birth date';
+            }
       
               if(empty($data['address'])){
-                  $data['address_err'] = 'Please enter address';
+                  $data['address_err'] = 'Please enter your address';
               }
       
               if(empty($data['city'])){
@@ -246,6 +258,7 @@
                  empty($data['mobile_err']) && 
                  empty($data['fname_err']) && 
                  empty($data['lname_err']) &&
+                 empty($data['birthDate_err']) &&
                  empty($data['address_err']) &&
                  empty($data['city_err']) &&
                  empty($data['password_err']) && empty($data['confirm_password_err'])){
@@ -273,6 +286,7 @@
                 'user_ID'=>'',
                 'fName' => '',
                 'lName' => '',
+                'birthDate' => '',
                 'mobile' => '',
                 'email' => '',
                 'address' => '',
@@ -280,9 +294,11 @@
                 'password' => '',
                 'confirm_password' => '',
                 'user_role' => '',
+                'joinedDate' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
+                'birthDate_err' => '',
                 'mobile_err' => '',
                 'email_err' => '',
                 'address_err' => '',
