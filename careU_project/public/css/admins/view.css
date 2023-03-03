@@ -151,3 +151,58 @@ table {
   .vm{
     text-align: center;
   }
+
+  .container#blur.active{
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+    opacity: 80;
+}
+
+  #popup{
+    position: fixed;
+    top: 52%;
+    left: 51%;
+    transform: translate(-50%,-50%);
+    width: 650px;
+    height: 483px;
+    /* padding-top: px; */
+    padding-right: 10px;
+    padding-left: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #F1F1E6;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#popup a{
+  margin-top: 72%;
+  /* padding-right: 5%; */
+}
+
+#popup.active{
+    top: 52%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+}
+
+#popup2{
+    
+  max-height: 380px;
+  overflow-y: auto;
+  background-color: white;
+  
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+
+
+

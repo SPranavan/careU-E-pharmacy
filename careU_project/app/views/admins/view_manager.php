@@ -1,7 +1,8 @@
 <?php require APPROOT . '/views/inc/admin_header.php'; ?>
 
-    <main class="content">
+    <main class="content" >
 
+    <div id="blur" class="container">
     <div class="box2">
         <a href="<?php echo URLROOT; ?>/admins/view_manager"><span class="actor1">Manager</span></a><br><br>
         <a href="<?php echo URLROOT; ?>/admins/view_pharmacist"><span class="actor">Pharmacist</span></a><br><br>
@@ -33,7 +34,7 @@
                             <td><?php echo $mObject->fName." ".$mObject->lName ?></td>
                             <td><?php echo $mObject->mobile ?></td>
                             <td><?php echo $mObject->email ?></td>
-                            <td class="vm"><a href=""><button class="viewMore"><img src="<?php echo URLROOT;?>/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button></a></td>
+                            <td class="vm"><a href="#" onclick="toggle()"><button class="viewMore" ><img src="<?php echo URLROOT;?>/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button></a></td>
                         </tr>
                     <?php endforeach; ?>
                                       
@@ -42,12 +43,37 @@
                 
             </div>
         </div>
+    </div>
+
+        
+       
+    </main>
+
+    <div class="view_popup" id="popup">
+        <div class="view_details" id="popup2">
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+            <h2>Test Pop-up</h2>
+
+        </div>
+        <a href="#" onclick="toggle()">Close</a>
+
+            
+    </div>
+
+    <script src="<?php echo URLROOT; ?>/public/js/admins/view.js"></script>
 
     
-        
-
-        
-    </main>
 
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
+
