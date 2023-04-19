@@ -11,6 +11,8 @@
       $this->view('admins/admin_dashboard');
       //$this->view('admins/add_manager');
       //$this->view('admins/add_deliveryperson');
+      //$this->view('admins/account');
+      //$this->view('admins/view_more');
     }
 
     

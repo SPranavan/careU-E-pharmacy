@@ -24,15 +24,15 @@
                     </tr>
                     <!-- PHP CODE TO FETCH DATA FROM ROWS -->
                     
-                    <?php foreach($data['customer_details'] as $mObject) : ?>
+                    <?php foreach($data['customer_details'] as $cObject) : ?>
                         
                         <tr class="dataset1">
                             <!-- FETCHING DATA FROM EACH
                                 ROW OF EVERY COLUMN -->
-                            <td><?php echo $mObject->user_ID ?></td>
-                            <td><?php echo $mObject->fName." ".$mObject->lName ?></td>
-                            <td><?php echo $mObject->mobile ?></td>
-                            <td><?php echo $mObject->email ?></td>
+                            <td><?php echo $cObject->user_ID ?></td>
+                            <td><?php echo $cObject->fName." ".$cObject->lName ?></td>
+                            <td><?php echo $cObject->mobile ?></td>
+                            <td><?php echo $cObject->email ?></td>
                             <td class="vm"><a href=""><button class="viewMore"><img src="<?php echo URLROOT;?>/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button></a></td>
                         </tr>
                     <?php endforeach; ?>

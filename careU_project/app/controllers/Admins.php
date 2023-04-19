@@ -17,6 +17,22 @@
         }
 
 
+        public function view_more(){
+          
+
+          if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $data = [
+                'user_ID' => strval(trim($_POST['user_ID'])),
+                'user_details' => ''
+            ];
+            $data['user_details'] = $prespectiveUserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
+            $this->view('admins/view_more', $data);
+          }else{
+              die("Error occured!");
+          }  
+        }
+
+
         /* Controller for view manager details */
         public function view_manager()
         {
@@ -158,6 +174,8 @@
     
             return $user_ID;
         }
+
+        
 
 
         public function add_manager(){

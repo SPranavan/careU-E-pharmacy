@@ -1,0 +1,89 @@
+.account img{
+    object-fit: cover;
+    height: 258px;
+    width: 303px;
+    margin-top: 197px;
+    border-radius: 15px 16px 0 0;
+    margin-left: 138px;
+    border: 2px solid;
+    border-color: #1d1d1d;
+}
+
+
+
+.dashboard-container {
+    width: 250px;
+    height: 351px;
+    /* background-color: #023e58; */
+    margin-left: 97px;
+    margin-top: -407px;
+}
+
+.dashboard-container h3{
+    font-size: 20px;
+    margin-top: -30px;
+    margin-left: 60px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.dashboard-container button {
+    width: 305px;
+    height: 79px;
+    padding: 8px;
+    background-color: white;
+}
+
+.dashboard-container li{
+    list-style-type: none;
+}
+
+.dashboard-container img{
+    height: 40px;
+    width: 40px;
+    margin-right: 230px;
+}
+
+.last {
+    width: 305px;
+    height: 79px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.details{
+    height: 580px;
+    width: 1200px;
+    /* background-color: beige; */
+    margin-left: 575px;
+    margin-top: 214px;
+    position: absolute;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.details h1{
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    margin-left: 53px;
+}
+
+.data {
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.data label{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.data input{
+    width: 1100px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #888888;
+    font-size: 18px;
+    padding: 13px;
+}

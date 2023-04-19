@@ -15,8 +15,27 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
+
+.box3{
+    margin-top: 0.5%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 290px;
+    height: 240px;
+    left: 20%;
+    /* top: 180px; */
+    
   
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
   
+.viewer-name{
+  margin-left: 18%;
+  margin-top: 0.05%;
+} 
   
 .actor{
     position: absolute;
@@ -46,7 +65,7 @@
     font-size: 18px;
     line-height: 23px;
     color: #000000;
-    background: #F1F1E6;
+    background: #FFEBCC;
     padding-top: 5px;
     margin-bottom: 5px;
     padding-left: 3px;
@@ -68,7 +87,7 @@
     padding-bottom: 30px;
     /* left: 800px; */
     border-radius: 10px;
-    background-color: #F1F1E6;
+    background-color: #FFEBCC;
     width: 61%;
     height: auto;
     margin-bottom: 5px;
@@ -77,6 +96,22 @@
     margin-left: 35%;
     
     
+}
+
+.container3 {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  /* left: 800px; */
+  border-radius: 10px;
+  background-color: white;
+  width: 61%;
+  height: auto;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  margin-top: -40px;
+  margin-left: 40%;
+  
+  
 }
 
 .topic1-view{

@@ -42,6 +42,21 @@
             }
         }
 
+        public function findUserByUserID($user_ID){
+
+            $this->db->query("SELECT * FROM users where user_ID = :user_ID");
+            $this->db->bind(':user_ID', $user_ID);
+
+            $row = $this->db->single();
+
+            //check row
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
+        }
+
         
         //Manager
         public function getLastUserID_manager()
