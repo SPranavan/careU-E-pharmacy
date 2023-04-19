@@ -1,5 +1,7 @@
 <?php require APPROOT . '/views/inc/admin_header2.php'; ?>
 
+
+
     <main class="content" >
 
     <div id="blur" class="container">
@@ -118,10 +120,15 @@
 
                     
                     <div class="row">
-                    <input type="submit" value="Add" name="submit">
+                        
+                    <a href="<?php echo URLROOT; ?>/admins/view_<?php echo ($data['user_details']->user_role); ?>" class="goback"><span>Back</span></a>
+                    <input type="submit" value="Update" name="submit">
+                    
+                    
                     </div>
                     
             </form>
+            
 
 
 
