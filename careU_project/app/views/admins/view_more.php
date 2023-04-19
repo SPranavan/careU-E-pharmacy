@@ -60,7 +60,7 @@
                         <label for="age">Age:</label>
                     </div>
                     <div class="col-75">
-                        <input type="number" id="age" name="age" value="<?php echo $data['user_details']->age; ?>" readonly><br>
+                        <input type="number" id="age" name="age" value="<?php echo $data['age']->age; ?>" readonly><br>
                         <br><br>
                     </div>
                     </div>

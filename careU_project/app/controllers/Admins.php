@@ -16,23 +16,7 @@
             $this->view('admins/admin_dashboard', $data);
         }
 
-
-        public function view_more(){
-          
-
-          if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $data = [
-                'user_ID' => strval(trim($_POST['user_ID'])),
-                'user_details' => ''
-            ];
-            $data['user_details'] = $prespectiveUserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
-            $this->view('admins/view_more', $data);
-          }else{
-              die("Error occured!");
-          }  
-        }
-
-
+        
         /* Controller for view manager details */
         public function view_manager()
         {
@@ -149,9 +133,29 @@
         }
         
         
+        //For view more details of users
+        public function view_more(){
+                 
+          if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $data = [
+                'user_ID' => strval(trim($_POST['user_ID'])),
+                'user_details' => '',
+                'age' => ''
+            ];
 
+            $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
+            $data['age'] = $userAge = $this->adminModel->calculateAge($data['user_ID']);
 
+            $data = [
+              'user_details' => $UserDetail,
+              'age' => $userAge
+            ];
 
+            $this->view('admins/view_more', $data);
+          }else{
+              die("Error occurred!");
+          }  
+        }
 
         
         private function getLastUserID_manager($lastUserID)

@@ -57,6 +57,52 @@
             } 
         }
 
+        //To calculate age
+        public function calculateAge($user_ID){
+
+            $stmt = $this->db->prepare("SELECT birthDate FROM users WHERE user_ID = :user_ID");
+            $stmt->bindParam(':user_ID', $user_ID);
+            $stmt->execute();
+        
+            $birthDate = $stmt->fetchColumn();
+        
+            $dobObject = new DateTime($birthDate);
+            $currentDate = new DateTime();
+            $ageInterval = $currentDate->diff($dobObject);
+            $age = $ageInterval->y;
+        
+            return (object) ['age' => $age];
+
+        }
+
+        public function findRole($user_ID){
+
+            $stmt = $this->db->prepare("SELECT user_role FROM users WHERE user_ID = :user_ID");
+            $stmt->bindParam(':user_ID', $user_ID);
+            $stmt->execute();
+        
+            $userRole = $stmt->fetchColumn();
+
+            if($userRole == 'manager'){
+                return (object) ['userRole' => "MANAGER"];
+            }
+            elseif($userRole == 'pharmacist'){
+                return (object) ['userRole' => "PHARMACIST"];
+            }
+            elseif($userRole == 'storekeeper'){
+                return (object) ['userRole' => "STORE KEEPER"];
+            }
+            elseif($userRole == 'deliveryperson'){
+                return (object) ['userRole' => "DELIVERY PERSON"];
+            }
+            elseif($userRole == 'deliveryperson'){
+                return (object) ['userRole' => "DELIVERY PERSON"];
+            }
+            elseif($userRole == 'customer'){
+                return (object) ['userRole' => "CUSTOMER"];
+            }
+        }
+
         
         //Manager
         public function getLastUserID_manager()
