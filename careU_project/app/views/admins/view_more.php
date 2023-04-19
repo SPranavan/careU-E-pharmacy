@@ -3,7 +3,7 @@
     <main class="content" >
 
     <div id="blur" class="container">
-    <h3 class="viewer-name"><?php echo $data['user_details']->user_role; ?></h3>
+    <h3 class="viewer-name"><?php echo $data['userRole']->userRole; ?></h3>
     <div class="box3">
         
         
@@ -21,6 +21,7 @@
                     </div>
                     <div class="col-75">
                         <input type="text" id="empID" name="user_ID" value="<?php echo $data['user_details']->user_ID; ?>" readonly>
+                        <br><br>
                     </div>
                     </div> 
 
@@ -31,7 +32,7 @@
                     <div class="col-75">
                         <input type="text" id="fname" name="fName" value="<?php echo $data['user_details']->fName; ?>" readonly><br>
                         
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -41,7 +42,7 @@
                     </div>
                     <div class="col-75">
                         <input type="text" id="lname" name="lName" value="<?php echo $data['user_details']->lName; ?>" readonly><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -51,7 +52,7 @@
                     </div>
                     <div class="col-75">
                         <input type="date" id="birthDate" name="birthDate" value="<?php echo $data['user_details']->birthDate; ?>" readonly><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -61,7 +62,7 @@
                     </div>
                     <div class="col-75">
                         <input type="number" id="age" name="age" value="<?php echo $data['age']->age; ?>" readonly><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -71,7 +72,7 @@
                     </div>
                     <div class="col-75">
                         <input type="tel" id="telNo" name="mobile" value="<?php echo $data['user_details']->mobile; ?>" placeholder="07Xxxxxxxx" readonly><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -81,7 +82,7 @@
                     </div>
                     <div class="col-75">
                         <input type="email" id="mail" name="email" value="<?php echo $data['user_details']->email; ?>" readonly><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -91,7 +92,7 @@
                     </div>
                     <div class="col-75">
                         <input type="text" id="sa" name="address" value="<?php echo $data['user_details']->address; ?>" ><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 
@@ -101,7 +102,7 @@
                     </div>
                     <div class="col-75">
                         <input type="text" id="city" name="city" value="<?php echo $data['user_details']->city; ?>" ><br>
-                        <br><br>
+                        <br>
                     </div>
                     </div>
 

@@ -101,6 +101,9 @@
             elseif($userRole == 'customer'){
                 return (object) ['userRole' => "CUSTOMER"];
             }
+            else {
+                return (object) ['userRole' => "UNKNOWN"];
+            }
         }
 
         

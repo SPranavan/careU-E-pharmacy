@@ -93,7 +93,7 @@
 
 
   
-input[type=text], input[type=tel], input[type=password], input[type=email], input[type=date], select, textarea{
+input[type=text], input[type=tel], input[type=password], input[type=email], input[type=date],input[type=number],input[type=datetime], select, textarea{
     width: 90%;
     padding: 8px;
     border: 1px solid #ccc;

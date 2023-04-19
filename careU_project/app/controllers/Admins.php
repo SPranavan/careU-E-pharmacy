@@ -140,15 +140,19 @@
             $data = [
                 'user_ID' => strval(trim($_POST['user_ID'])),
                 'user_details' => '',
-                'age' => ''
+                'age' => '',
+                'userRole' => ''
             ];
 
             $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
             $data['age'] = $userAge = $this->adminModel->calculateAge($data['user_ID']);
+            $data['userRole'] = $userRole = $this->adminModel->findRole($data['user_ID']);
+
 
             $data = [
               'user_details' => $UserDetail,
-              'age' => $userAge
+              'age' => $userAge,
+              'userRole' => $userRole
             ];
 
             $this->view('admins/view_more', $data);

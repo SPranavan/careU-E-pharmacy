@@ -104,14 +104,24 @@
   /* left: 800px; */
   border-radius: 10px;
   background-color: white;
-  width: 61%;
+  width: 40%;
   height: auto;
   margin-bottom: 5px;
   box-sizing: border-box;
   margin-top: -40px;
-  margin-left: 40%;
+  margin-left: 45%;
   
   
+}
+
+input[type=text], input[type=tel], input[type=password], input[type=email], input[type=date],input[type=number],input[type=datetime], select, textarea{
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .topic1-view{
