@@ -19,8 +19,19 @@
         public function index()
         {
             $this->PharmacistModel = $this->model('Pharmacist');
-            $data ="";
-            $this->view('pharmacist/home_page', $data);
+            $count_heart = $this->PharmacistModel->getCount_Heart();
+            $count_diabetes=$this->PharmacistModel->getCount_diabetes();
+            $count_infection=$this->PharmacistModel->getCount_infection();
+            $count_gastro=$this->PharmacistModel->getCount_gastro();
+            $count_muscle=$this->PharmacistModel->getCount_muscle();
+            $count_customer=$this->PharmacistModel->getCount_customer();
+
+            $cur_date = date('y-m-d');
+            $count_expired=$this->PharmacistModel->getexpiredate($cur_date);
+
+            $data =array($count_heart,$count_diabetes,$count_infection,$count_gastro,$count_muscle,$count_customer,$count_expired);
+            //print_r($data);die();
+            $this->view('pharmacist/dashboard', $data);
         }
 
         public function accepted_orders()
@@ -52,12 +63,12 @@
             $this->view('pharmacist/completed_orders', $data);
         }
 
-        public function dashboard()
-        {
-            $this->PharmacistModel = $this->model('Pharmacist');
-            $data ="";
-            $this->view('pharmacist/dashboard', $data);
-        }
+        // public function dashboard()
+        // {
+        //     $this->PharmacistModel = $this->model('Pharmacist');
+        //     $data ="";
+        //     $this->view('pharmacist/dashboard', $data);
+        // }
 
         public function completed_prescription()
         {
@@ -205,6 +216,54 @@
             $support = $this->PharmacistModel->support();
             $data =$support;
             $this->view('pharmacist/product_md_support', $data);
+        }
+
+        public function account()
+        {
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $email = $_SESSION['email'];
+            $userdetails = $this->PharmacistModel->getuserdetails($email);
+            $data =$userdetails;
+            // print_r($data);die();
+            $this->view('pharmacist/account', $data);
+        }
+
+        public function change_pw()
+        {
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $data ="";
+            $this->view('pharmacist/change_pw', $data);
+        }
+
+        public function update_pw()
+        {
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $data ="";
+            //print_r($_POST);die();
+            $cur_pw = $_POST['cur_pw']; 
+            $res = $this->PharmacistModel->getuserdetails($_SESSION['email']);
+            if (password_verify($cur_pw,$res[0]->password)) {
+                if ($_POST['new_pw'] == $_POST['con_pw'] ) {
+                    $hashed = password_hash($_POST['new_pw'], PASSWORD_DEFAULT);
+                    $res = $this->PharmacistModel->updatePassword($_SESSION['email'],$hashed);
+                    if ($res) {
+                        header('Location: ./account');
+                    }
+                }
+                else {
+                    $_SESSION['error2'] = "Passwords Not Match";
+                    $this->view('pharmacist/change_pw', $data);
+                    exit();
+                }
+            }
+            else {
+                $_SESSION['error1'] = "Incorrect Password";
+                $this->view('pharmacist/change_pw', $data);
+                exit();
+            }
+            // print_r($res[0]->password);die();
+            // $data ="";
+            // $this->view('pharmacist/change_pw', $data);
         }
 
 
@@ -437,6 +496,7 @@
             $_SESSION['Pharmacist_fName'] = $Pharmacist->fName;
             $_SESSION['Pharmacist_lName'] = $Pharmacist->lName;
             $_SESSION['Pharmacist_role'] = $Pharmacist->role;
+            $_SESSION['profile_pic'] = $Pharmacist->profile_picture;
 
             //redirect to the Pharmacist's homepage
             die("logged successfully");
@@ -444,7 +504,72 @@
 
           }
 
+          public function updateImg()
+        {
+            // print_r($_FILES);die();
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $data ='';
 
+            $target_dir = "C:/xampp/htdocs/careU_project/public/img/user-pics/";
+        $filename = basename($_FILES["fileToUpload"]["name"]);
+        $target_file = $target_dir . $filename;
+        
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        
+        // Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+
+        // Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+
+        // Allow certain file formats
+        if (
+            $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"
+        ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+
+        $result = $this->PharmacistModel->updateProfilePic($filename,$_SESSION['email']);
+        if ($result) {
+            $_SESSION['profile'] = $filename;
+        }
+
+        redirect('pharmacists/account'); 
+        }
+       
         
     }
 

@@ -24,7 +24,7 @@
                             <div class="login-link">
                                 <img class="login-icon" src="<?php echo URLROOT;?>/public/img/header/Login.png" alt="icon">
                                 <a href="<?php echo URLROOT; ?>/users/logout"><h4 class="login-a">LOGOUT</h4></a>
-                                <a href="#"><h4 class="myacc-a"> |&nbsp MY ACCOUNT</h4></a>
+                                <a href="/careU_project/pharmacists/account"><h4 class="myacc-a"> |&nbsp MY ACCOUNT</h4></a>
                             </div>
     
                             
@@ -32,8 +32,8 @@
     
     
                 <div class="topNav">
-                    <img class="logo" src="<?php echo URLROOT;?>/public/img/header/Logo_White.png" alt="logo">
-                    <h3 class="logoName">Pharmacy</h3>
+                    <a href="/careU_project/pharmacists/"><img class="logo" src="<?php echo URLROOT;?>/public/img/header/Logo_White.png" alt="logo">
+                    <h3 class="logoName">Pharmacy</h3></a>
     
                     <div class="search-container">
                         <form action="/action_page.php">

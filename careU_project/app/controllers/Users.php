@@ -304,8 +304,10 @@
 
             //Store session data
             $_SESSION['user_fName'] = $user->fName;
+            $_SESSION['email'] = $user->email;
             $_SESSION['user_lName'] = $user->lName;
             $_SESSION['user_role'] = $user->user_role;
+            $_SESSION['profile'] = $user->profile_picture;
 
             //redirect to the user's homepage
             //die("logged successfully");

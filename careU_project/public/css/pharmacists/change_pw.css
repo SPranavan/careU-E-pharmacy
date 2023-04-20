@@ -1,0 +1,204 @@
+.account img{
+    object-fit: cover;
+    height: 258px;
+    width: 303px;
+    margin-top: 197px;
+    border-radius: 15px 16px 0 0;
+    margin-left: 138px;
+    border: 2px solid;
+    border-color: #1d1d1d;
+}
+
+
+
+.dashboard-container {
+    width: 250px;
+    height: 351px;
+    /* background-color: #023e58; */
+    margin-left: 97px;
+    margin-top: -407px;
+}
+
+.dashboard-container h3{
+    font-size: 20px;
+    margin-top: -30px;
+    margin-left: 60px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.dashboard-container button {
+    width: 305px;
+    height: 79px;
+    padding: 8px;
+    background-color: white;
+}
+
+.dashboard-container li{
+    list-style-type: none;
+}
+
+.dashboard-container img{
+    height: 40px;
+    width: 40px;
+    margin-right: 230px;
+}
+
+.last {
+    width: 305px;
+    height: 79px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.details{
+    height: 580px;
+    width: 1200px;
+    /* background-color: beige; */
+    margin-left: 575px;
+    margin-top: 214px;
+    position: absolute;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.details h1{
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    margin-left: 53px;
+}
+
+.data {
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+.data label{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.data input{
+    width: 1100px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #888888;
+    font-size: 18px;
+    padding: 13px;
+}
+
+.details button{
+    height: 47px;
+    width: 130px;
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-left: 1010px;
+    margin-top: 25px;
+    box-shadow: 5px 5px 8px #888888;
+    background-color: #023e58;
+    color: #ffffff;
+}
+
+.error2 {
+    position: absolute;
+    margin-left: -1096px;
+    margin-top: 72px;
+}
+
+
+
+
+/* Add padding and center-align text to the container */
+.container {
+    padding: 16px;
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    background: #F1F1E6;
+    border-radius: 15px;
+    z-index: 999;
+    margin-top: 231px;
+    margin-left: 450px;
+    border: 1px solid;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background: #F1F1E6;
+    margin: 0 auto 0 auto;
+    /* 5% from the top, 15% from the bottom and centered */
+
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+/* hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+} */
+
+/* The Modal Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .deletebtn {
+        width: 100%;
+    }
+}
+
+.review {
+    width: 266px;
+    height: 320px;
+}
+
+.sub-btn {
+    width: 108px;
+    height: 42px;
+
+    background: #000000;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+
+
+    color: #FFFFFF;
+}
