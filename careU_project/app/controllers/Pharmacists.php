@@ -266,6 +266,239 @@
             // $this->view('pharmacist/change_pw', $data);
         }
 
+        public function heart_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_heart($_POST['search']);
+            $countdata = count($res);
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function diabetes_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_diabetes($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function infection_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_infection($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function gastro_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_gastro($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function muscle_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_muscle($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function nourishment_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_nourishment($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function accessories_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_accessories($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function skincare_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_skincare($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function womenpc_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_womenpc($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function oralcare_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_oralcare($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function firstaid_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_firstaid($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function healthdevice_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_healthdevice($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
+        public function support_search(){
+            $this->PharmacistModel = $this->model('Pharmacist');
+            $res = $this->PharmacistModel->search_support($_POST['search']);
+            $countdata = count($res);
+            
+
+            for ($i = 0; $i < $countdata; $i++) {
+                echo '
+                    <div class="box1">
+                    <img src="' . URLROOT . '/public/img/pharmacist/panadol.jpg" alt="call">
+                    <p>Item name :<span class="data"> ' . $res[$i]->name . ' </span> </p>
+                        <p>Price :<span class="data"> ' . $res[$i]->price . '</span> </p>
+                        <p>Stock :<span class="data"> ' . $res[$i]->quantity . '</span> </p>
+                        <p>Quantity :<span class="data"> ' . $res[$i]->quantity_measurement . '</span> </p>
+                    </div> ';
+            };        
+        }
+
 
         //Pharmacist's login authentication
         public function login(){
@@ -496,7 +729,7 @@
             $_SESSION['Pharmacist_fName'] = $Pharmacist->fName;
             $_SESSION['Pharmacist_lName'] = $Pharmacist->lName;
             $_SESSION['Pharmacist_role'] = $Pharmacist->role;
-            $_SESSION['profile_pic'] = $Pharmacist->profile_picture;
+            $_SESSION['profile_pic'] = $Pharmacist->user_img;
 
             //redirect to the Pharmacist's homepage
             die("logged successfully");
@@ -565,9 +798,10 @@
         $result = $this->PharmacistModel->updateProfilePic($filename,$_SESSION['email']);
         if ($result) {
             $_SESSION['profile'] = $filename;
+            redirect('pharmacists/account');
         }
 
-        redirect('pharmacists/account'); 
+        
         }
        
         

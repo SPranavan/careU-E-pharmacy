@@ -307,7 +307,7 @@
             $_SESSION['email'] = $user->email;
             $_SESSION['user_lName'] = $user->lName;
             $_SESSION['user_role'] = $user->user_role;
-            $_SESSION['profile'] = $user->profile_picture;
+            $_SESSION['profile'] = $user->user_img;
 
             //redirect to the user's homepage
             //die("logged successfully");

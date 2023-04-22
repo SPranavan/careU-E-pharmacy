@@ -29,12 +29,15 @@
     position: absolute;
     width: 1292px;
     height: 347px;
-    left: 9px;
+    left: 65px;
     top: -2px;
     /* background: #F1F1E6; */
-    border-radius: 15px;
-    box-shadow: 10px 10px 8px #888888;
+    /* border-radius: 15px; */
+    /* box-shadow: 10px 10px 8px #888888; */
 }
+
+
+
 
 
 .details table{

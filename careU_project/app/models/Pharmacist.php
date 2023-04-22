@@ -226,6 +226,110 @@
             }
         }
 
+        public function search_heart($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medicine' AND medicine_type2 ='heart' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_diabetes($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medicine' AND medicine_type2 ='diabetes' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_infection($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medicine' AND medicine_type2 ='infection' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_gastro($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medicine' AND medicine_type2 ='gastro' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_muscle($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medicine' AND medicine_type2 ='muscle' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_nourishment($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='Personal Care' AND medicine_type2 ='nourishments' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_accessories($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='Personal Care' AND medicine_type2 ='accessories' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_skincare($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='Personal Care' AND medicine_type2 ='Skin care' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_womenpc($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='Personal Care' AND medicine_type2 ='women personal care' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_oralcare($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='Personal Care' AND medicine_type2 ='oral care' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_firstaid($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medical devices' AND medicine_type2 ='first aid' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_healthdevice($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medical devices' AND medicine_type2 ='health device' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
+        public function search_support($search){
+            $this->db->query("SELECT * FROM medicine WHERE medicine_type1='medical devices' AND medicine_type2 ='support' 
+            AND name LIKE :search");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            return $row;
+        }
+
 
 
 

@@ -207,10 +207,10 @@ section {
 
 .name p{
   font-family: 'Basic';
-    color: white;
-    margin-left: 1616px;
-    margin-top: -49px;
-    font-size: 30px;
+  color: white;
+  margin-left: 1616px;
+  margin-top: 25px;
+  font-size: 30px;
 
 }
 
@@ -524,5 +524,16 @@ section {
   padding-left: 50px;
   
 }
+
+.prof_img img{
+  position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    margin-left: 1540px;
+    width: 50px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
 
 

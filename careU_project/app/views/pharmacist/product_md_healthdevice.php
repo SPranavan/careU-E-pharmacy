@@ -4,10 +4,34 @@
 <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/product_md_healthdevice.css">
 </head>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#search").keyup(function(){
+				var searchText = $(this).val();
+				$.ajax({
+					url: './healthdevice_search',
+					type: 'post',
+					data: {search: searchText},
+					success: function(response){
+                        console.log(response);
+						$("#details").html(response);
+					}
+				});
+			});
+		});
+	</script>
 
     <div class="medicine">
         <p>Medical Devices</p>
     </div>
+
+    <div class="search-container">
+   
+        <input id="search" type="text" placeholder="Search..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    
+</div>
     <div class="side_element">
         <div class="side_options">
             <a href="product_md_firstaid">First aid</a>
@@ -21,7 +45,7 @@
 
 
     </div>
-    <div class="details">
+    <div id="details" class="details">
     <?php 
         $countdata = count($data);
 

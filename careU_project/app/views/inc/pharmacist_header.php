@@ -35,13 +35,16 @@
                     <a href="/careU_project/pharmacists/"><img class="logo" src="<?php echo URLROOT;?>/public/img/header/Logo_White.png" alt="logo">
                     <h3 class="logoName">Pharmacy</h3></a>
     
-                    <div class="search-container">
+                    <!-- <div class="search-container">
                         <form action="/action_page.php">
                         <input type="text" placeholder="Search..." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
-                    </div>
+                    </div> -->
+                    <div class="prof_img">
+                    <img class="sli-img" src="<?php echo URLROOT; ?>/public/img/user-pics/<?php echo $_SESSION['profile'] ?>" />
 
+                    </div>
                     <div class="name">
                         <p><?php echo $_SESSION['user_fName'] . " " . $_SESSION['user_lName'] ?></p>
                     </div>

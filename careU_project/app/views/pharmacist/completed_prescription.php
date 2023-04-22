@@ -29,7 +29,7 @@
             <th>Customer ID</th>
             <th>Customer Name</th>
             <th>Date</th>
-            <th>Time</th>
+            
             <th></th>
             <th></th>
         </tr>
@@ -44,7 +44,7 @@
             <td><?php echo$data[$i]->customerID?></td>
             <td><?php echo$data[$i]->customer_name?></td>
             <td><?php echo$data[$i]->date?></td>
-            <td><?php echo$data[$i]->time?></td>
+            
             <td><button>order details</button></td>
             <td><button class="btn2" onclick="document.getElementById;('id01').style.display='block'">Feedback</button></td>
         </tr>

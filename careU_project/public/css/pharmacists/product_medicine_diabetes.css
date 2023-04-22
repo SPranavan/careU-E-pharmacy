@@ -147,7 +147,7 @@ border-radius: 15px;
 .box1 img {
 height: 100px;
 width: 100px;
-margin-left: 80px;
+margin-left: 117px;
 }
 
 /* .box2 img {
@@ -216,3 +216,59 @@ margin-left: 30px;
 font-family: 'Roboto';
 margin-top: -1px;
 }
+
+.search-container {
+    width: 41.5%;
+    margin-left: 639px;
+    position: absolute;
+    margin-top: 189px;
+  }
+  
+  .search-container input[type=text] {
+    padding: 6px;
+    margin-top: 25px;
+    font-size: 17px;
+    border: 2px solid;
+    height: 40px;
+    font-family: 'Basic';
+    font-style: normal;
+    letter-spacing: 1px;
+    border-color: #023e58;
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .search-container button {
+    float: right;
+    color:#FFFFFF;
+    padding: 6px 10px;
+    margin-top: -50px;
+    margin-right: -35px;
+    background:#023e58;
+    font-size: 17px;
+    border: 2px solid;
+    cursor: pointer;
+    height: 40px;
+    border-color: #023e58;
+    border-radius: 0px 10px 10px 0px;
+  }
+  
+  .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .search-container {
+      float: none;
+    }
+    .search-container input[type=text], .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .search-container input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }

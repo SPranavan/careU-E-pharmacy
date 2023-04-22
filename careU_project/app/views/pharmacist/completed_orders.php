@@ -24,6 +24,7 @@
 <div class="details">
     <table>
         <hr class="hr1">
+        <thead>
         <tr>
             <th>Order ID</th>
             <th>Customer ID</th>
@@ -33,9 +34,10 @@
             <th></th>
             <th></th>
         </tr>
+        <thead>
         <hr class="hr2">
         
-
+        <tbody>
         <tr>
             <td>Alfreds Futterkiste</td>
             <td>Maria Anders</td>
@@ -72,6 +74,7 @@
             <td><button>order details</button></td>
             <td><button>feedback</button></td>
         </tr>
+        </tbody>
     </table>
 
 </div>
