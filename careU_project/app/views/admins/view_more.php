@@ -137,10 +137,17 @@
             <div class="row">
                         <input type="hidden" name="user_ID" value="<?php echo $data['user_details']->user_ID;?>">
                         <input type="hidden" name="user_role" value="<?php echo $data['user_details']->user_role;?>">
+                        <input type="hidden" name="status" value="<?php echo $data['user_details']->active_status;?>">
                         <a href="<?php echo URLROOT; ?>/admins/view_<?php echo ($data['user_details']->user_role); ?>" class="goback"><span>Back</span></a>
 
             
-                        <input type="submit" value="Delete Account" name="submit">
+                        <input type="submit" value="<?php if(($data['user_details']->active_status)=='Active'){
+                            echo ("Delete Account");
+                        }
+                        elseif(($data['user_details']->active_status)=='Deactivated'){
+                            echo ("Activate Account");
+                        }
+                        ; ?>" name="submit">
                         
                         
                         </div>

@@ -252,9 +252,18 @@
             }
         }
 
-        public function view_managers(){
+        public function view_manager(){
 
             $this->db->query("SELECT * FROM users where user_role = 'manager' and active_status = 'Active'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
+        public function delete_manager(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'manager' and active_status = 'Deactivated'");
            
             return $this->db->resultSet();
 
@@ -270,9 +279,27 @@
 
         }
 
+        public function delete_pharmacist(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'pharmacist' and active_status = 'Deactivated'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
         public function view_storekeeper(){
 
             $this->db->query("SELECT * FROM users where user_role = 'storekeeper' and active_status = 'Active'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
+        public function delete_storekeeper(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'storekeeper' and active_status = 'Deactivated'");
            
             return $this->db->resultSet();
 
@@ -288,9 +315,27 @@
 
         }
 
+        public function delete_deliveryperson(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'deliveryperson' and active_status = 'Deactivated'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
         public function view_customer(){
 
             $this->db->query("SELECT * FROM users where user_role = 'customer'and active_status = 'Active'");
+           
+            return $this->db->resultSet();
+
+
+        }
+
+        public function delete_customer(){
+
+            $this->db->query("SELECT * FROM users where user_role = 'customer'and active_status = 'Deactivated'");
            
             return $this->db->resultSet();
 
@@ -311,6 +356,22 @@
                 return false;
             } 
 
+
+        }
+
+        public function activate_acc($user_ID){
+
+            $this->db->query("UPDATE users SET active_status = 'Active' WHERE user_ID = :user_ID");
+            $this->db->bind(':user_ID', $user_ID);
+
+            $row = $this->db->single();
+
+            //check row
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
 
         }
 

@@ -20,22 +20,19 @@
         /* Controller for view manager details */
         public function view_manager()
         {
-            // $this->userModel = $this->model('Admin');
-            // $data ="";
-            // $this->view('admins/view_manager', $data);
-
-            $ManagerDetails = $this->adminModel->view_managers();
+            
+            $ManagerDetails = $this->adminModel->view_manager();
             $data = [
               'manager_details' => $ManagerDetails
             ];
 
             $this->view('admins/view_manager', $data);
-            //$this->view('admins/delete_manager', $data);
+            
         }
 
         public function delete_manager()
         {
-          $ManagerDetails = $this->adminModel->view_managers();
+          $ManagerDetails = $this->adminModel->delete_manager();
           $data = [
             'manager_details' => $ManagerDetails
           ];
@@ -47,9 +44,7 @@
 
         public function view_pharmacist()
         {
-            // $this->adminModel = $this->model('Admin');
-            // $data ="";
-            // $this->view('admins/view_pharmacist', $data);
+            
             $PharmacistDetails = $this->adminModel->view_pharmacist();
             $data = [
               'pharmacist_details' => $PharmacistDetails
@@ -60,7 +55,7 @@
 
         public function delete_pharmacist()
         {
-            $PharmacistDetails = $this->adminModel->view_pharmacist();
+            $PharmacistDetails = $this->adminModel->delete_pharmacist();
             $data = [
               'pharmacist_details' => $PharmacistDetails
             ];
@@ -79,7 +74,7 @@
 
         public function delete_storekeeper()
         {
-            $StoreKeepertDetails = $this->adminModel->view_storekeeper();
+            $StoreKeepertDetails = $this->adminModel->delete_storekeeper();
             $data = [
               'storekeeper_details' => $StoreKeepertDetails
             ];
@@ -98,7 +93,7 @@
 
         public function delete_deliveryperson()
         {
-            $DeliveryPerson = $this->adminModel->view_deliveryperson();
+            $DeliveryPerson = $this->adminModel->delete_deliveryperson();
             $data = [
               'deliveryperson_details' => $DeliveryPerson
             ];
@@ -117,15 +112,11 @@
             
         }
 
-        // public function add_manager(){
-        //     $this->userModel = $this->model('User');
-        //     $data ="";
-        //     $this->view('admin/add_manager', $data);
-        // }
+       
 
         public function delete_customer()
         {
-          $Customer = $this->adminModel->view_customer();
+          $Customer = $this->adminModel->delete_customer();
           $data = [
             'customer_details' => $Customer
           ];
@@ -172,19 +163,30 @@
               'user_details' => '',
             ];
 
-            $this->adminModel->delete_user_account($data['user_ID']);
-            
+            $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
+
            
 
-            $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
-            redirect('admins/view_'.$UserDetail->user_role);
+            if ($data['user_details']->active_status == 'Active'){
+              $this->adminModel->delete_user_account($data['user_ID']);
+              redirect('admins/view_'.$UserDetail->user_role);
+            }
 
+            elseif($data['user_details']->active_status == 'Deactivated'){
+              $this->adminModel->activate_acc($data['user_ID']);
+              redirect('admins/delete_'.$UserDetail->user_role);
+            }
+            
             $data = [
               'user_details' => $UserDetail
                
             ];
+           
 
+            
+            
 
+            
             
 
           }else{
@@ -194,6 +196,9 @@
           
 
         }
+
+
+        
 
         
         private function getLastUserID_manager($lastUserID)

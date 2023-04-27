@@ -35,7 +35,15 @@
                             <td><?php echo $mObject->fName." ".$mObject->lName ?></td>
                             <td><?php echo $mObject->mobile ?></td>
                             <td><?php echo $mObject->email ?></td>
-                            <td class="vm"><a href=""><button class="viewMore"><img src="<?php echo URLROOT;?>/public/img/admins/delete_action.png" alt="view more" style="width:30px;height:20px;"></button></a></td>
+
+                            <td class="vm">
+                                <form action="<?php echo URLROOT;?>/admins/view_more" method="POST">
+                                <input type="hidden" name="user_ID" value="<?php echo $mObject->user_ID; ?>">
+                                
+                                <button class="viewMore" type="submit"><img src="<?php echo URLROOT;?>/public/img/admins/delete_action.png" alt="view more" style="width:30px;height:20px;"></button>
+
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
 
