@@ -34,9 +34,9 @@ input[type=submit] {
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    cursor: cell;
+    cursor: pointer;
     float: left;
-    margin-left: 50%;
+    margin-left: 44.5%;
     margin-top: 5%;
     
 }
@@ -53,7 +53,7 @@ input[type=submit]:hover {
     border-radius: 4px;
   
     
-    margin-left: -56.5%;
+    margin-left: -56.6%;
     margin-top: 5%;
 
     display: inline-block;

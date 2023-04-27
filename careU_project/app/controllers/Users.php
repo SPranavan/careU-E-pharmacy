@@ -176,6 +176,7 @@
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'customer',
                 'joinedDate' => date('Y-m-d H:i:s'),
+                'active_status' => 'Active',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -295,6 +296,7 @@
                 'confirm_password' => '',
                 'user_role' => '',
                 'joinedDate' => '',
+                'active_status' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',

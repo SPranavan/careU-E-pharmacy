@@ -1,135 +1,90 @@
-<?php require APPROOT . '/views/inc/admin_header.php'; ?>
+<?php require APPROOT . '/views/inc/admin_header2.php'; ?>
 
-    <main class="content">
+<head>
+    <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/pharmacists/account.css">
 
-    <div class="box1">
-        <a href="<?php echo URLROOT; ?>/admins/add_manager"><span class="actor">Manager</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/add_pharmacist"><span class="actor">Pharmacist</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/add_storekeeper"><span class="actor">Store Keeper</span></a><br><br>
-        <a href="<?php echo URLROOT; ?>/admins/add_deliveryperson"><span class="actor1">Delivery Person</span></a>
+    <!-- <script>
+        // Get the modal
+        var modal = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+</head>
+<?php require APPROOT . '/views/inc/img_upload_popup.php'; ?>
+<body>
+
+
+
+<div class="account">
+    <img class="sli-img" src="<?php echo URLROOT; ?>/public/img/user-pics/<?php echo $_SESSION['profile'] ?>" />
+</div>
+
+<div class="dashboard-container">
+    <nav>
+        <ul>
+            <li>
+                <a href="/careU_project/pharmacists/dashboard">
+                    <button>
+                    <img src="<?php echo URLROOT; ?>/public/img/pharmacist/home.png" alt="">
+                    <span><h3>Dashboard</h3></span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="/careU_project/pharmacists/account">
+                    <button>
+                        <span><img src="<?php echo URLROOT; ?>/public/img/pharmacist/menu.png" alt=""></span>
+                        <span><h3>Account Details</h3></span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="/careU_project/pharmacists/change_pw">
+                    <button>
+                        <span><img src="<?php echo URLROOT; ?>/public/img/pharmacist/rotation-lock.png" alt=""></span>
+                        <span><h3>Change Password</h3></span>
+                    </button>
+                </a>
+            </li>
+            <li>
+                
+                    <button class="last" onclick="document.getElementById('id02').style.display='block'">
+                        <span><img src="<?php echo URLROOT; ?>/public/img/pharmacist/user1.png" alt=""></span>
+                        <span><h3>Change Profile Picture</h3></span>
+                    </button>
+               
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="details">
+    <h1>Account Details</h1>
+    <div class="data">
+        <label for="">Name</label><br>
+        <input type="text" value="<?php echo $data[0]->fName." ".$data[0]->lName; ?>" readonly>
+    </div>
+    <div class="data">
+        <label for="">Email address</label><br>
+        <input type="text" value="<?php echo $data[0]->email; ?>" readonly >
+    </div>
+    <div class="data">
+        <label for="">Mobile number</label><br>
+        <input type="text" value="<?php echo $data[0]->mobile; ?>" readonly >
+    </div>
+    <div class="data">
+        <label for="">Role</label><br>
+        <input type="text" value="<?php echo $data[0]->user_role; ?>" readonly>
     </div>
 
-    <div class="body-right">
-
-        <h3 class="topic1">Add | Delivery Person</h3>   
-
-        <div class="container1">
-
-            <form action="<?php echo URLROOT; ?>/admins/add_deliveryperson" method="POST">
-                    
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="fname">First Name:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="fName" value="<?php echo $data['fName']; ?>"><br>
-                        <span style="color: red;"><?php echo $data['fName_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Last Name:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lName" value="<?php echo $data['lName']; ?>" ><br>
-                        <span style="color: red;"><?php echo $data['lName_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="birthDate">Birth Date:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="date" id="birthDate" name="birthDate" value="<?php echo $data['birthDate']; ?>" ><br>
-                        <span style="color: red;"><?php echo $data['birthDate_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="telNo">Mobile Number:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="tel" id="telNo" name="mobile" value="<?php echo $data['mobile']; ?>" placeholder="07Xxxxxxxx"><br>
-                        <span style="color: red;"><?php echo $data['mobile_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="mail">Email:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="email" id="mail" name="email" value="<?php echo $data['email']; ?>" ><br>
-                        <span style="color: red;"><?php echo $data['email_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="sa">Street Address:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="sa" name="address" value="<?php echo $data['address']; ?>" ><br>
-                        <span style="color: red;"><?php echo $data['address_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="city">City</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="city" name="city" value="<?php echo $data['city']; ?>"><br>
-                        <option value="Kandy">Kandy</option>
-                        <option value="Colombo">Colombo</option>
-                        <option value="Jaffna">Jaffna</option>
-                        </select>
-                        <span style="color: red;"><?php echo $data['city_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="pw">Password:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="password" id="pw" name="password" value="<?php echo $data['password']; ?>" ><br>
-                        <span style="color: red;"><?php echo $data['password_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-25">
-                        <label for="cpw">Confirm Password:</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="password" id="cpw" name="confirm_password" value="<?php echo $data['confirm_password']; ?>" ><br>
-                        <span style="color: red;"><?php echo $data['confirm_password_err'];?></span>
-                        <br><br>
-                    </div>
-                    </div>
-                    
-                    <br>
-                    
-                    <br>
-                    <div class="row">
-                    <input type="submit" value="Add" name="submit">
-                    </div>
-                    
-            </form>
+</div>
 
 
+</body>
 
-        </div>
-
-    </div>
-        
-
-        
-    </main>
-
-
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+<?php require APPROOT . '/views/inc/pharmacistfooter.php'; ?>

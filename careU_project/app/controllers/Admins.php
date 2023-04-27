@@ -30,7 +30,7 @@
             ];
 
             $this->view('admins/view_manager', $data);
-            // $this->view('admins/delete_manager', $data);
+            //$this->view('admins/delete_manager', $data);
         }
 
         public function delete_manager()
@@ -42,7 +42,7 @@
 
      
           $this->view('admins/delete_manager', $data);
-            // $this->view('admins/delete_manager', $data);
+            
         }
 
         public function view_pharmacist()
@@ -138,27 +138,61 @@
                  
           if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $data = [
-                'user_ID' => strval(trim($_POST['user_ID'])),
-                'user_details' => '',
-                'age' => '',
-                'userRole' => ''
+              'user_ID' => strval(trim($_POST['user_ID'])),
+              'user_details' => '',
+              'age' => '',
+              'userRole' => ''
             ];
+  
+          $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
+          $data['age'] = $userAge = $this->adminModel->calculateAge($data['user_ID']);
+          $data['userRole'] = $userRole = $this->adminModel->findRole($data['user_ID']);
+  
+  
+          $data = [
+            'user_details' => $UserDetail,
+            'age' => $userAge,
+            'userRole' => $userRole
+          ];
+  
+          $this->view('admins/view_more', $data);
 
-            $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
-            $data['age'] = $userAge = $this->adminModel->calculateAge($data['user_ID']);
-            $data['userRole'] = $userRole = $this->adminModel->findRole($data['user_ID']);
-
-
-            $data = [
-              'user_details' => $UserDetail,
-              'age' => $userAge,
-              'userRole' => $userRole
-            ];
-
-            $this->view('admins/view_more', $data);
           }else{
               die("Error occurred!");
           }  
+        }
+
+
+        public function delete_user_account(){
+
+          if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+            $data = [
+              'user_ID' => strval(trim($_POST['user_ID'])),
+              'user_details' => '',
+            ];
+
+            $this->adminModel->delete_user_account($data['user_ID']);
+            
+           
+
+            $data['user_details'] = $UserDetail = $this->adminModel->findUserByUserID($data['user_ID']);
+            redirect('admins/view_'.$UserDetail->user_role);
+
+            $data = [
+              'user_details' => $UserDetail
+               
+            ];
+
+
+            
+
+          }else{
+              die("Error occurred!");
+          }  
+
+          
+
         }
 
         
@@ -220,6 +254,7 @@
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'manager',
                 'joinedDate' => date('Y-m-d H:i:s'),
+                'active_status' => 'Active',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -339,6 +374,7 @@
                 'confirm_password' => '',
                 'user_role' => '',
                 'joinedDate' => '',
+                'active_status' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -416,6 +452,7 @@
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'pharmacist',
                 'joinedDate' => date('Y-m-d H:i:s'),
+                'active_status' => 'Active',                
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -535,6 +572,7 @@
                 'confirm_password' => '',
                 'user_role' => '',
                 'joinedDate' => '',
+                'active_status' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -610,6 +648,7 @@
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'storekeeper',
                 'joinedDate' => date('Y-m-d H:i:s'),
+                'active_status' => 'Active',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -729,6 +768,7 @@
                 'confirm_password' => '',
                 'user_role' => '',
                 'joinedDate' => '',
+                'active_status' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -806,6 +846,7 @@
                 'confirm_password' => trim($_POST['confirm_password']),
                 'user_role' => 'deliveryperson',
                 'joinedDate' => date('Y-m-d H:i:s'),
+                'active_status' => 'Active',
       
                 'fName_err' => '',
                 'lName_err' => '',
@@ -925,6 +966,7 @@
                 'confirm_password' => '',
                 'user_role' => '',
                 'joinedDate' => '',
+                'active_status' => '',
       
                 'fName_err' => '',
                 'lName_err' => '',

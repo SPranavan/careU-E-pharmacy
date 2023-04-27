@@ -119,7 +119,7 @@
         public function add_manager($data){
                   
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate, active_status) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate, :active_status)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
@@ -132,7 +132,7 @@
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'manager');
             $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
-
+            $this->db->bind(':active_status', 'Active');
         
             // Execute
             if($this->db->execute()){
@@ -155,7 +155,7 @@
         public function add_pharmacist($data){
                   
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate,active_status) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate, :active_status)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
@@ -167,8 +167,9 @@
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'pharmacist');
-            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
-
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));
+            $this->db->bind(':active_status', 'Active');
+            
         
             // Execute
             if($this->db->execute()){
@@ -191,7 +192,7 @@
         public function add_storekeeper($data){
                   
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate, active_status) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate, :active_status)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
@@ -203,8 +204,8 @@
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'storekeeper');
-            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
-
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));
+            $this->db->bind(':active_status', 'Active');
         
             // Execute
             if($this->db->execute()){
@@ -228,7 +229,7 @@
                   
             
 
-            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate)');
+            $this->db->query('INSERT INTO users (user_ID, fName, lName, birthDate, mobile, email, address, city, password, user_role, joinedDate, active_status) VALUES(:user_ID, :fName, :lName, :birthDate, :mobile, :email, :address, :city, :password, :user_role, :joinedDate, :active_status)');
             // Bind values
             $this->db->bind(':user_ID', $data['user_ID']);
             $this->db->bind(':fName', $data['fName']);
@@ -240,8 +241,8 @@
             $this->db->bind(':city', $data['city']);
             $this->db->bind(':password', $data['password']);
             $this->db->bind(':user_role', 'deliveryperson');
-            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));;
-            
+            $this->db->bind(':joinedDate', date('Y-m-d H:i:s'));
+            $this->db->bind(':active_status', 'Active');
         
             // Execute
             if($this->db->execute()){
@@ -253,7 +254,7 @@
 
         public function view_managers(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'manager'");
+            $this->db->query("SELECT * FROM users where user_role = 'manager' and active_status = 'Active'");
            
             return $this->db->resultSet();
 
@@ -262,7 +263,7 @@
 
         public function view_pharmacist(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'pharmacist'");
+            $this->db->query("SELECT * FROM users where user_role = 'pharmacist' and active_status = 'Active'");
            
             return $this->db->resultSet();
 
@@ -271,7 +272,7 @@
 
         public function view_storekeeper(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'storekeeper'");
+            $this->db->query("SELECT * FROM users where user_role = 'storekeeper' and active_status = 'Active'");
            
             return $this->db->resultSet();
 
@@ -280,7 +281,7 @@
 
         public function view_deliveryperson(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'deliveryperson'");
+            $this->db->query("SELECT * FROM users where user_role = 'deliveryperson' and active_status = 'Active'");
            
             return $this->db->resultSet();
 
@@ -289,9 +290,26 @@
 
         public function view_customer(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'customer'");
+            $this->db->query("SELECT * FROM users where user_role = 'customer'and active_status = 'Active'");
            
             return $this->db->resultSet();
+
+
+        }
+
+        public function delete_user_account($user_ID){
+
+            $this->db->query("UPDATE users SET active_status = 'Deactivated' WHERE user_ID = :user_ID");
+            $this->db->bind(':user_ID', $user_ID);
+
+            $row = $this->db->single();
+
+            //check row
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
 
 
         }

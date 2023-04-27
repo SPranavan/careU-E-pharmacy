@@ -16,7 +16,7 @@
 
                 <div class="container3">
 
-                <form action="<?php echo URLROOT; ?>/admins/view_more" method="">
+                <form action="<?php echo URLROOT; ?>/admins/view_more" method="POST">
                     <div class="row">
                     <div class="col-25">
                         <label for="empID">Employee ID:</label>
@@ -93,17 +93,17 @@
                         <label for="sa">Street Address:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="sa" name="address" value="<?php echo $data['user_details']->address; ?>" ><br>
+                        <input type="text" id="sa" name="address" value="<?php echo $data['user_details']->address; ?>" readonly><br>
                         <br>
                     </div>
                     </div>
 
                     <div class="row">
                     <div class="col-25">
-                        <label for="city">City</label>
+                        <label for="city">City:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="city" name="city" value="<?php echo $data['user_details']->city; ?>" ><br>
+                        <input type="text" id="city" name="city" value="<?php echo $data['user_details']->city; ?>" readonly><br>
                         <br>
                     </div>
                     </div>
@@ -118,15 +118,32 @@
                     </div>
                     </div>
 
-                    
                     <div class="row">
-                        
-                    <a href="<?php echo URLROOT; ?>/admins/view_<?php echo ($data['user_details']->user_role); ?>" class="goback"><span>Back</span></a>
-                    <input type="submit" value="Update" name="submit">
-                    
-                    
+                    <div class="col-25">
+                        <label for="status">Active Status:</label>
                     </div>
+                    <div class="col-75">
+                        <input type="text" id="status" name="status" value="<?php echo $data['user_details']->active_status; ?>" readonly><br>
+                        <br>
+                    </div>
+                    </div>
+
                     
+                    
+                    
+            </form>
+
+            <form action="<?php echo URLROOT; ?>/admins/delete_user_account" method="POST">
+            <div class="row">
+                        <input type="hidden" name="user_ID" value="<?php echo $data['user_details']->user_ID;?>">
+                        <input type="hidden" name="user_role" value="<?php echo $data['user_details']->user_role;?>">
+                        <a href="<?php echo URLROOT; ?>/admins/view_<?php echo ($data['user_details']->user_role); ?>" class="goback"><span>Back</span></a>
+
+            
+                        <input type="submit" value="Delete Account" name="submit">
+                        
+                        
+                        </div>
             </form>
             
 
