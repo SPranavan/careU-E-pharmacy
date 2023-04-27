@@ -133,7 +133,7 @@
                     
             </form>
 
-            <form action="<?php echo URLROOT; ?>/admins/delete_user_account" method="POST">
+            <form action="<?php echo URLROOT; ?>/admins/user_account_status" method="POST">
             <div class="row">
                         <input type="hidden" name="user_ID" value="<?php echo $data['user_details']->user_ID;?>">
                         <input type="hidden" name="user_role" value="<?php echo $data['user_details']->user_role;?>">

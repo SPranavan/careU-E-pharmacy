@@ -154,7 +154,7 @@
         }
 
 
-        public function delete_user_account(){
+        public function user_account_status(){
 
           if($_SERVER['REQUEST_METHOD'] == 'POST'){
 

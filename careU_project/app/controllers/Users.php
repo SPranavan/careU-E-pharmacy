@@ -108,31 +108,10 @@
                  $user_ID = intval($user_ID);
                  $user_ID = "C0000" . ($user_ID+1);
 
-            //     preg_match('/C(\d+)/', $lastid, $matches);
-            //     $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
+            
              }
           
-            //  if (empty($lastUserID)) {
-            //      return 'C00001';
-            //  }
-
-            //  elseif (preg_match('/U(\d+)/', $lastUserID, $matches)) {
-            //   $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
-            //   echo'hello';
-            // } else {
-            //     // Handle the error, for example, by logging the error message.
-            //     error_log("Error: Failed to match pattern in preg_match()");
-            // }
-          
-    
-            // // preg_match('/U(\d+)/', $lastUserID, $matches);
-            // // $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
-            // if (isset($matches[1])) {
-            //   $user_ID = "C" . str_pad($matches[1] + 1, 5, "0", STR_PAD_LEFT);
-            // } else {
-            //     // handle the error, for example, by logging it or returning a default value
-            //     $user_ID = "C00001";
-            // }
+            
     
             return $user_ID;
         }
