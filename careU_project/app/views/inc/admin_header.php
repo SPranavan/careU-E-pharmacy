@@ -43,7 +43,7 @@
                     
     
                         <div class="topNav-right">
-                            <a href=""><button type="submit" name="submit" class="button1" style="vertical-align:middle"><span><span>Admin</span></button></a>
+                            <a href="<?php echo URLROOT;?>/admins/admin_dashboard"><button type="submit" name="submit" class="button1" style="vertical-align:middle"><span><span>Admin</span></button></a>
                         </div>
     
                     </div>

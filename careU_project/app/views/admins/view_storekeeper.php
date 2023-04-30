@@ -1,6 +1,7 @@
 <?php require APPROOT . '/views/inc/admin_header.php'; ?>
 
 
+
     <main class="content">
 
     <div class="box2">
