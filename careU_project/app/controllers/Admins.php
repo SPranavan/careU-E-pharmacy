@@ -220,6 +220,138 @@
         
           echo $output;
         }
+
+
+        public function search_pharmacist() {
+          $result = $this->adminModel->search_pharmacist($_POST['search']);
+          
+          $output = '';
+
+          if($result>0){
+            foreach($result as $row) {
+              $output .= '                          
+                          <tr class="dataset1">
+                              <td>' .$row->user_ID. '</td>
+                              <td>' .$row->fName." ".$row->lName. '</td>
+                              <td>' .$row->mobile. '</td>
+                              <td>' .$row->email. '</td>
+                              <td class="vm">
+                                  <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                      <input type="hidden" name="user_ID" value="' .$row->user_ID.'">
+                                      <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                                  </form>
+                              </td>
+                          </tr>
+                          ';
+              }
+          }
+
+          else{
+            $output .= '
+            <tr><td colspan="5">No results found</td></tr>';
+          }
+        
+          echo $output;
+        }
+
+
+        public function search_storekeeper() {
+          $result = $this->adminModel->search_storekeeper($_POST['search']);
+          
+          $output = '';
+
+          if($result>0){
+            foreach($result as $row) {
+              $output .= '                          
+                          <tr class="dataset1">
+                              <td>' .$row->user_ID. '</td>
+                              <td>' .$row->fName." ".$row->lName. '</td>
+                              <td>' .$row->mobile. '</td>
+                              <td>' .$row->email. '</td>
+                              <td class="vm">
+                                  <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                      <input type="hidden" name="user_ID" value="' .$row->user_ID.'">
+                                      <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                                  </form>
+                              </td>
+                          </tr>
+                          ';
+              }
+          }
+
+          else{
+            $output .= '
+            <tr><td colspan="5">No results found</td></tr>';
+          }
+        
+          echo $output;
+        }
+
+
+        public function search_deliveryperson() {
+          $result = $this->adminModel->search_deliveryperson($_POST['search']);
+          
+          $output = '';
+
+          if($result>0){
+            foreach($result as $row) {
+              $output .= '                          
+                          <tr class="dataset1">
+                              <td>' .$row->user_ID. '</td>
+                              <td>' .$row->fName." ".$row->lName. '</td>
+                              <td>' .$row->mobile. '</td>
+                              <td>' .$row->email. '</td>
+                              <td class="vm">
+                                  <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                      <input type="hidden" name="user_ID" value="' .$row->user_ID.'">
+                                      <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                                  </form>
+                              </td>
+                          </tr>
+                          ';
+              }
+          }
+
+          else{
+            $output .= '
+            <tr><td colspan="5">No results found</td></tr>';
+          }
+        
+          echo $output;
+        }
+
+
+        public function search_customer() {
+          $result = $this->adminModel->search_customer($_POST['search']);
+          
+          $output = '';
+
+          if($result>0){
+            foreach($result as $row) {
+              $output .= '                          
+                          <tr class="dataset1">
+                              <td>' .$row->user_ID. '</td>
+                              <td>' .$row->fName." ".$row->lName. '</td>
+                              <td>' .$row->mobile. '</td>
+                              <td>' .$row->email. '</td>
+                              <td class="vm">
+                                  <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                      <input type="hidden" name="user_ID" value="' .$row->user_ID.'">
+                                      <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                                  </form>
+                              </td>
+                          </tr>
+                          ';
+              }
+          }
+
+          else{
+            $output .= '
+            <tr><td colspan="5">No results found</td></tr>';
+          }
+        
+          echo $output;
+        }
         
 
 

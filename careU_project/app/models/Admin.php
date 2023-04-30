@@ -388,6 +388,58 @@
            
         }
 
+        public function search_pharmacist($search){
+            $this->db->query("SELECT * FROM users WHERE user_role = 'pharmacist' AND (fName LIKE :search OR lName LIKE :search OR email LIKE :search OR user_ID LIKE :search)");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            //var_dump($row); // Add this line to log the result set
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
+           
+        }
+
+        public function search_storekeeper($search){
+            $this->db->query("SELECT * FROM users WHERE user_role = 'storekeeper' AND (fName LIKE :search OR lName LIKE :search OR email LIKE :search OR user_ID LIKE :search)");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            //var_dump($row); // Add this line to log the result set
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
+           
+        }
+
+        public function search_deliveryperson($search){
+            $this->db->query("SELECT * FROM users WHERE user_role = 'deliveryperson' AND (fName LIKE :search OR lName LIKE :search OR email LIKE :search OR user_ID LIKE :search)");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            //var_dump($row); // Add this line to log the result set
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
+           
+        }
+
+        public function search_customer($search){
+            $this->db->query("SELECT * FROM users WHERE user_role = 'customer' AND (fName LIKE :search OR lName LIKE :search OR email LIKE :search OR user_ID LIKE :search)");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            //var_dump($row); // Add this line to log the result set
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
+           
+        }
+
 
             
     }

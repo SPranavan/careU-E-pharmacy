@@ -16,9 +16,9 @@
           <h3 class="topic1-view">Details | Customer</h3>
 
           <div class="search-container">
-                        <form action="/action_page.php">
-                        <input type="text" placeholder="Search..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <form action="<?php echo URLROOT;?>/admins/search_customer" method="POST">
+                            <input type="text" placeholder="Search..." name="search" id="search">
+                            <button type="submit" name="search" id="btn-search"><i class="fa fa-search"></i></button>
                         </form>
           </div>
           <br>
@@ -34,26 +34,32 @@
                         <th style="width:20%">&nbsp</th>
                     </tr>
                     <!-- PHP CODE TO FETCH DATA FROM ROWS -->
-                    
-                    <?php foreach($data['customer_details'] as $cObject) : ?>
-                        
-                        <tr class="dataset1">
-                            <!-- FETCHING DATA FROM EACH
-                                ROW OF EVERY COLUMN -->
-                            <td><?php echo $cObject->user_ID ?></td>
-                            <td><?php echo $cObject->fName." ".$cObject->lName ?></td>
-                            <td><?php echo $cObject->mobile ?></td>
-                            <td><?php echo $cObject->email ?></td>
-                            <td class="vm">
-                                <form action="<?php echo URLROOT;?>/admins/view_more" method="POST">
-                                <input type="hidden" name="user_ID" value="<?php echo $cObject->user_ID; ?>">
-                                
-                                <button class="viewMore" type="submit"><img src="<?php echo URLROOT;?>/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
 
-                                </form>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+                    <tbody class="all-data">
+                    
+                    <?php foreach($data['customer_details'] as $cObject){
+                        
+                        echo '                          
+                                <tr class="dataset1">
+                                    <td>' .$cObject->user_ID. '</td>
+                                    <td>' .$cObject->fName." ".$cObject->lName. '</td>
+                                    <td>' .$cObject->mobile. '</td>
+                                    <td>' .$cObject->email. '</td>
+                                    <td class="vm">
+                                        <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                            <input type="hidden" name="user_ID" value="' .$cObject->user_ID.'">
+                                            <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                ';
+                    
+                            }
+                        
+                        ?>
+                
+                    </tbody>
+                    <tbody id="details" class="search-data"></tbody>
 
 
                    
@@ -68,6 +74,9 @@
 
         
     </main>
+
+<script src="<?php echo URLROOT;?>/public/js/admins/search_customer.js"></script>
+
 
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
