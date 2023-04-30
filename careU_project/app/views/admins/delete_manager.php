@@ -15,6 +15,15 @@
     
         <div class="body-right-view">
           <h3 class="topic1-view">Details | Manager</h3>
+
+          <div class="search-container">
+                        <form action="/action_page.php">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+          </div>
+          <br>
+          
             <div class="container2-view">
             <table>
                     <tr>

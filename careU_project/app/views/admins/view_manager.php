@@ -13,14 +13,17 @@
         
     </div>
 
+       
+  
+
     
         <div class="body-right-view">
           <h3 class="topic1-view">Details | Manager</h3>
 
           <div class="search-container">
-                        <form action="/action_page.php">
-                        <input type="text" placeholder="Search..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <form action="<?php echo URLROOT;?>/admins/search_manager" method="POST">
+                            <input type="text" placeholder="Search..." name="search" id="search">
+                            <button type="submit" name="search" id="btn-search"><i class="fa fa-search"></i></button>
                         </form>
           </div>
           <br>
@@ -28,6 +31,7 @@
             <div class="container2-view">
 
             <table>
+                
                     <tr>
                         <th style="width:13%">Manager ID</th>
                         <th style="width:30%">Full Name</th>
@@ -36,25 +40,33 @@
                         <th style="width:20%">&nbsp</th>
                     </tr>
                     <!-- PHP CODE TO FETCH DATA FROM ROWS -->
-                    <?php foreach($data['manager_details'] as $mObject) : ?>
-                        
-                        <tr class="dataset1">
-                            <!-- FETCHING DATA FROM EACH
-                                ROW OF EVERY COLUMN -->
-                            <td><?php echo $mObject->user_ID ?></td>
-                            <td><?php echo $mObject->fName." ".$mObject->lName ?></td>
-                            <td><?php echo $mObject->mobile ?></td>
-                            <td><?php echo $mObject->email ?></td>
-                            <td class="vm">
-                                <form action="<?php echo URLROOT;?>/admins/view_more" method="POST">
-                                <input type="hidden" name="user_ID" value="<?php echo $mObject->user_ID; ?>">
-                                
-                                <button class="viewMore" type="submit"><img src="<?php echo URLROOT;?>/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                    
+                    <tbody class="all-data">
 
-                                </form>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+                        <?php 
+                            foreach($data['manager_details'] as $mObject){
+                            
+                                echo '                          
+                                <tr class="dataset1">
+                                    <td>' .$mObject->user_ID. '</td>
+                                    <td>' .$mObject->fName." ".$mObject->lName. '</td>
+                                    <td>' .$mObject->mobile. '</td>
+                                    <td>' .$mObject->email. '</td>
+                                    <td class="vm">
+                                        <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                            <input type="hidden" name="user_ID" value="' .$mObject->user_ID.'">
+                                            <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                ';
+                    
+                            }
+                        
+                        ?>
+                
+                    </tbody>
+                    <tbody id="details" class="search-data"></tbody>
                                       
                     
             </table>
@@ -62,13 +74,15 @@
             </div>
         </div>
     </div>
-
+                            
         
        
     </main>
 
     
 
+    
+<script src="<?php echo URLROOT;?>/public/js/admins/search_manager.js"></script>
     
 
 

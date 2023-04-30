@@ -375,6 +375,19 @@
 
         }
 
+        public function search_manager($search){
+            $this->db->query("SELECT * FROM users WHERE user_role = 'manager' AND (fName LIKE :search OR lName LIKE :search OR email LIKE :search OR user_ID LIKE :search)");
+            $this->db->bind(':search', '%'.$search.'%');
+            $row = $this->db->resultSet();
+            //var_dump($row); // Add this line to log the result set
+            if($this->db->rowCount() > 0){
+                return $row;
+            }else{
+                return false;
+            } 
+           
+        }
+
 
             
     }
