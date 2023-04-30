@@ -254,7 +254,7 @@
 
         public function view_manager(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'manager' and active_status = 'Active'");
+            $this->db->query("SELECT * FROM users where user_role = 'manager' and active_status = 'Active' ORDER BY user_ID DESC");
            
             return $this->db->resultSet();
 
@@ -272,7 +272,7 @@
 
         public function view_pharmacist(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'pharmacist' and active_status = 'Active'");
+            $this->db->query("SELECT * FROM users where user_role = 'pharmacist' and active_status = 'Active' ORDER BY user_ID DESC");
            
             return $this->db->resultSet();
 
@@ -290,7 +290,7 @@
 
         public function view_storekeeper(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'storekeeper' and active_status = 'Active'");
+            $this->db->query("SELECT * FROM users where user_role = 'storekeeper' and active_status = 'Active' ORDER BY user_ID DESC");
            
             return $this->db->resultSet();
 
@@ -308,7 +308,7 @@
 
         public function view_deliveryperson(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'deliveryperson' and active_status = 'Active'");
+            $this->db->query("SELECT * FROM users where user_role = 'deliveryperson' and active_status = 'Active' ORDER BY user_ID DESC");
            
             return $this->db->resultSet();
 
@@ -326,7 +326,7 @@
 
         public function view_customer(){
 
-            $this->db->query("SELECT * FROM users where user_role = 'customer'and active_status = 'Active'");
+            $this->db->query("SELECT * FROM users where user_role = 'customer'and active_status = 'Active' ORDER BY user_ID DESC");
            
             return $this->db->resultSet();
 
