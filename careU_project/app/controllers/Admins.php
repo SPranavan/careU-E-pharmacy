@@ -352,7 +352,13 @@
         
           echo $output;
         }
-        
+
+
+        public function my_account(){
+          
+
+           $this->view('admins/my_account');
+       }
 
 
         

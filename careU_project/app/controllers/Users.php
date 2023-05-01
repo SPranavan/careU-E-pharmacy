@@ -300,9 +300,16 @@
           public function createUserSession($user){
            
             //Store session data
+            $_SESSION['user_ID'] = $user->user_ID;
+            $_SESSION['profile'] = $user->user_img;
+            $_SESSION['user_email'] = $user->email;
             $_SESSION['user_fName'] = $user->fName;
             $_SESSION['user_lName'] = $user->lName;
+            $_SESSION['user_bDay'] = $user->birthDate;
+            $_SESSION['user_mobile'] = $user->mobile;
             $_SESSION['user_role'] = $user->user_role;
+            $_SESSION['user_status'] = $user->active_status;
+            $_SESSION['registered_date'] = $user->joinedDate;
   
             if($_SESSION['user_role'] == "customer"){
               //header("Location: ".URLROOT."/HomePage");
@@ -336,12 +343,10 @@
           public function logout(){
             // DESTROY USER DETAILS
             
-            unset($_SESSION['user_fName']);
-            unset($_SESSION['user_lName']);
-            unset($_SESSION['user_role']);
-           
-
+            session_unset();
             session_destroy();
+            session_regenerate_id(true);
+            
             redirect('users/login');
         }
 

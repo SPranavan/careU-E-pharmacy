@@ -26,7 +26,7 @@
                         <div class="topNav-right">
                             <div class="login-link">
                                 <img class="login-icon" src="<?php echo URLROOT;?>/public/img/header/Login.png" alt="icon">
-                                <a href="<?php echo URLROOT; ?>#"><h4 class="register-a">MY ACCOUNT</h4></a>
+                                <a href="<?php echo URLROOT; ?>/admins/my_account"><h4 class="register-a">MY ACCOUNT</h4></a>
                                 <a href="<?php echo URLROOT; ?>/users/logout"><h4 class="myacc-a"> |&nbsp LOGOUT</h4></a>
                             </div>
     
