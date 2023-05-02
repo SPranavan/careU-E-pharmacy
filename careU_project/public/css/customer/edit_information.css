@@ -1,0 +1,196 @@
+body {
+    min-height: 115vh;
+}   
+
+.form-div-outer {
+    width: 50%;
+    border-radius: 15px;
+    background-color: #1a4c6729;
+}
+
+.form-div {
+    margin: auto;
+    min-height: 500px;
+    padding: 30px 30px 30px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.change {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 34px;
+    top: 230px;
+    margin-bottom: 100px;
+
+    background: #f1f1e6;
+}
+
+.change-myaccount {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    left: 34px;
+    top: 410px;
+    margin-bottom: 100px;
+
+    background: #f1f1e6;
+}
+
+.a-myaccount {
+    position: absolute;
+    width: 350px;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.edit-box-information {
+    position: absolute;
+    width: 430px;
+    height: 323px;
+    left: 540px;
+    top: 250px;
+
+    background: #F1F1E6;
+    border-radius: 15px;
+}
+
+.edit-box-myaccount {
+    position: absolute;
+    width: 430px;
+    height: 463px;
+    left: 540px;
+    top: 250px;
+
+    background: #F1F1E6;
+    border-radius: 15px;
+}
+
+.edit-box-changeusername {
+    position: absolute;
+    width: 430px;
+    height: 265px;
+    left: 525px;
+    top: 0px;
+    padding-top: 10px;
+
+    background: #F1F1E6;
+    border-radius: 15px;
+}
+
+.edit-box-changepassword {
+    position: absolute;
+    width: 430px;
+    height: 360px;
+    left: 525px;
+    top: 0px;
+    padding-top: 20px;
+
+    background: #F1F1E6;
+    border-radius: 15px;
+}
+
+.p-myaccount {
+    margin: auto;
+    width: 11%;
+    min-height: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.label-edit {
+    position: absolute;
+    margin-left: 40px;
+    top: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.input-edit {
+    position: absolute;
+    width: 361px;
+    height: 50px;
+    left: 34px;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border: 1px solid;
+    background-color: #FFFFFF;
+    color: rgb(0, 0, 0);
+}
+
+.p-edit {
+    position: absolute;
+    width: 278.64px;
+    height: 37px;
+    left: 540px;
+    top: 180px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.change-button {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 295px;
+    top: 210px;
+    background-color: #000000;
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.change-button-password {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 295px;
+    top: 305px;
+    background-color: #000000;
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    color: #FFFFFF;
+}

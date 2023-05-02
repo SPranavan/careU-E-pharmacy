@@ -1,0 +1,227 @@
+body {
+    min-height: 150vh;
+}
+
+/* h1 {
+    margin-top: 0px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 53px;
+}
+
+.flex-container {
+    display: flex;
+}
+  
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 50px 100px;
+    font-size: 30px;
+}
+
+.checkout {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.checkout-box-1 {
+    position: absolute;
+    width: 370px;
+    height: 150px;
+    left: 35px;
+    top: 470px;
+
+    background: #FAFCFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.checkout-box-3 {
+    position: absolute;
+    width: 410px;
+    height: 460px;
+    left: 980px;
+    top: 470px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F1F1E6;
+    border-radius: 5px;
+} */
+
+/* .square {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 0px;
+    top: 0px;
+    background-color: #F1F1E6;
+    margin: 15px;
+
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.button-checkout {
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    left: 75px;
+    top: 410px;
+    background-color: #000000;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.payment-box-2 {
+    position: absolute;
+    width: 358px;
+    height: 343px;
+    left: 530px;
+    top: 470px;
+
+    border: 1px dashed #000000;
+    border-radius: 10px;
+}
+
+.edit {
+    position: absolute;
+    width: 361px;
+    height: 50px;
+    left: 95px;
+    top: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid;
+    background-color: #FFFFFF;
+    color: rgb(0, 0, 0);
+}
+
+.edit-checkout {
+    position: absolute;
+    width: 361px;
+    height: 50px;
+    left: 495px;
+    top: 480px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid;
+    background-color: #FFFFFF;
+    color: rgb(0, 0, 0);
+}
+
+
+.edit-box-2 {
+    position: absolute;
+    width: 430px;
+    height: 423px;
+    left: 452px;
+    top: 232px;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.label-payment {
+    position: absolute;
+    margin-left: 45px;
+    top: 465px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.label-checkout {
+    position: absolute;
+    margin-left: 445px;
+    top: 450px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+} */
+table{
+    border: .5px solid rgb(71, 70, 70);
+    border-radius: 5px;
+}
+th{
+    padding: 20px 10px;
+    /* border-bottom: .5px solid rgb(71, 70, 70); */
+    text-align: start;
+}
+td{
+    padding: 10px 10px;
+}
+tr{
+    border-bottom: .5px solid rgb(71, 70, 70) !important;
+}
+
+input {
+    width: 50px;
+}
+
+.actions{
+    text-align: right;
+}
+
+button{
+    border: 0 !important;  
+    padding: 10px;
+}
+
+.update-cart{
+    background-color: rgba(0, 102, 255, 0.94);
+}
+
+.update-cart{
+    background-color: rgb(0, 157, 255);
+    color: #F1F1E6;
+}
+
+.outer-div {
+    margin: auto;
+    min-width: 400px;
+    padding: 40px 30px 30px 30px;
+}
+
+.inner-div {
+    width: 8    5%;
+    border-radius: 15px;
+    /* background-color: #1a4c6729; */
+}
+
+.return-cart {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+}
