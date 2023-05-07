@@ -332,7 +332,7 @@
               redirect('storekeepers/Add_medicine');
             }
             elseif($_SESSION['user_role'] == "deliveryperson"){
-              //header("Location: ".URLROOT."/admin_dashboard");
+              redirect('deliveryPersons/deliveryPersons_dashboard');
             }
 
             

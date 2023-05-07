@@ -188,6 +188,109 @@
 
          }
 
+      public function change_password(){
+
+        $this->adminModel = $this->model('Admin');
+        $data ="";
+
+        $this->view('admins/change_password', $data);
+
+      }
+
+
+public function change_password_action(){
+
+  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $data = [
+      'currentPassword' => trim($_POST['cur_pw']),
+      'newPassword' => trim($_POST['new_pw']),
+      'confirmPassword' => trim($_POST['con_pw']),
+
+      'cur_pw_err' => '',
+      'con_pw_err' => '',
+  ];
+
+  $user_ID = $_SESSION['user_ID'];
+
+  $UserDetails = $this->adminModel->findUserByUserID($user_ID);
+
+  if($UserDetails){
+      $userHashedValue = $UserDetails->password;
+      if(password_verify(strval($data['currentPassword']), strval($userHashedValue))){
+          //Validated
+      }
+      else{
+        // if not verified
+        $data['cur_pw_err'] = "*invalid password";
+      }
+  }
+    else{
+      //user not found
+      // die("Something went wrong!!!");
+      die("Something went wrong!!!");
+  }
+  if(strval($data["newPassword"]) == strval($data["confirmPassword"])){
+    //pass
+}else{
+    $data["con_pw_err"] = "*password doesn't match";
+}
+
+ // check weather there are no errors
+ if(empty($data['cur_pw_err']) && empty($data['con_pw_err'])){
+                    
+  //allow to change password
+  if($this->adminModel->change_password($data)){
+      $this->view('admins/my_account');
+      
+      // send email to the user
+      // $userName = $_SESSION['user_fName'];
+      // $userEmail = $_SESSION['user_email'];
+
+      //$this->sendEmailToTheUserWhenPasswordChanged($userName,$userEmail);
+      // echo "<script>
+      //             Swal.fire(
+      //                 'Password changed successfully',
+      //                 'success'
+      //             )
+      //     </script>";
+  }else{
+      // die('something went wrong');
+      die();
+  }
+}else{
+  //load the view with errors
+  $this->view('admins/change_password', $data);
+}
+
+}else{
+// if request is not a POST request then load the form
+$data = [
+  'fName' => '',
+  'lName' => '',
+  'email' => '',
+  // 'nic' => '',
+  // 'pNumber' => '',
+  // 'password' => '',
+
+  'fName_err' => '',
+  'lName_err' => '',
+  'email_err' => '',
+  // 'nic_err' => '',
+  // 'pNumber_err' => '',
+  // 'password_err' => '',
+
+];
+//load the view
+$this->view('admins/change_password', $data);
+
+  }
+}
+         
+
+
+
+         
+
 
          public function search_manager() {
           $result = $this->adminModel->search_manager($_POST['search']);

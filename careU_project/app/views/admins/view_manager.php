@@ -45,7 +45,8 @@
 
                         <?php 
                             foreach($data['manager_details'] as $mObject){
-                            
+                                print_r($mObject);
+                                die();
                                 echo '                          
                                 <tr class="dataset1">
                                     <td>' .$mObject->user_ID. '</td>

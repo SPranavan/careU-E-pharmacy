@@ -440,6 +440,43 @@
            
         }
 
+        public function getUserByEmail($email)
+        {
+            $this->db->query('SELECT * FROM users WHERE email = :email');
+            $this->db->bind(':email', $email);
+            $row = $this->db->single();
+            return $row;
+        }
+
+       
+
+
+        public function change_password($data) {
+            $newPassword = $data['newPassword'];
+            // Hash the password
+            $hashedPassword = password_hash(strval($newPassword), PASSWORD_DEFAULT);
+            $email = $_SESSION['user_email'];
+        
+            // Prepare query
+            $query = "UPDATE users SET password = :hashedPassword WHERE email = :email";
+            $this->db->query($query);
+            $this->db->bind(':hashedPassword', $hashedPassword);
+            $this->db->bind(':email', $email);
+        
+            $this->db->execute();
+        
+            if ($this->db->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        
+
+        
+        
+
 
        
 

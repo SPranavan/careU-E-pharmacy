@@ -1,0 +1,263 @@
+.col-75 input[type=text], input[type=tel], input[type=password], input[type=email], input[type=date],input[type=number],input[type=datetime-local], select, textarea{
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    cursor: context-menu;
+  }
+
+  label {
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    font-family: 'Roboto';
+    font-size: small;
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.reject{
+
+  background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 3.5%;
+    margin-top: 5%;
+
+}
+
+.confirm{
+  
+  background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 30.5%;
+    margin-top: 5%;
+
+}
+  
+
+  
+input[type=submit]:hover {
+    background-color: rgb(89, 89, 89);
+}
+
+
+
+.goback{
+  
+    background-color: rgb(230, 227, 227);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    align-items: right;
+    width: 16.7%;
+    margin-left: -16.6%;
+    margin-top: 15%;
+
+    display: inline-block;
+   
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    
+    transition: all 0.5s;
+    cursor: pointer;
+    
+    
+}
+
+.goback span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .goback span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 20px;
+    transition: 0.5s;
+  }
+  
+  .goback:hover span {
+    padding-left: 20px;
+  }
+  
+  .goback:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+
+
+  .goback1{
+  
+    background-color: rgb(230, 227, 227);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    align-items: right;
+    width: 16.7%;
+    margin-left: 43.3%;
+    margin-top: 5%;
+
+    display: inline-block;
+   
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    
+    transition: all 0.5s;
+    cursor: pointer;
+    
+    
+}
+
+.goback1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .goback1 span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 20px;
+    transition: 0.5s;
+  }
+  
+  .goback1:hover span {
+    padding-left: 20px;
+  }
+  
+  .goback1:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+  
+  
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 5px;
+    margin-right: -20px;
+    
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 5px;
+   
+}
+  
+.row{
+    margin-left: 25px;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+.col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+}
+
+.viewer-name-t{
+  margin-left: 9.3%;
+  margin-top: -1%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+
+
+.container4 {
+  
+margin-left: 6%;
+margin-top: 3%;
+width: 60%;
+
+  
+}
+
+.container4 hr{
+  margin-left: 5.5%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  width: 55.8%;
+  
+}
+
+.body-right-view-vm{
+
+  float: right;
+  margin-top: -44.4%;
+  width: 100%;
+
+}
+
+.viewer-name-tt{
+  margin-left: 57.35%;
+  /* margin-top: -25%; */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.container5 {
+  
+  margin-left: 54%;
+  margin-top: 0%;
+  width: 60%;
+  
+  
+}
+
+.container5 hr{
+  width: 55.8%;
+  margin-left: 5.5%;
+  margin-bottom: 6%;
+}

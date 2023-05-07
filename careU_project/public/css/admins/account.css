@@ -1,10 +1,10 @@
 .account img{
     object-fit: cover;
-    height: 150px;
+    height: 170px;
     width: 220px;
-    margin-top: -3%;
+    margin-top: -3.5%;
     border-radius: 15px 16px 0 0;
-    margin-left: -23.0%;
+    margin-left: -39.6%;
     border: 2px solid;
     border-color: #1d1d1d;
     position: fixed;
@@ -17,7 +17,7 @@
     height: 300px;
     /* background-color: #023e58; */
     margin-left: 3.45%;
-    margin-top: 3.4%;
+    margin-top: 6.6%;
     position: fixed;
     margin-bottom: 5%;
 }
@@ -58,16 +58,114 @@
 }
 
 .details{
-    height: 971px;
+    height: auto;
     width: 60%;
     /* background-color: beige; */
     margin-left: 33%;
-    margin-top: -6.2%;
-    margin-bottom: -10%;
+    margin-top: -3.8%;
+    margin-bottom: -5%;
     border: 2px solid;
     border-radius: 10px;
     position: relative;
+    padding-bottom: 53%;
 }
+
+.details1{
+    height: auto;
+    width: 60%;
+    /* background-color: beige; */
+    margin-left: 33%;
+    margin-top: -3.8%;
+    margin-bottom: -5.27%;
+    border: 2px solid;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.last {
+    width: 305px;
+    height: 79px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+.form-group {
+    position: relative;
+    
+  }
+  
+  .form-group label {
+    float: left;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 3%;
+    text-align: left;
+    margin-left: 10%;
+  }
+  
+  .form-group input {
+    float: right;
+    display: block;
+    width: 75%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 0.5%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+  }
+  
+  .error1{
+    
+    margin-top: 7% ;
+    float: left;
+    color: red;
+    font-size: 15px;
+    margin-left: 10%;
+    font-family: 'Roboto';
+    margin-right: -24%;
+    
+  }
+
+  .error2 {
+       
+    float: left;
+    color: red;
+    font-size: 15px;
+    margin-left: 10%;
+    font-family: 'Roboto';
+    margin-right: 5%;
+    
+  }
+  
+
+
+.details1 button{
+    height: 40px;
+    width: 100px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-left: 57.5%;
+    margin-top: 5%;
+    box-shadow: 5px 5px 8px #888888;
+    background-color: black;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
 
 .details h1{
     font-size: 24px;
@@ -75,6 +173,14 @@
     font-family: 'Roboto';
     margin-left: -65%;
     margin-bottom: 5%;
+}
+
+.details1 h1{
+    font-size: 21px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    margin-left: -60%;
+    margin-bottom: 1%;
 }
 
 
@@ -95,11 +201,13 @@
     box-shadow: 5px 5px 8px #888888;
     font-size: 15px;
     padding: 10px;
-    margin-top: 1.5%;
+    margin-top: 1%;
     margin-right: 17.3%;
-    margin-bottom: 2.5%;
+    margin-bottom: 2%;
    
 }
+
+
 
 
 
@@ -207,3 +315,4 @@
     margin-top: 38px;
 
 }
+

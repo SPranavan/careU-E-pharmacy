@@ -23,6 +23,8 @@
 <body>
 
 
+
+
 <div class="account">
     <img class="sli-img" <?php 
         if (isset($_SESSION['profile']) && $_SESSION['profile'] != null) {
@@ -32,6 +34,9 @@
         }
     ?> style="width: 220px; height: 170px; ">
 </div>
+
+
+
 
 
 
@@ -74,43 +79,36 @@
         </nav>
     </div>
 
-    <div class="details">
-        <h1>Account Details</h1>
-        <div class="data">
-            <label for="">User ID: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_ID']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Name: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_fName']." ".$_SESSION['user_lName']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Birthday: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_bDay']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Email: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_email']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Mobile Number: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_mobile']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Role: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_role']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Registered Date: </label><br>
-            <input type="text" value="<?php echo $_SESSION['registered_date']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Active Status: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_status']; ?>" readonly >
-        </div>
-
+    <div class="details1">
+    <h1>Change Password</h1>
+    <form action="<?php echo URLROOT; ?>/admins/change_password_action" method="POST">
+    <div class="form-group">
+        <label for="cur_pw">Current Password</label>
+        <input id="cur_pw" name="cur_pw" type="password" value="" required>
+        <span style="color: red;" class="error1"><?php echo isset($data['cur_pw_err']) ? $data['cur_pw_err'] : ''; ?></span>
+        <br>
     </div>
     
+    <div class="form-group">
+    <br>
+        <label for="new_pw">New Password</label>
+        <input id="new_pw" name="new_pw" type="password" value="" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="con_pw">Confirm New Password</label>
+        <input id="con_pw" name="con_pw" type="password" value="" required>
+        <span style="color: red;" class="error2"><?php echo isset($data['con_pw_err']) ? $data['con_pw_err'] : ''; ?></span>
+    </div>
+    <br>
+    <button type="submit">Update</button>
+</form>
+
+
+
+
+</div>
+
 </main>
 
 
