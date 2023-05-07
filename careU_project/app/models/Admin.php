@@ -471,6 +471,25 @@
                 return false;
             }
         }
+
+
+        public function UploadProfilePicture($data){
+            $profilePicture = $data;
+            $email = $_SESSION['user_email'];
+            //prepare query
+            $temp = "UPDATE users SET user_img = :profilePicture WHERE email = :email";
+            $this->db->query($temp);
+            $this->db->bind(':profilePicture', $profilePicture);
+            $this->db->bind(':email', $email);
+
+            $this->db->execute();
+
+            if($this->db->rowCount() > 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
         
         
 

@@ -23,6 +23,8 @@
 <body>
 
 
+
+
     <div class="account">
                     <div class="dropdown_area" style="background-image: url(
                             <?php 
@@ -34,6 +36,9 @@
                             ?>); width: 160px; height: 160px;">
                     </div>
     </div>
+
+
+
 
 
 
@@ -78,43 +83,21 @@
         </nav>
     </div>
 
-    <div class="details">
-        <h1>Account Details</h1>
-        <div class="data">
-            <label for="">User ID: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_ID']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Name: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_fName']." ".$_SESSION['user_lName']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Birthday: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_bDay']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Email: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_email']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Mobile Number: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_mobile']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Role: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_role']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Registered Date: </label><br>
-            <input type="text" value="<?php echo $_SESSION['registered_date']; ?>" readonly >
-        </div>
-        <div class="data">
-            <label for="">Active Status: </label><br>
-            <input type="text" value="<?php echo $_SESSION['user_status']; ?>" readonly >
-        </div>
-
-    </div>
+    <div class="details1">
+    <h1>Change Profile Picture</h1>
     
+    <form class="" action="<?php echo URLROOT;?>/admins/UpdateProfilePicture" method="post" autocomplete="off" enctype="multipart/form-data">
+            <input type="file" name="image1" id = "image1" accept=".jpg, .jpeg, .png" value="">
+            <button type = "submit" name = "submit" class="">Update</button>
+    
+    
+    </form>
+
+
+
+
+</div>
+
 </main>
 
 

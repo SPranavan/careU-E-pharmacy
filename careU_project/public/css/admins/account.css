@@ -1,15 +1,36 @@
-.account img{
-    object-fit: cover;
+ .account{
+    
     height: 170px;
     width: 220px;
     margin-top: -3.5%;
     border-radius: 15px 16px 0 0;
-    margin-left: -39.6%;
+    margin-left: 6.1%;
     border: 2px solid;
     border-color: #1d1d1d;
+    z-index: 3;
     position: fixed;
+} 
+
+.dropdown_area{
+   
+    margin-top: 0.25%;
+    margin-left: 1.78%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    cursor: pointer;
+    z-index: 5;
 }
 
+/* Show the dropdown menu on hover */
+.dropdown_area:hover .dashboard__user__dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
 
 
 .dashboard-container {
@@ -243,7 +264,7 @@
     margin: 0 auto 0 auto;
     /* 5% from the top, 15% from the bottom and centered */
 
-    width: 80%;
+    
     /* Could be more or less, depending on screen size */
 }
 

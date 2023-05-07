@@ -188,15 +188,14 @@
 
          }
 
-      public function change_password(){
+public function change_password(){
 
-        $this->adminModel = $this->model('Admin');
-        $data ="";
+    $this->adminModel = $this->model('Admin');
+    $data ="";
 
-        $this->view('admins/change_password', $data);
+    $this->view('admins/change_password', $data);
 
-      }
-
+}
 
 public function change_password_action(){
 
@@ -285,33 +284,97 @@ $this->view('admins/change_password', $data);
 
   }
 }
-         
+
+public function change_profileImg(){
+
+  $this->adminModel = $this->model('Admin');
+  $data ="";
+
+  $this->view('admins/change_profileImg', $data);
+
+}    
+
+
+public function UpdateProfilePicture(){
+    if(isset($_POST["submit"])){
+      $img_name = $_FILES['image1']['name'];
+      $img_size = $_FILES['image1']['size'];
+      $tmp_name = $_FILES['image1']['tmp_name'];
+      $error = $_FILES['image1']['error'];
+
+      if($error === 0){
+          if($img_size > 12500000){
+              // $data['image1_err'] = "Sorry, your first image is too large.";
+              // $this->landToErrorPage();
+              die();
+          }
+          else{
+              $img_ex = pathinfo($img_name, PATHINFO_EXTENSION); //Extension type of image(jpg,png)
+              $img_ex_lc = strtolower($img_ex);
+
+              $allowed_exs = array("jpg", "jpeg", "png"); 
+
+              if(in_array($img_ex_lc, $allowed_exs)){
+
+                  $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
+                  $img_upload_path = dirname(APPROOT).'/public/img/user-pics/'.$new_img_name;
+                  move_uploaded_file($tmp_name, $img_upload_path);
+                  // $data['image1'] = $new_img_name;
+
+                  //Insert into database
+                  if($this->adminModel->UploadProfilePicture($new_img_name)){
+                      $_SESSION['profile'] = $new_img_name;
+                      $this->view('admins/my_account');
+                  }
+                  else{
+                      die('Something went wrong');
+                  }
+              }
+              else{
+                  // $data['image1_err'] = "You can't upload files of this type";
+                  // $this->landToErrorPage();
+                  die();
+              }
+          }
+      }
+      else{
+          // $data['image1_err'] = "Unknown error occurred!";
+          // $this->landToErrorPage();
+          die();
+      }
+  }else{
+      // $data['image1_err'] = 'Please upload atleast one image';
+ // $this->landToErrorPage();
+      die();
+  }
+  
+}
 
 
 
          
 
 
-         public function search_manager() {
-          $result = $this->adminModel->search_manager($_POST['search']);
+public function search_manager() {
+    $result = $this->adminModel->search_manager($_POST['search']);
           
-          $output = '';
+    $output = '';
 
-          if($result>0){
-            foreach($result as $row) {
-              $output .= '                          
-                          <tr class="dataset1">
-                              <td>' .$row->user_ID. '</td>
-                              <td>' .$row->fName." ".$row->lName. '</td>
-                              <td>' .$row->mobile. '</td>
-                              <td>' .$row->email. '</td>
-                              <td class="vm">
-                                  <form action="'.URLROOT.'/admins/view_more" method="POST">
-                                      <input type="hidden" name="user_ID" value="' .$row->user_ID.'">
-                                      <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
-                                  </form>
-                              </td>
-                          </tr>
+    if($result>0){
+        foreach($result as $row) {
+          $output .= '                          
+                       <tr class="dataset1">
+                         <td>' .$row->user_ID. '</td>
+                         <td>' .$row->fName." ".$row->lName. '</td>
+                         <td>' .$row->mobile. '</td>
+                         <td>' .$row->email. '</td>
+                         <td class="vm">
+                            <form action="'.URLROOT.'/admins/view_more" method="POST">
+                                <input type="hidden" name="user_ID" value="' .$row->user_ID.'">
+                                <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/eye.png" alt="view more" style="width:30px;height:20px;"></button>
+                             </form>
+                          </td>
+                        </tr>
                           ';
               }
           }

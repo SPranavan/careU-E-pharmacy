@@ -25,15 +25,17 @@
 
 
 
-<div class="account">
-    <img class="sli-img" <?php 
-        if (isset($_SESSION['profile']) && $_SESSION['profile'] != null) {
-            echo 'src="' . URLROOT . '/public/img/user-pics/' . $_SESSION['profile'] . '.jpg"';
-        } else {
-            echo 'src="' . URLROOT . '/public/img/user-pics/user_public.jpg"';
-        }
-    ?> style="width: 220px; height: 170px; ">
-</div>
+    <div class="account">
+                    <div class="dropdown_area" style="background-image: url(
+                            <?php 
+                                if($_SESSION['profile'] != null){
+                                    echo URLROOT. "/public/img/user-pics/". $_SESSION['profile'];
+                                }else{
+                                    echo URLROOT. "/public/img/user-pics/user_public.jpg";
+                                }
+                            ?>); width: 160px; height: 160px;">
+                    </div>
+    </div>
 
 
 
@@ -68,12 +70,12 @@
                     </a>
                 </li>
                 <li>
-                    
-                        <button class="last" onclick="document.getElementById('id02').style.display='block'">
+                    <a href="/careU_project/admins/change_profileImg">
+                        <button class="last">
                             <span><img src="<?php echo URLROOT; ?>/public/img/admins/user1.png" alt=""></span>
                             <span><h3>Change Profile Picture</h3></span>
                         </button>
-                
+                    </a>
                 </li>
             </ul>
         </nav>
