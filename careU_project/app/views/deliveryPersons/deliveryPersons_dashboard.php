@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/deliveryPerson_header.php'; ?>
+<?php require APPROOT . '/views/deliveryPersons/deliveryPerson_header.php'; ?>
 
     <main class="content">
 

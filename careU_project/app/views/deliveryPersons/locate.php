@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/deliveryPerson_header2.php'; ?>
+<?php require APPROOT . '/views/deliveryPersons/deliveryPerson_header2.php'; ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/public/css/deliveryPersons/locate.css">
 

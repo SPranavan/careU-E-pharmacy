@@ -36,7 +36,8 @@
         {
             $this->db->query('SELECT delivery_guy.deliveryID, delivery_guy.orderId, delivery_guy.customerID, delivery_guy.deliveredDate , delivery_guy.rejectedDate, delivery_guy.availability_status,users.address, users.city  
             FROM delivery_guy 
-            INNER JOIN users ON delivery_guy.customerID = users.user_ID ORDER BY delivery_guy.deliveryID DESC');
+            INNER JOIN users ON delivery_guy.customerID = users.user_ID 
+            where delivery_guy.availability_status = "delivered" ORDER BY delivery_guy.deliveryID DESC');
             $results = $this->db->resultSet();
             return $results;
         }

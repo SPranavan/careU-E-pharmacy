@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/admin_header2.php'; ?>
+<?php require APPROOT . '/views/admins/admin_header2.php'; ?>
 
 
 

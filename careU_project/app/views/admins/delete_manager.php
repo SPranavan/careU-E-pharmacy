@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/admin_header.php'; ?>
+<?php require APPROOT . '/views/admins/admin_header.php'; ?>
 
 
     <main class="content">
@@ -51,7 +51,7 @@
                                     <td class="vm">
                                         <form action="'.URLROOT.'/admins/view_more" method="POST">
                                             <input type="hidden" name="user_ID" value="' .$mObject->user_ID.'">
-                                            <button class="viewMore" type="submit"><img src="<?php echo URLROOT;?>/public/img/admins/delete_action.png" alt="view more" style="width:30px;height:20px;"></button>
+                                            <button class="viewMore" type="submit"><img src="'.URLROOT.'/public/img/admins/delete_action.png" alt="view more" style="width:30px;height:20px;"></button>
                                         </form>
                                     </td>
                                 </tr>
